@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aidnevnik.si/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -193,6 +193,31 @@
   <url>
     <loc>https://aidnevnik.si/clanek/google-gemini-4-carbon-hydrogen-novosti.html</loc>
     <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aidnevnik.si/clanek/anthropic-ipo-83-nasdaq-zacetek.html</loc>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aidnevnik.si/clanek/citibank-agenti-odgovornost-vdori.html</loc>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aidnevnik.si/clanek/altman-nadella-nadzor-infrastruktura.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aidnevnik.si/clanek/humyn-labs-robotika-podatki.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aidnevnik.si/clanek/x-gpt62-preizkusi-zadnji-hip.html</loc>
+    <lastmod>2026-11-18</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>

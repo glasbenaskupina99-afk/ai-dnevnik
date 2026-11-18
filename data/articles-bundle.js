@@ -1,6 +1,6 @@
 // Samodejno ustvarjeno iz content/articles.json prek scripts/build-content.mjs
 window.AI_DNEVNIK_DATA = {
-  "updatedAt": "2026-11-18T00:45:00+01:00",
+  "updatedAt": "2026-11-19T00:55:00+01:00",
   "categoryLabels": {
     "modeli": "Modeli in raziskave",
     "slovenija": "Slovenija in EU",
@@ -10,6 +10,31 @@ window.AI_DNEVNIK_DATA = {
   },
   "tickerItems": [
     {
+      "time": "00:50",
+      "text": "Anthropic IPO določil ceno 83 $ na delnico (~1,5 bilijona $ vrednosti) + 26 mrd $ naložb; danes na Nasdaq kot ANT",
+      "articleId": "anthropic-ipo-83-nasdaq-zacetek"
+    },
+    {
+      "time": "00:30",
+      "text": "Citibank opozoril stranke z zunanjimi UI-agenti: ob nepooblaščenih transakcijah ali vdorih ste odgovorni sami",
+      "articleId": "citibank-agenti-odgovornost-vdori"
+    },
+    {
+      "time": "22:15",
+      "text": "Sam Altman zavrnil postopno predajanje oblasti UI; Nadella svari pred ranljivo kritično infrastrukturo",
+      "articleId": "altman-nadella-nadzor-infrastruktura"
+    },
+    {
+      "time": "20:10",
+      "text": "Humyn Labs zbral 47 mio $ za snemanje resničnega sveta z dvokamerno strojno opremo za ameriško robotiko",
+      "articleId": "humyn-labs-robotika-podatki"
+    },
+    {
+      "time": "19:00",
+      "text": "Z omrežja X: OpenAI priznal, da so GPT-6.2 spremenili nekaj dni pred izidom brez ponovnih testov vplivnežev",
+      "articleId": "x-gpt62-preizkusi-zadnji-hip"
+    },
+    {
       "time": "00:40",
       "text": "OpenAI izdal GPT-6.2 Astra (8 $/40 $, 2. mesto AA v5) in GPT-6.2 Sol z načinom Ultrafast",
       "articleId": "openai-gpt-62-astra-sol"
@@ -18,31 +43,6 @@ window.AI_DNEVNIK_DATA = {
       "time": "00:35",
       "text": "Microsoft Ignite: 7 novih modelov MAI (MAI Code 2, MAI Image 2.7) in pobuda za preglednost s 40+ partnerji",
       "articleId": "microsoft-ignite-mai-transparentnost"
-    },
-    {
-      "time": "23:55",
-      "text": "Google Gemini 4: Carbon zdaj v splošnem dostopu (2 $/10 $ uvodno), Hydrogen pa v brezplačnih opravilih Tasks",
-      "articleId": "google-gemini-4-carbon-hydrogen-novosti"
-    },
-    {
-      "time": "23:50",
-      "text": "Anthropic IPO: določanje cene delnice ANT (70–78 $) nocoj pred četrtkovim začetkom na Nasdaqu",
-      "articleId": "anthropic-ipo-cena-nasdaq"
-    },
-    {
-      "time": "21:15",
-      "text": "OpenAI odprl kodo neodvisnim pregledovalcem (Apollo, METR); Kalifornija vložila tožbo zaradi varnosti agentov",
-      "articleId": "openai-vgrajeni-varnostni-pregledi-kalifornija"
-    },
-    {
-      "time": "19:40",
-      "text": "Raziskava Vals: UI zaveden v označevanje civilistov kot tarč, če nalogo predstaviš kot videoigro",
-      "articleId": "vals-vojska-igra-varnost"
-    },
-    {
-      "time": "18:05",
-      "text": "Z omrežja X: val video-parodij z Jensenom Huangom in gverilske cigaretne škatlice proti UI pretiravanju",
-      "articleId": "x-jensen-huang-video-memi"
     }
   ],
   "articles": [
@@ -1090,8 +1090,9 @@ window.AI_DNEVNIK_DATA = {
       "timestamp": "2026-11-18T00:15:00",
       "readMinutes": 5,
       "views": 8850,
-      "isHeroLead": true,
-      "breaking": true,
+      "isHeroLead": false,
+      "isHeroSide": true,
+      "breaking": false,
       "variant": "gemini",
       "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Building92microsoft.jpg/960px-Building92microsoft.jpg",
       "imageAlt": "Sedež podjetja Microsoft v Redmondu (stavba 92)",
@@ -1132,7 +1133,7 @@ window.AI_DNEVNIK_DATA = {
       "timestamp": "2026-11-18T00:05:00",
       "readMinutes": 4,
       "views": 7940,
-      "isHeroSide": true,
+      "isHeroSide": false,
       "breaking": false,
       "variant": "anthropic",
       "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/NASDAQ_Times_Square_-_panoramio.jpg/960px-NASDAQ_Times_Square_-_panoramio.jpg",
@@ -1174,7 +1175,7 @@ window.AI_DNEVNIK_DATA = {
       "timestamp": "2026-11-17T21:15:00",
       "readMinutes": 5,
       "views": 6810,
-      "isHeroSide": true,
+      "isHeroSide": false,
       "breaking": false,
       "variant": "varnost",
       "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/San_Francisco_City_Hall%2C_Blue_and_Gold_%28from_Memorial_Court%29_%288692161452%29.jpg/960px-San_Francisco_City_Hall%2C_Blue_and_Gold_%28from_Memorial_Court%29_%288692161452%29.jpg",
@@ -1220,7 +1221,7 @@ window.AI_DNEVNIK_DATA = {
       "timestamp": "2026-11-17T16:20:00",
       "readMinutes": 4,
       "views": 5920,
-      "isHeroSide": true,
+      "isHeroSide": false,
       "breaking": false,
       "variant": "slovenija",
       "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Spiral_stairs_%28Art_Deco%2C_Neboti%C4%8Dnik%2C_Ljubljana%29.jpg/960px-Spiral_stairs_%28Art_Deco%2C_Neboti%C4%8Dnik%2C_Ljubljana%29.jpg",
@@ -1373,7 +1374,8 @@ window.AI_DNEVNIK_DATA = {
       "timestamp": "2026-11-18T00:35:00",
       "readMinutes": 5,
       "views": 9120,
-      "breaking": true,
+      "isHeroSide": true,
+      "breaking": false,
       "variant": "svet",
       "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/CSIRO_ScienceImage_11313_The_CSIRO_GPU_cluster_at_the_data_centre.jpg/960px-CSIRO_ScienceImage_11313_The_CSIRO_GPU_cluster_at_the_data_centre.jpg",
       "imageAlt": "Visokozmogljiva grafična gruča v podatkovnem centru",
@@ -1451,6 +1453,205 @@ window.AI_DNEVNIK_DATA = {
         {
           "label": "OrcaRouter — Gemini 4 Hydrogen powers free Tasks in Gemini",
           "url": "https://www.orcarouter.ai/blog/gemini-4-hydrogen-tasks-free-rollout"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-ipo-83-nasdaq-zacetek",
+      "title": "Zgodovinski trenutek za UI: Anthropic za IPO določil ceno 83 $, vrednotenje poskočilo na 1,5 bilijona dolarjev",
+      "excerpt": "Danes se pod oznako ANT na borzi Nasdaq začne trgovanje po 83 dolarjev za delnico — nad prvotnim razponom — ob dodatnih 26 milijardah dolarjev zasebne naložbe Googla, Nvidie, Microsofta in drugih velikanov.",
+      "category": "posel",
+      "dateLabel": "19. november 2026",
+      "timestamp": "2026-11-19T00:50:00",
+      "readMinutes": 5,
+      "views": 9650,
+      "isHeroLead": true,
+      "breaking": true,
+      "variant": "anthropic",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Wall_Street_-_New_York_Stock_Exchange.jpg/960px-Wall_Street_-_New_York_Stock_Exchange.jpg",
+      "imageAlt": "Wall Street in borzno poslopje v New Yorku",
+      "imageCredit": "Foto: Carlos Delgado / CC BY-SA 3.0",
+      "tags": [
+        "Anthropic",
+        "IPO",
+        "Nasdaq",
+        "Vlagatelji"
+      ],
+      "takeaways": [
+        "Anthropic je končno ceno delnice razreda A določil pri 83 USD (prejšnji razpon je bil 70–78 USD) in s prodajo 980 milijonov delnic zbral okoli 81,34 milijarde dolarjev.",
+        "Popolno vrednotenje podjetja dosega približno 1,5 bilijona dolarjev, kar uvršča vstop na Nasdaq pod oznako ANT med največje borzne debije v zgodovini.",
+        "Sedem tehnoloških velikanov — Google, NVIDIA, Microsoft, AMD, Broadcom, Micron in TSMC — je prek vzporedne zasebne naložbe kupilo za skupno 26 milijard dolarjev delnic."
+      ],
+      "body": [
+        "Anthropic je v sredo zvečer uradno določil končno ceno ene najodmevnejših prvih javnih ponudb delnic v zgodovini tehnologije. Zaradi izjemnega povpraševanja vlagateljev je delnico ovrednotil na 83 dolarjev — občutno nad prvotno napovedanim razponom med 70 in 78 dolarji.",
+        "Družba daje v ponudbo 980 milijonov delnic razreda A, s čimer naj bi ob začetni ceni zbrala okoli 81,34 milijarde dolarjev kapitala, popolno vrednotenje ustvarjalca modelov Claude pa dosega približno 1,5 bilijona dolarjev. Trgovanje na borzi Nasdaq Global Select Market pod oznako ANT se začenja danes, v četrtek, 19. novembra.",
+        "Še posebej zgovoren je seznam strateških kupcev v vzporedni zasebni naložbi: Google, NVIDIA, Microsoft, AMD, Broadcom, Micron in TSMC so se zavezali k nakupu za skupno 26 milijard dolarjev delnic, kar tesno povezuje celotno svetovno verigo čipov in oblaka s prihodnostjo podjetja Anthropic."
+      ],
+      "sources": [
+        {
+          "label": "The Guardian — Anthropic prices blockbuster Nasdaq IPO at $83 a share",
+          "url": "https://www.theguardian.com/technology/2026/nov/18/anthropic-share-price-stock-market-ipo"
+        },
+        {
+          "label": "Anadolu Agency — Claude maker Anthropic prices record $81.34B IPO",
+          "url": "https://www.aa.com.tr/en/science-technology/claude-maker-anthropic-prices-record-8134b-ipo-at-83-per-share/4129911"
+        },
+        {
+          "label": "ET CIO — Google, Nvidia, Microsoft among seven firms committing $26B",
+          "url": "https://cio.economictimes.indiatimes.com/news/investments/google-nvidia-microsoft-among-seven-firms-committing-usd-26-billion-to-anthropic/135728598"
+        }
+      ]
+    },
+    {
+      "id": "citibank-agenti-odgovornost-vdori",
+      "title": "Citibank posvaril stranke z UI-agenti: če pomočnik zgreši ali vas oropajo, škodo nosite sami",
+      "excerpt": "Velika ameriška banka je posodobila pogoje poslovanja in jasno zapisala, da komitenti, ki svojim osebnim finančnim UI-agentom zaupajo dostop do računov, sami prevzemajo tveganje vdorov.",
+      "category": "posel",
+      "dateLabel": "19. november 2026",
+      "timestamp": "2026-11-19T00:30:00",
+      "readMinutes": 3,
+      "views": 6290,
+      "isHeroSide": true,
+      "breaking": false,
+      "variant": "varnost",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Citibank_K%C5%8Dbe_Branch.jpg/960px-Citibank_K%C5%8Dbe_Branch.jpg",
+      "imageAlt": "Poslovnica banke Citibank",
+      "imageCredit": "Foto: ラハール / CC BY-SA 4.0",
+      "tags": [
+        "Citibank",
+        "UI-agenti",
+        "Bančništvo",
+        "Odgovornost"
+      ],
+      "takeaways": [
+        "Citibank je spremenil pogoje uporabe in opozoril stranke, naj pri uporabi zunanjih UI-agentov za bančne opravke ne računajo na povračilo škode.",
+        "Če komitent agentu posreduje poverilnice ali odobri samodejno delovanje, banka ne krije niti nepooblaščenih transakcij ob morebitnem vdorih v orodje.",
+        "Novica prihaja le nekaj dni po predstavitvi storitve ChatGPT Wallet in kaže na zaostritev bančne previdnosti do avtonomnih pomočnikov."
+      ],
+      "body": [
+        "V tednu, ko tehnološka podjetja množično predstavljajo UI-agente za spletno nakupovanje in urejanje financ, so prve večje banke potegnile jasno pravno črto. Citibank je v posodobljenih pogojih poslovanja komitente opozoril, da ob uporabi zunanjih UI-agentov pri upravljanju osebnih financ v celoti ostajajo prepuščeni sami sebi.",
+        "Če stranka avtonomnemu pomočniku odobri dostop ali ta sproži nepooblaščene transakcije zaradi napake oziroma hekerskega vdora, banka takšne izgube ne namerava kriti. Gre za jasen signal tradicionalnih finančnih ustanov, da ne želijo prevzemati tveganj nepreverjenih zunanjih programskih vmesnikov.",
+        "Podobno previden pristop sprejemajo tudi druge velike banke, kar potrjuje, zakaj so sistemi s strogimi plačilnimi žetoni in obvezno biometrično potrditvijo vsakega posameznega nakupa za zdaj nujni."
+      ],
+      "sources": [
+        {
+          "label": "TechCrunch — Banks warn customers using AI agents are on their own if hacked",
+          "url": "https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/"
+        }
+      ]
+    },
+    {
+      "id": "altman-nadella-nadzor-infrastruktura",
+      "title": "Altman proti »predaji oblasti UI«, Nadella opozarja na nezakrpljivo infrastrukturo",
+      "excerpt": "Prva moža družb OpenAI in Microsoft sta na ločenih nastopih poudarila meje avtomatizacije: človek mora obdržati odločanje, velik del ključnih sistemov pa je pred kibernetskimi napadi težko zaščititi.",
+      "category": "posel",
+      "dateLabel": "18. november 2026",
+      "timestamp": "2026-11-18T22:15:00",
+      "readMinutes": 4,
+      "views": 5480,
+      "breaking": false,
+      "variant": "nvidia",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Programming_code.jpg/960px-Programming_code.jpg",
+      "imageAlt": "Programska koda na zaslonu razvijalca",
+      "imageCredit": "Foto: Martin Vorel / CC BY-SA 4.0",
+      "tags": [
+        "Sam Altman",
+        "Satya Nadella",
+        "Kibernetska varnost",
+        "Upravljanje UI"
+      ],
+      "takeaways": [
+        "Sam Altman je na vrhu NYT DealBook ob Gregu Brockmanu idejo o postopnem prepuščanju ključnih odločitev UI označil za »grozno idejo«.",
+        "Satya Nadella je opozoril, da je velik del kritične družbene in industrijske infrastrukture v osnovi nemogoče sproti zakrpati pred napadi z UI.",
+        "Izjavi kažeta, da kljub hitremu napredku agentov vodilni v panogi poudarjajo potrebo po človeškem nadzoru in stalni zaščiti omrežij."
+      ],
+      "body": [
+        "Čeprav laboratoriji ta teden predstavljajo vse bolj avtonomne modele, sta vodilna moža podjetij OpenAI in Microsoft v sredinih nastopih ubrala presenetljivo previden ton glede varnosti in vloge človeka.",
+        "Izvršni direktor OpenAI Sam Altman je na konferenci New York Times DealBook Summit ob soustanovitelju Gregu Brockmanu odločno zavrnil zamisel, da bi družba vodilno vlogo v ključnih panogah in ustanovah postopoma prepustila umetni inteligenci — takšno »predajo vajeti« je označil za grozno idejo in poudaril nujnost človeškega nadzora.",
+        "Vzporedno je prvi mož Microsofta Satya Nadella ob strahovih pred samodejnimi kibernetskimi napadi posvaril, da je znaten del svetovne kritične infrastrukture tehnično skoraj nemogoče sproti posodobiti in zakrpati, zato morajo podjetja in države vlagati v odpornost celotnih omrežij."
+      ],
+      "sources": [
+        {
+          "label": "TechCrunch — Sam Altman warns against AI calling the shots instead of humans",
+          "url": "https://techcrunch.com/2026/11/18/sam-altman-warns-against-a-future-where-ai-not-humans-calls-the-shots/"
+        },
+        {
+          "label": "TechCrunch — Satya Nadella says lots of critical infrastructure is unpatchable",
+          "url": "https://techcrunch.com/2026/11/18/amidst-fears-of-ai-cyberattacks-satya-nadella-says-lots-of-critical-infrastructure-is-unpatchable/"
+        }
+      ]
+    },
+    {
+      "id": "humyn-labs-robotika-podatki",
+      "title": "Humyn Labs zbral 47 milijonov dolarjev za zajem resničnih gibov za ameriško robotiko",
+      "excerpt": "Podjetje iz Bengaluruja s posebno dvokamerno napravo snema vsakodnevna človeška opravila in z njimi zalaga učne baze vodilnih razvijalcev robotov in temeljnih modelov v ZDA.",
+      "category": "robotika",
+      "dateLabel": "18. november 2026",
+      "timestamp": "2026-11-18T20:10:00",
+      "readMinutes": 3,
+      "views": 4710,
+      "breaking": false,
+      "variant": "robotika",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Robotic_Arm_Polishing_Guitars_at_Martin_Guitar_Factory.jpg/960px-Robotic_Arm_Polishing_Guitars_at_Martin_Guitar_Factory.jpg",
+      "imageAlt": "Robotska roka pri natančnem industrijskem delu",
+      "imageCredit": "Foto: Henrysz / CC BY 4.0",
+      "tags": [
+        "Robotika",
+        "Učni podatki",
+        "Humyn Labs",
+        "Naložbe"
+      ],
+      "takeaways": [
+        "Indijski startup Humyn Labs je v krogu serije A pod vodstvom skladov Accel in Lighthouse Canton zbral 47 milijonov dolarjev.",
+        "Z lastno dvokamerno nosljivo opremo zajema natančne fizične in večmodalne posnetke iz resničnega okolja.",
+        "Naložba potrjuje, da za urjenje robotov spletni posnetki niso dovolj — ozko grlo panoge so kakovostni podatki iz fizičnega sveta."
+      ],
+      "body": [
+        "Medtem ko se jezikovni modeli učijo iz skoraj vsega besedila na spletu, se razvijalci humanoidnih in industrijskih robotov spopadajo z drugačno oviro: primanjkuje jim natančnih posnetkov človeškega prijemanja, ravnanja s predmeti in gibanja v nepredvidljivih resničnih prostorih.",
+        "Prav to nišo zapolnjuje startup Humyn Labs iz Bengaluruja, ki je te dni pod vodstvom skladov Accel in Lighthouse Canton zbral 47 milijonov dolarjev v krogu financiranja serije A. Podjetje uporablja lastno dvokamerno strojno opremo, s katero zajema podrobne prostorske in fizične podatke vsakodnevnih opravil.",
+        "Zbrane večmodalne zbirke podatkov nato dobavlja ameriškim razvijalcem robotike in temeljnih modelov, kar kaže, da postaja zbiranje kakovostnih podatkov iz fizičnega sveta ena najhitreje rastočih panog v ozadju umetne inteligence."
+      ],
+      "sources": [
+        {
+          "label": "TechCrunch — Accel backs Humyn Labs with $47M for robotics training data",
+          "url": "https://techcrunch.com/2026/11/18/accel-backs-indias-humyn-labs-to-supply-training-data-needed-by-u-s-robotics-ai-developers/"
+        }
+      ]
+    },
+    {
+      "id": "x-gpt62-preizkusi-zadnji-hip",
+      "title": "Zakulisna zmeda na X: vplivneži hvalili GPT-6.2, OpenAI pa model spremenil tri dni pred izidom",
+      "excerpt": "Zakaj so se zgodnje recenzije na omrežju X razlikovale od prvih vtisov uporabnikov? Vodja izdelka pri OpenAI je odkrito priznal, da so različico v zadnjem hipu posodobili brez ponovnega testa.",
+      "category": "zanimivo",
+      "dateLabel": "18. november 2026",
+      "timestamp": "2026-11-18T19:00:00",
+      "readMinutes": 3,
+      "views": 6840,
+      "breaking": false,
+      "variant": "zanimivo",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Code_on_computer_monitor_%28Unsplash%29.jpg/960px-Code_on_computer_monitor_%28Unsplash%29.jpg",
+      "imageAlt": "Zaslon računalnika s programsko kodo med testiranjem",
+      "imageCredit": "Foto: Markus Spiske / CC0",
+      "tags": [
+        "Omrežje X",
+        "OpenAI",
+        "GPT-6.2 Astra",
+        "Zakulisje"
+      ],
+      "takeaways": [
+        "Ob izidu modelov GPT-6.2 Astra in Sol so uporabniki na omrežju X hitro opazili razhajanja med navdušenimi predpremičnimi ocenami in dejanskim občutkom ob zagonu.",
+        "Produktno vodstvo OpenAI (Thibault Sottiaux) je na X pojasnilo, da so model še 3 do 4 dni pred izidom dodatno spreminjali, zato zgodnji preizkuševalci niso testirali povsem enake različice.",
+        "Priznanje je na X sprožilo val šal o tem, da niti največji laboratoriji včasih ne preizkusijo zadnjih sprememb pred objavo v produkcijo."
+      ],
+      "body": [
+        "Vsak večji izid novega modela UI na omrežju X spremlja enak obred: v prvi minuti se pojavijo bleščeče pohvale vplivnežev z zgodnjim dostopom, nato pa se oglasijo običajni uporabniki s precej bolj mešanimi opažanji. Ob izidu modela GPT-6.2 Astra je razlika postala tako očitna, da se je razvila v eno glavnih razprav dneva.",
+        "Zmedo je nepričakovano iskreno razjasnil OpenAI-jev produktni vodja Thibault Sottiaux. Na omrežju X je pojasnil, da je ekipa model še tri do štiri dni pred javno predstavitvijo močno spreminjala, zato različice, ki so jo dobili zgodnji ocenjevalci, pred uradnim izidom niso znova testirali na isti skupini.",
+        "Skupnost na X je razlago sprejela z mešanico olajšanja in smeha: številni razvijalci so v šali pripomnili, da je spreminjanje kode v petek tik pred objavo brez ponovnega testa očitno edina tradicija programerstva, ki je umetna inteligenca še ni izkoreninila."
+      ],
+      "sources": [
+        {
+          "label": "MLQ — OpenAI's GPT-6.2 Astra splits early testers after last-minute changes",
+          "url": "https://mlq.ai/news/openais-gpt-62-astra-splits-its-early-testers-and-an-openai-lead-says-the-model-changed-in-its-last-days-before-launch/"
         }
       ]
     }
