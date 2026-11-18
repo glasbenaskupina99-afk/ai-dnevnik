@@ -77,10 +77,11 @@
   <script>
     const apply = (t) => {
       document.documentElement.setAttribute("data-theme", t);
-      localStorage.setItem("aidnevnik_theme", t);
+      try { localStorage.setItem("aidnevnik_theme", t); } catch (e) {}
       document.getElementById("theme-label").textContent = t === "dark" ? "Svetli način" : "Temni način";
     };
-    apply(localStorage.getItem("aidnevnik_theme") || "light");
+    let saved = "light"; try { saved = localStorage.getItem("aidnevnik_theme") || "light"; } catch (e) {}
+    apply(saved);
     document.getElementById("theme-toggle").addEventListener("click", () => {
       apply(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark");
     });

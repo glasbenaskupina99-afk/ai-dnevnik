@@ -36,6 +36,19 @@ const DEFAULT_TITLE = "AI Dnevnik — Najnovejše novice s področja umetne inte
 const DEFAULT_DESCRIPTION =
   "AI Dnevnik — slovenski portal za najnovejše novice, analize in preglede s področja umetne inteligence, jezikovnih modelov, robotike in evropske regulacije.";
 
+const store = {
+  get(key) {
+    try { return localStorage.getItem(key); } catch { return null; }
+  },
+  set(key, value) {
+    try { localStorage.setItem(key, value); } catch { /* shramba ni na voljo */ }
+  }
+};
+
+function readJson(key, fallback) {
+  try { return JSON.parse(store.get(key) || "") ?? fallback; } catch { return fallback; }
+}
+
 const MONTHS_SHORT = ["jan", "feb", "mar", "apr", "maj", "jun", "jul", "avg", "sep", "okt", "nov", "dec"];
 const ARCHIVE_PAGE = 12;
 const GRID_COUNT = 7;
@@ -86,8 +99,8 @@ const state = {
   modelProvider: "vsi",
   modelSort: "intelligence",
   chartMetric: "intelligence",
-  bookmarks: JSON.parse(localStorage.getItem("aidnevnik_bookmarks") || "[]"),
-  theme: localStorage.getItem("aidnevnik_theme") || "light",
+  bookmarks: readJson("aidnevnik_bookmarks", []),
+  theme: store.get("aidnevnik_theme") || "light",
   activeArticleId: null,
   archiveVisible: ARCHIVE_PAGE
 };
@@ -167,13 +180,13 @@ function applyTheme(theme) {
   state.theme = theme;
   els.html.setAttribute("data-theme", theme);
   els.themeLabel.textContent = theme === "dark" ? "Svetli način" : "Temni način";
-  localStorage.setItem("aidnevnik_theme", theme);
+  store.set("aidnevnik_theme", theme);
   const themeMeta = document.querySelector('meta[name="theme-color"]');
   if (themeMeta) themeMeta.setAttribute("content", theme === "dark" ? "#14130f" : "#f7f4ee");
 }
 
 function saveBookmarks() {
-  localStorage.setItem("aidnevnik_bookmarks", JSON.stringify(state.bookmarks));
+  store.set("aidnevnik_bookmarks", JSON.stringify(state.bookmarks));
   els.bookmarkCount.textContent = String(state.bookmarks.length);
 }
 
@@ -831,9 +844,9 @@ async function handleNewsletterSubmit(e) {
       els.newsletterFeedback.textContent = `Prijava trenutno ni uspela. Pišite nam na ${SITE_CONFIG.contactEmail}.`;
     }
   } else {
-    const subscribers = JSON.parse(localStorage.getItem("aidnevnik_newsletter_pending") || "[]");
+    const subscribers = readJson("aidnevnik_newsletter_pending", []);
     if (!subscribers.includes(email)) subscribers.push(email);
-    localStorage.setItem("aidnevnik_newsletter_pending", JSON.stringify(subscribers));
+    store.set("aidnevnik_newsletter_pending", JSON.stringify(subscribers));
     els.newsletterFeedback.textContent =
       `Hvala, naslov ${email} je zabeležen s privolitvijo GDPR (predogledni način — pred objavo v config.js vnesite pravi poštni API).`;
   }
