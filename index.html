@@ -420,45 +420,6 @@
     </div>
   </footer>
 
-  <!-- Modalno okno za branje celotnega članka -->
-  <div id="article-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal-panel">
-      <div class="modal-toolbar">
-        <span id="modal-category" class="badge"></span>
-        <div class="modal-actions">
-          <a id="modal-standalone-link" class="icon-action-btn modal-standalone-link" href="#">Samostojna stran ↗</a>
-          <button type="button" id="modal-bookmark-btn" class="icon-action-btn" aria-label="Shrani članek">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-            <span id="modal-bookmark-label">Shrani</span>
-          </button>
-          <button type="button" id="modal-copy-btn" class="icon-action-btn" aria-label="Kopiraj povezavo">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-            <span id="modal-copy-label">Kopiraj</span>
-          </button>
-          <button type="button" id="modal-close-btn" class="close-btn" aria-label="Zapri članek">×</button>
-        </div>
-      </div>
-      <div class="modal-progress" aria-hidden="true"><span id="modal-progress-bar"></span></div>
-      <div class="modal-scroll" id="modal-scroll">
-        <figure class="modal-figure">
-          <div id="modal-art" class="modal-art"></div>
-          <figcaption id="modal-photo-credit" class="modal-photo-credit"></figcaption>
-        </figure>
-        <h2 id="modal-title" class="modal-title"></h2>
-        <p id="modal-dek" class="article-dek"></p>
-        <div id="modal-meta" class="modal-meta"></div>
-        <div class="glossary-hint-bar">
-          <span>Namig: dotakni se ali postavi miško na <span class="glossary-hint-sample">podčrtan izraz</span> za razlago.</span>
-        </div>
-        <div id="modal-takeaways" class="modal-takeaways"></div>
-        <div id="modal-body" class="modal-body"></div>
-        <div id="modal-sources" class="modal-sources"></div>
-        <p id="modal-ai-note" class="modal-ai-note"></p>
-        <div id="modal-tags" class="modal-tags"></div>
-      </div>
-    </div>
-  </div>
-
   <!-- Stranski predal za shranjene članke -->
   <div id="bookmarks-drawer" class="drawer-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
     <div class="drawer-panel">

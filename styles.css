@@ -839,6 +839,49 @@ a {
   outline-offset: 6px;
 }
 
+/* Celotna kartica je klikljiva prek povezave v naslovu (raztegnjena povezava) */
+[data-article-id] {
+  position: relative;
+}
+
+.card-link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.card-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.card-link:focus-visible {
+  outline: none;
+}
+
+.card-link:focus-visible::after {
+  outline: 2px solid var(--accent);
+  outline-offset: 6px;
+}
+
+[data-article-id] .bookmark-mini,
+[data-article-id] .glossary-term,
+[data-article-id] a:not(.card-link) {
+  position: relative;
+  z-index: 2;
+}
+
+.ticker-item,
+.weekly-link-pill {
+  text-decoration: none;
+}
+
+.bookmark-item h4 a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* ---------- Naslovni sklop ---------- */
 
 .hero-grid {
@@ -1214,6 +1257,7 @@ a {
 }
 
 .weekly-link-pill {
+  display: inline-block;
   background: none;
   border: none;
   padding: 0;
@@ -2904,6 +2948,22 @@ a {
 
 .article-page .modal-body p {
   font-size: 1.22rem;
+}
+
+.article-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -6px 0 18px;
+}
+
+.article-actions [aria-pressed="true"] {
+  color: var(--text);
+  border-color: var(--text);
+}
+
+.article-actions [aria-pressed="true"] svg {
+  fill: currentColor;
 }
 
 .related-block {

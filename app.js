@@ -32,10 +32,6 @@ const MODELS_DATA = window.AI_DNEVNIK_MODELS || {
 };
 const WEEKLY_SUMMARY = window.AI_DNEVNIK_WEEKLY || null;
 
-const DEFAULT_TITLE = "AI Dnevnik — Najnovejše novice s področja umetne inteligence";
-const DEFAULT_DESCRIPTION =
-  "AI Dnevnik — slovenski portal za najnovejše novice, analize in preglede s področja umetne inteligence, jezikovnih modelov, robotike in evropske regulacije.";
-
 const store = {
   get(key) {
     try { return localStorage.getItem(key); } catch { return null; }
@@ -52,6 +48,10 @@ function readJson(key, fallback) {
 const MONTHS_SHORT = ["jan", "feb", "mar", "apr", "maj", "jun", "jul", "avg", "sep", "okt", "nov", "dec"];
 const ARCHIVE_PAGE = 12;
 const GRID_COUNT = 7;
+
+function articleUrl(id) {
+  return `clanek/${id}.html`;
+}
 
 function shortDate(item) {
   const d = new Date(item.timestamp);
@@ -105,7 +105,6 @@ const state = {
   chartMetric: "intelligence",
   bookmarks: readJson("aidnevnik_bookmarks", []),
   theme: store.get("aidnevnik_theme") || "light",
-  activeArticleId: null,
   archiveVisible: ARCHIVE_PAGE
 };
 
@@ -138,30 +137,10 @@ const els = {
   newsletterEmail: document.getElementById("newsletter-email"),
   newsletterConsent: document.getElementById("newsletter-consent"),
   newsletterFeedback: document.getElementById("newsletter-feedback"),
-  modal: document.getElementById("article-modal"),
-  modalCategory: document.getElementById("modal-category"),
-  modalStandaloneLink: document.getElementById("modal-standalone-link"),
-  modalBookmarkBtn: document.getElementById("modal-bookmark-btn"),
-  modalBookmarkLabel: document.getElementById("modal-bookmark-label"),
-  modalCopyBtn: document.getElementById("modal-copy-btn"),
-  modalCopyLabel: document.getElementById("modal-copy-label"),
-  modalCloseBtn: document.getElementById("modal-close-btn"),
-  modalArt: document.getElementById("modal-art"),
-  modalPhotoCredit: document.getElementById("modal-photo-credit"),
-  modalTitle: document.getElementById("modal-title"),
-  modalDek: document.getElementById("modal-dek"),
-  modalScroll: document.getElementById("modal-scroll"),
-  modalProgressBar: document.getElementById("modal-progress-bar"),
   archiveBlock: document.getElementById("archive-block"),
   archiveList: document.getElementById("archive-list"),
   loadMoreBtn: document.getElementById("load-more-btn"),
   categoryNav: document.querySelector(".category-nav"),
-  modalMeta: document.getElementById("modal-meta"),
-  modalTakeaways: document.getElementById("modal-takeaways"),
-  modalBody: document.getElementById("modal-body"),
-  modalSources: document.getElementById("modal-sources"),
-  modalAiNote: document.getElementById("modal-ai-note"),
-  modalTags: document.getElementById("modal-tags"),
   drawer: document.getElementById("bookmarks-drawer"),
   drawerCloseBtn: document.getElementById("drawer-close-btn"),
   bookmarksList: document.getElementById("bookmarks-list"),
@@ -208,43 +187,22 @@ function toggleBookmark(id, event) {
   }
   saveBookmarks();
   renderAll();
-  if (state.activeArticleId === id) {
-    updateModalBookmarkButton(id);
-  }
   if (!els.drawer.classList.contains("hidden")) {
     renderBookmarksDrawer();
-  }
-}
-
-function updateSeoMetadata(article) {
-  const descMeta = document.querySelector('meta[name="description"]');
-  const ogTitle = document.querySelector('meta[property="og:title"]');
-  const ogDesc = document.querySelector('meta[property="og:description"]');
-
-  if (article) {
-    document.title = `${article.title} — AI Dnevnik`;
-    if (descMeta) descMeta.setAttribute("content", article.excerpt);
-    if (ogTitle) ogTitle.setAttribute("content", article.title);
-    if (ogDesc) ogDesc.setAttribute("content", article.excerpt);
-  } else {
-    document.title = DEFAULT_TITLE;
-    if (descMeta) descMeta.setAttribute("content", DEFAULT_DESCRIPTION);
-    if (ogTitle) ogTitle.setAttribute("content", DEFAULT_TITLE);
-    if (ogDesc) ogDesc.setAttribute("content", DEFAULT_DESCRIPTION);
   }
 }
 
 function renderTicker() {
   const itemsHtml = TICKER_ITEMS.map(
     (item) => `
-      <button type="button" class="ticker-item" data-article-id="${item.articleId}">
+      <a class="ticker-item" href="${articleUrl(item.articleId)}">
         <span class="ticker-time">${item.time}</span>
         <span>${item.text}</span>
-      </button>
+      </a>
     `
   ).join("");
   // Vsebina je podvojena, da trak teče brez preskoka (animacija premakne za -50 %).
-  els.tickerTrack.innerHTML = itemsHtml + itemsHtml.replace(/<button /g, '<button tabindex="-1" aria-hidden="true" ');
+  els.tickerTrack.innerHTML = itemsHtml + itemsHtml.replace(/<a /g, '<a tabindex="-1" aria-hidden="true" ');
   const chars = TICKER_ITEMS.reduce((n, i) => n + i.text.length, 0);
   els.tickerTrack.style.setProperty("--ticker-duration", `${Math.max(40, Math.round(chars / 7))}s`);
 }
@@ -262,7 +220,6 @@ function renderHero() {
   const side = ARTICLES.filter((a) => a.isHeroSide).slice(0, 3);
 
   els.heroLead.dataset.articleId = lead.id;
-  els.heroLead.tabIndex = 0;
   els.heroLead.innerHTML = `
     <div class="hero-art">${photoHtml(lead, { lazy: false })}</div>
     <div class="hero-lead-body">
@@ -270,7 +227,7 @@ function renderHero() {
         ${badgeHtml(lead)}
         ${bookmarkBtn(lead.id, 15)}
       </div>
-      <h1 class="hero-lead-title">${lead.title}</h1>
+      <h1 class="hero-lead-title"><a class="card-link" href="${articleUrl(lead.id)}">${lead.title}</a></h1>
       <p class="hero-lead-excerpt">${lead.excerpt}</p>
       ${metaLine(lead, { long: true })}
     </div>
@@ -280,13 +237,13 @@ function renderHero() {
   els.heroSide.innerHTML = side
     .map(
       (item) => `
-      <article class="hero-side-card cat-${item.category}" data-article-id="${item.id}" tabindex="0">
+      <article class="hero-side-card cat-${item.category}" data-article-id="${item.id}">
         <div class="card-top-row">
           ${badgeHtml(item)}
           ${bookmarkBtn(item.id)}
         </div>
         <div class="hero-side-thumb card-art">${photoHtml(item, { credit: false })}</div>
-        <h3>${item.title}</h3>
+        <h3><a class="card-link" href="${articleUrl(item.id)}">${item.title}</a></h3>
         <p>${item.excerpt}</p>
         ${metaLine(item)}
       </article>
@@ -328,14 +285,14 @@ function getFilteredArticles() {
 
 function articleCardHtml(item, { feature = false } = {}) {
   return `
-      <article class="article-card cat-${item.category}${feature ? " is-feature" : ""}" data-article-id="${item.id}" tabindex="0">
+      <article class="article-card cat-${item.category}${feature ? " is-feature" : ""}" data-article-id="${item.id}">
         <div class="card-art">${photoHtml(item)}</div>
         <div class="card-content">
           <div class="card-top-row">
             ${badgeHtml(item)}
             ${bookmarkBtn(item.id)}
           </div>
-          <h3 class="card-title">${item.title}</h3>
+          <h3 class="card-title"><a class="card-link" href="${articleUrl(item.id)}">${item.title}</a></h3>
           <p class="card-excerpt">${item.excerpt}</p>
           ${metaLine(item)}
         </div>
@@ -349,11 +306,11 @@ function archiveItemHtml(item) {
     ? item.dateLabel
     : `<b>${d.getDate()}.</b>${MONTHS_SHORT[d.getMonth()]}`;
   return `
-      <li class="archive-item cat-${item.category}" data-article-id="${item.id}" tabindex="0">
+      <li class="archive-item cat-${item.category}" data-article-id="${item.id}">
         <span class="archive-date">${dateHtml}</span>
         <span>
           ${badgeHtml(item)}
-          <span class="archive-item-title">${item.title}</span>
+          <a class="archive-item-title card-link" href="${articleUrl(item.id)}">${item.title}</a>
           <span class="archive-item-meta">${item.readMinutes} min branja</span>
         </span>
         <span class="archive-thumb">${photoHtml(item, { credit: false })}</span>
@@ -426,9 +383,9 @@ function renderTrending() {
   els.trendingList.innerHTML = top
     .map(
       (item) => `
-      <li class="trending-item cat-${item.category}" data-article-id="${item.id}" tabindex="0">
+      <li class="trending-item cat-${item.category}" data-article-id="${item.id}">
         <div>
-          <span class="trending-title">${item.title}</span>
+          <a class="trending-title card-link" href="${articleUrl(item.id)}">${item.title}</a>
           <span class="trending-meta">${CATEGORY_LABELS[item.category]} · ${item.readMinutes} min branja</span>
         </div>
       </li>
@@ -437,102 +394,11 @@ function renderTrending() {
     .join("");
 }
 
-function updateModalBookmarkButton(id) {
-  const saved = isBookmarked(id);
-  els.modalBookmarkLabel.textContent = saved ? "Shranjeno" : "Shrani";
-  els.modalBookmarkBtn.style.borderColor = saved ? "var(--text)" : "";
-  els.modalBookmarkBtn.style.color = saved ? "var(--text)" : "";
-  const icon = els.modalBookmarkBtn.querySelector("svg");
-  if (icon) icon.style.fill = saved ? "currentColor" : "none";
-}
-
-function openArticleModal(id, { updateUrl = true } = {}) {
-  const article = ARTICLES.find((a) => a.id === id);
-  if (!article) return;
-  state.activeArticleId = id;
-
-  els.modalCategory.innerHTML = `${article.breaking ? '<span class="badge-flag">Udarno</span>' : ""}${CATEGORY_LABELS[article.category]}`;
-  els.modalCategory.className = `badge cat-${article.category}`;
-  els.modalStandaloneLink.href = `clanek/${article.id}.html`;
-  els.modalArt.innerHTML = photoHtml(article, { lazy: false, credit: false });
-  attachImageFallbacks(els.modalArt);
-  els.modalPhotoCredit.textContent = article.imageUrl ? `${article.imageCredit} (Wikimedia Commons)` : article.imageCredit || "";
-  els.modalTitle.textContent = article.title;
-  els.modalDek.textContent = article.excerpt;
-  els.modalMeta.innerHTML = `
-    <span class="byline">Napisala UI</span>
-    <span>·</span>
-    <span>${article.dateLabel}</span>
-    <span>·</span>
-    <span>${article.readMinutes} min branja</span>
-  `;
-  els.modalTakeaways.innerHTML = `
-    <h4>Ključni poudarki</h4>
-    <ol>${article.takeaways.map((t) => `<li>${t}</li>`).join("")}</ol>
-  `;
-  const inlineAd = window.AI_DNEVNIK_ADS ? window.AI_DNEVNIK_ADS.slotHtml("article-inline", "mobile", "div", "ad-inline") : "";
-  els.modalBody.innerHTML = article.body.map((p, i) => `<p>${p}</p>${i === 1 && article.body.length >= 3 ? inlineAd : ""}`).join("");
-  if (window.AI_DNEVNIK_ADS) window.AI_DNEVNIK_ADS.mount(els.modalBody);
-  if (window.annotateGlossary) {
-    window.annotateGlossary(els.modalTakeaways);
-    window.annotateGlossary(els.modalBody);
-  }
-
-  const sources = article.sources || [];
-  els.modalSources.innerHTML = sources.length
-    ? `
-      <h4>Uporabljeni viri</h4>
-      <ol>
-        ${sources
-          .map(
-            (s) =>
-              `<li><a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.label}</a></li>`
-          )
-          .join("")}
-      </ol>
-    `
-    : "";
-  els.modalSources.classList.toggle("hidden", sources.length === 0);
-  els.modalAiNote.textContent = "Članek je napisala UI na podlagi javno dostopnih virov.";
-  els.modalTags.innerHTML = article.tags.map((tag) => `<span class="tag-chip">#${tag}</span>`).join("");
-
-  updateModalBookmarkButton(id);
-  updateSeoMetadata(article);
-  if (updateUrl && window.location.hash !== `#${id}`) {
-    history.replaceState(null, "", `#${id}`);
-  }
-  els.modalCopyLabel.textContent = "Kopiraj";
-  els.modal.classList.remove("hidden");
-  document.body.style.overflow = "hidden";
-  els.modalScroll.scrollTop = 0;
-  updateModalProgress();
-}
-
-function updateModalProgress() {
-  const el = els.modalScroll;
-  const max = el.scrollHeight - el.clientHeight;
-  const p = max > 0 ? Math.min(1, el.scrollTop / max) : 0;
-  els.modalProgressBar.style.setProperty("--p", p.toFixed(3));
-}
-
-function closeArticleModal({ updateUrl = true } = {}) {
-  state.activeArticleId = null;
-  els.modal.classList.add("hidden");
-  document.body.style.overflow = "";
-  updateSeoMetadata(null);
-  if (updateUrl && window.location.hash) {
-    history.replaceState(null, "", window.location.pathname + window.location.search);
-  }
-}
-
+// Stare povezave oblike index.html#id preusmeri na samostojno stran članka
 function handleHashRoute() {
   const hashId = window.location.hash.replace(/^#/, "").trim();
-  if (!hashId) {
-    if (state.activeArticleId) closeArticleModal({ updateUrl: false });
-    return;
-  }
-  if (ARTICLES.some((a) => a.id === hashId)) {
-    openArticleModal(hashId, { updateUrl: false });
+  if (hashId && ARTICLES.some((a) => a.id === hashId)) {
+    window.location.replace(articleUrl(hashId));
   }
 }
 
@@ -556,7 +422,7 @@ function renderBookmarksDrawer() {
       (item) => `
       <div class="bookmark-item">
         <span style="align-self: flex-start;">${badgeHtml(item, { withFlag: false })}</span>
-        <h4 data-open-bookmark="${item.id}">${item.title}</h4>
+        <h4><a href="${articleUrl(item.id)}">${item.title}</a></h4>
         <div class="bookmark-item-foot">
           <span>${item.dateLabel} · ${item.readMinutes} min</span>
           <button type="button" class="text-link" data-remove-bookmark="${item.id}">Odstrani</button>
@@ -956,43 +822,6 @@ function bindEvents() {
       return;
     }
 
-    const articleEl = e.target.closest("[data-article-id]");
-    if (
-      articleEl &&
-      !e.target.closest("button[data-bookmark-id]") &&
-      !e.target.closest("a[data-source-link]") &&
-      !e.target.closest(".glossary-term")
-    ) {
-      openArticleModal(articleEl.dataset.articleId);
-    }
-  });
-
-  els.modalCloseBtn.addEventListener("click", () => closeArticleModal());
-  els.modal.addEventListener("click", (e) => {
-    if (e.target === els.modal) closeArticleModal();
-  });
-
-  els.modalBookmarkBtn.addEventListener("click", () => {
-    if (state.activeArticleId) toggleBookmark(state.activeArticleId);
-  });
-
-  els.modalCopyBtn.addEventListener("click", async () => {
-    const article = ARTICLES.find((a) => a.id === state.activeArticleId);
-    if (!article) return;
-    const base = window.location.href.split("#")[0];
-    const shareUrl = window.location.protocol === "file:"
-      ? `${base}#${article.id}`
-      : `${SITE_CONFIG.siteUrl}/clanek/${article.id}.html`;
-    const text = `${article.title} — AI Dnevnik (${shareUrl})`;
-    try {
-      await navigator.clipboard.writeText(text);
-      els.modalCopyLabel.textContent = "Kopirano!";
-    } catch {
-      els.modalCopyLabel.textContent = "Pripravljeno";
-    }
-    setTimeout(() => {
-      els.modalCopyLabel.textContent = "Kopiraj";
-    }, 2000);
   });
 
   els.bookmarksToggle.addEventListener("click", () => {
@@ -1009,12 +838,6 @@ function bindEvents() {
       els.drawer.classList.add("hidden");
       return;
     }
-    const openBtn = e.target.closest("[data-open-bookmark]");
-    if (openBtn) {
-      els.drawer.classList.add("hidden");
-      openArticleModal(openBtn.dataset.openBookmark);
-      return;
-    }
     const removeBtn = e.target.closest("[data-remove-bookmark]");
     if (removeBtn) {
       toggleBookmark(removeBtn.dataset.removeBookmark, e);
@@ -1023,7 +846,6 @@ function bindEvents() {
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-      if (!els.modal.classList.contains("hidden")) closeArticleModal();
       if (!els.drawer.classList.contains("hidden")) els.drawer.classList.add("hidden");
     }
   });
@@ -1035,16 +857,6 @@ function bindEvents() {
     renderFeed();
   });
 
-  els.modalScroll.addEventListener("scroll", updateModalProgress, { passive: true });
-
-  // Tipkovnica: Enter/presledek odpre članek na fokusirani kartici
-  document.addEventListener("keydown", (e) => {
-    if (e.key !== "Enter" && e.key !== " ") return;
-    const card = e.target.closest && e.target.closest("[data-article-id][tabindex]");
-    if (!card || e.target !== card) return;
-    e.preventDefault();
-    openArticleModal(card.dataset.articleId);
-  });
 
   const updateNavFade = () => {
     const sc = els.categoryTabs;
@@ -1106,7 +918,7 @@ function renderWeeklySummary() {
       const linksHtml = (pillar.relatedArticles || [])
         .map(
           (ref) =>
-            `<button type="button" class="weekly-link-pill" data-article-id="${ref.id}">${ref.label} →</button>`
+            `<a class="weekly-link-pill" href="${articleUrl(ref.id)}">${ref.label} →</a>`
         )
         .join("");
       return `
