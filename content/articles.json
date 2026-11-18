@@ -406,7 +406,7 @@
       "readMinutes": 5,
       "views": 5340,
       "variant": "robotika",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Humanoid_robot_at_Science_Square_Tsukuba.jpg/960px-Humanoid_robot_at_Science_Square_Tsukuba.jpg",
+      "imageUrl": "images/agentska-robotika-berkeley.webp",
       "imageAlt": "Humanoidni robot v raziskovalnem središču",
       "imageCredit": "Foto: Syced / CC0",
       "tags": [
@@ -434,7 +434,8 @@
           "label": "Fast Company — Foundational AI & Next Big Things in Tech 2026",
           "url": "https://www.fastcompany.com/91612044/foundational-ai-next-big-things-in-tech-2026"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Humanoid_robot_at_Science_Square_Tsukuba.jpg/960px-Humanoid_robot_at_Science_Square_Tsukuba.jpg"
     },
     {
       "id": "ai-week-evolucija-slovenija",
