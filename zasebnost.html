@@ -43,7 +43,7 @@
     <article class="prose-card">
       <span class="section-kicker">VARSTVO PODATKOV (GDPR)</span>
       <h1 class="standalone-title">Politika zasebnosti in piškotki</h1>
-      <p>Zadnja posodobitev: 13. november 2026</p>
+      <p>Zadnja posodobitev: 18. november 2026</p>
 
       <div class="info-callout">
         <strong>Upravljavec podatkov (osnutek pred objavo):</strong><br />
@@ -54,14 +54,21 @@
       <h2>1. Katere podatke zbiramo</h2>
       <ul>
         <li><strong>Prijava na tedenske e-novice:</strong> zbiramo izključno vaš e-poštni naslov na podlagi vaše izrecne privolitve (potrditveno polje ob obrazcu). Uporabljamo ga samo za pošiljanje tedenskega pregleda novic portala AI Dnevnik.</li>
-        <li><strong>Lokalna shramba brskalnika (<code>localStorage</code>):</strong> v vašem brskalniku shranjujemo le izbrano barvno temo (svetli/temni način) ter seznam člankov, ki ste jih shranili pod <em>Shranjeno</em>. Ti podatki se ne pošiljajo na naše strežnike.</li>
+        <li><strong>Lokalna shramba brskalnika (<code>localStorage</code>):</strong> v vašem brskalniku shranjujemo izbrano barvno temo (svetli/temni način), seznam člankov, ki ste jih shranili pod <em>Shranjeno</em>, ter vašo izbiro glede piškotkov. Ti podatki se ne pošiljajo na naše strežnike.</li>
       </ul>
 
-      <h2>2. Piškotki in merjenje obiska</h2>
-      <p>Portal AI Dnevnik ne uporablja oglaševalskih ali sledilnih piškotkov tretjih oseb. Če je v konfiguraciji vključena analitika obiska (npr. Plausible ali Umami), deluje brez piškotkov in brez shranjevanja osebnih podatkov obiskovalcev.</p>
+      <h2 id="piskotki">2. Piškotki, oglasi in merjenje obiska</h2>
+      <p>Portal AI Dnevnik se financira z oglasi. Oglase prikazuje <strong>Google (AdSense)</strong>, ki je za te namene samostojni upravljavec podatkov. Ob prvem obisku vas s pasico vprašamo za privolitev:</p>
+      <ul>
+        <li><strong>Nujni podatki</strong> (tema, shranjeni članki, vaša izbira glede piškotkov) so shranjeni le v vašem brskalniku in so potrebni za delovanje strani. Zanje privolitev ni potrebna.</li>
+        <li><strong>Oglasni piškotki</strong> (Google): samo z vašo privolitvijo Google uporablja piškotke in podobne tehnologije za prikaz oglasov, prilagojenih vašim interesom, ter za merjenje uspešnosti oglasov. Če privolitev zavrnete, Google prikazuje nepersonalizirane oglase, ki lahko še vedno uporabljajo piškotke za omejevanje pogostosti prikazov, preprečevanje zlorab in štetje prikazov.</li>
+      </ul>
+      <p>Več o tem, kako Google uporablja podatke, si preberite na strani <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Kako Google uporablja podatke s spletnih mest partnerjev</a>. Personalizirane oglase lahko izklopite tudi v <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Googlovih nastavitvah oglasov</a>.</p>
+      <p><button type="button" class="primary-btn" data-consent-open>Spremeni nastavitve piškotkov</button></p>
+      <p>Če je v konfiguraciji vključena analitika obiska (npr. Plausible ali Umami), deluje brez piškotkov in brez shranjevanja osebnih podatkov obiskovalcev.</p>
 
       <h2>3. Vaše pravice po GDPR</h2>
-      <p>Svojo privolitev za prejemanje e-novic lahko kadarkoli prekličete s klikom na povezavo za odjavo v vsakem sporočilu ali z zahtevo na <a href="mailto:urednistvo@aidnevnik.si">urednistvo@aidnevnik.si</a>. Prav tako lahko kadarkoli zahtevate vpogled, popravek ali izbris svojih podatkov.</p>
+      <p>Privolitev za oglasne piškotke lahko kadarkoli prekličete z gumbom zgoraj ali s povezavo »Nastavitve piškotkov« v nogi strani. Svojo privolitev za prejemanje e-novic lahko kadarkoli prekličete s klikom na povezavo za odjavo v vsakem sporočilu ali z zahtevo na <a href="mailto:urednistvo@aidnevnik.si">urednistvo@aidnevnik.si</a>. Prav tako lahko kadarkoli zahtevate vpogled, popravek ali izbris svojih podatkov.</p>
     </article>
   </main>
 
@@ -89,5 +96,7 @@
       apply(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark");
     });
   </script>
+  <script src="config.js"></script>
+  <script src="consent.js"></script>
 </body>
 </html>

@@ -131,6 +131,7 @@ const els = {
   feedHeading: document.getElementById("feed-heading"),
   sortSelect: document.getElementById("sort-select"),
   articlesGrid: document.getElementById("articles-grid"),
+  feedColumn: document.querySelector(".feed-column"),
   emptyState: document.getElementById("empty-state"),
   trendingList: document.getElementById("trending-list"),
   newsletterForm: document.getElementById("newsletter-form"),
@@ -389,19 +390,32 @@ function renderFeed() {
   // Prvih nekaj člankov je kartic s fotografijo (prvi širši), ostali gredo v kompakten arhivski seznam.
   const gridItems = items.slice(0, GRID_COUNT);
   const archiveItems = items.slice(GRID_COUNT);
+  const ADS = window.AI_DNEVNIK_ADS;
   els.articlesGrid.innerHTML = gridItems
-    .map((item, i) => articleCardHtml(item, { feature: i === 0 && gridItems.length > 2 }))
+    .map((item, i) => {
+      const card = articleCardHtml(item, { feature: i === 0 && gridItems.length > 2 });
+      // Mobilno: dodaten oglas med karticami po 3. članku
+      return i === 2 && ADS && gridItems.length > 4 ? card + ADS.slotHtml("infeed", "mobile", "div", "ad-infeed ad-grid-span") : card;
+    })
     .join("");
   attachImageFallbacks(els.articlesGrid);
 
   els.archiveBlock.classList.toggle("hidden", archiveItems.length === 0);
   const visible = archiveItems.slice(0, state.archiveVisible);
-  els.archiveList.innerHTML = visible.map(archiveItemHtml).join("");
+  const every = ADS ? ADS.infeedEvery : 0;
+  els.archiveList.innerHTML = visible
+    .map((item, i) => {
+      const row = archiveItemHtml(item);
+      // Oglas po vsakih N vrsticah seznama (ne za zadnjo vrstico)
+      return every && (i + 1) % every === 0 && i < visible.length - 1 ? row + ADS.slotHtml("infeed", "all", "li", "ad-infeed ad-archive") : row;
+    })
+    .join("");
   attachImageFallbacks(els.archiveList);
   const remaining = archiveItems.length - visible.length;
   els.loadMoreBtn.classList.toggle("hidden", remaining <= 0);
   els.loadMoreBtn.textContent = `Naloži več člankov (še ${remaining})`;
 
+  if (ADS) ADS.mount(els.feedColumn);
   if (window.annotateGlossary) {
     window.annotateGlossary(els.articlesGrid);
   }
@@ -456,7 +470,9 @@ function openArticleModal(id, { updateUrl = true } = {}) {
     <h4>Ključni poudarki</h4>
     <ol>${article.takeaways.map((t) => `<li>${t}</li>`).join("")}</ol>
   `;
-  els.modalBody.innerHTML = article.body.map((p) => `<p>${p}</p>`).join("");
+  const inlineAd = window.AI_DNEVNIK_ADS ? window.AI_DNEVNIK_ADS.slotHtml("article-inline", "mobile", "div", "ad-inline") : "";
+  els.modalBody.innerHTML = article.body.map((p, i) => `<p>${p}</p>${i === 1 && article.body.length >= 3 ? inlineAd : ""}`).join("");
+  if (window.AI_DNEVNIK_ADS) window.AI_DNEVNIK_ADS.mount(els.modalBody);
   if (window.annotateGlossary) {
     window.annotateGlossary(els.modalTakeaways);
     window.annotateGlossary(els.modalBody);

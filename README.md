@@ -39,6 +39,15 @@ node scripts/build-content.mjs
 
 Skript prenese vse še zunanje fotografije (počasi, ker Wikimedia omejuje hitrost), jih pretvori v WebP in v `imageUrl` zapiše lokalno pot (izvorni URL ostane v `imageSource`). Dokler fotografije ni, stran samodejno pokaže ilustracijo rubrike.
 
+## Oglasi in piškotki
+
+Oglasna mesta in pasica za piškotke se nastavijo v `config.js` (`ads`, `consent`):
+
+- `ads.mode: "demo"` pokaže sive okvirje z velikostmi; `"off"` oglase izklopi; `"adsense"` prikaže Google AdSense.
+- Mesta: pasica pod trakom »V živo« (namizje), pod glavno novico (mobilno), med novicami in v seznamu starejših člankov, pred primerjavo modelov (namizje) ter v članku po 2. odstavku (mobilno).
+- Ko vas Google odobri, vpišite `adsenseClient: "ca-pub-…"` in po želji ID-je oglasnih enot v `ads.slots`, nato `mode: "adsense"`.
+- Za personalizirane oglase v EU Google zahteva certificirano pasico za privolitev: v AdSense vklopite *Zasebnost in sporočila → Evropski predpisi* in v `config.js` nastavite `consent.provider: "google"`. Vgrajena pasica (`"builtin"`) je namenjena predogledu.
+
 ## Kaj urediti pred objavo
 
 - V `config.js` (ter po potrebi v `zasebnost.html` in `uredniska-nacela.html`) zamenjajte fiktivni e-naslov `urednistvo@aidnevnik.si` in podatke o izdajatelju s svojimi.

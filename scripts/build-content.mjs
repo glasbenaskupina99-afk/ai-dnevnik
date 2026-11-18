@@ -187,7 +187,9 @@ for (const article of articles) {
       </div>
 
       <div class="modal-body">
-        ${article.body.map((p) => `<p>${escapeHtml(p)}</p>`).join("\n        ")}
+        ${article.body
+          .map((p, i) => `<p>${escapeHtml(p)}</p>${i === 1 && article.body.length >= 3 ? '\n        <div class="ad-slot ad-inline" data-slot="article-inline" data-show="mobile"></div>' : ""}`)
+          .join("\n        ")}
       </div>
 
       <div class="modal-sources">
@@ -224,10 +226,14 @@ for (const article of articles) {
         <a href="../uredniska-nacela.html">Uredniška načela</a>
         <a href="../zasebnost.html">Zasebnost</a>
         <a href="../kontakt.html">Kontakt</a>
+        <a href="../zasebnost.html#piskotki" data-consent-open>Piškotki</a>
       </div>
     </div>
   </footer>
 
+  <script src="../config.js"></script>
+  <script src="../consent.js"></script>
+  <script src="../ads.js"></script>
   <script src="../art.js"></script>
   <script src="../glossary.js"></script>
   <script>

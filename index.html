@@ -115,6 +115,9 @@
   </div>
 
   <main class="container main-content" id="main">
+    <!-- Oglasno mesto: pasica pod trakom »V živo« (namizje) -->
+    <div class="ad-slot ad-wide ad-billboard" data-slot="billboard" data-show="desktop"></div>
+
     <!-- Obvestilo o aktivnem filtru ali iskanju -->
     <div id="filter-banner" class="filter-banner hidden">
       <span id="filter-status-text"></span>
@@ -130,6 +133,9 @@
         <!-- Napolnjeno z JS -->
       </div>
     </section>
+
+    <!-- Oglasno mesto: pod glavno novico (mobilno) -->
+    <div class="ad-slot ad-wide" data-slot="mobile-top" data-show="mobile"></div>
 
     <!-- Trak s ključnimi številkami (Utrip UI) -->
     <section id="pulse-section" class="pulse-strip" aria-label="Utrip UI v številkah">
@@ -187,6 +193,9 @@
         <div id="articles-grid" class="articles-grid">
           <!-- Napolnjeno z JS -->
         </div>
+
+        <!-- Oglasno mesto: med karticami in seznamom starejših člankov -->
+        <div class="ad-slot ad-infeed" data-slot="infeed" data-show="all"></div>
 
         <div id="archive-block" class="archive-block hidden">
           <h3 class="archive-title">Starejši članki</h3>
@@ -270,6 +279,9 @@
         </div>
       </aside>
     </section>
+
+    <!-- Oglasno mesto: pred primerjavo modelov (namizje) -->
+    <div class="ad-slot ad-wide ad-pre-models" data-slot="pre-models" data-show="desktop"></div>
 
     <!-- Primerjava AI modelov — temen »podatkovni« pas -->
     <section id="models-section" class="models-section band band-dark" aria-label="Primerjava modelov umetne inteligence">
@@ -397,6 +409,7 @@
             <li><a href="metodologija.html">Metodologija meritev</a></li>
             <li><a href="zasebnost.html">Politika zasebnosti (GDPR)</a></li>
             <li><a href="kontakt.html">Impressum in kontakt</a></li>
+            <li><a href="zasebnost.html#piskotki" data-consent-open>Nastavitve piškotkov</a></li>
           </ul>
         </div>
       </div>
@@ -463,11 +476,13 @@
   </div>
 
   <script src="config.js"></script>
+  <script src="consent.js"></script>
   <script src="data/articles-bundle.js"></script>
   <script src="data/models-bundle.js"></script>
   <script src="data/weekly-summary-bundle.js"></script>
   <script src="art.js"></script>
   <script src="glossary.js"></script>
+  <script src="ads.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
