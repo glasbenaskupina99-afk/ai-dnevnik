@@ -5,7 +5,9 @@ Slovenski novičarski portal za umetno inteligenco z ločeno podatkovno vsebino,
 ## Struktura projekta
 
 - `index.html` — glavna naslovna stran portala
-- `styles.css` — enotna oblika (svetli in temni način) za naslovnico, članke in podstrani
+- `styles.css` — oblikovni sistem »Časopis« (svetli in temni način) za naslovnico, članke in podstrani
+- `art.js` — generirane nadomestne ilustracije po rubrikah, ko fotografija manjka ali se ne naloži
+- `images/` — lokalne kopije naslovnih fotografij (WebP, do 1200 px)
 - `config.js` — nastavitve portala (kontaktni e-naslov, e-novice, brezpiškotna analitika)
 - `content/articles.json` — glavni vir člankov in traku *V živo*
 - `data/articles-bundle.js` — samodejno ustvarjena različica za delovanje tudi brez strežnika (`file://`)
@@ -25,6 +27,17 @@ Slovenski novičarski portal za umetno inteligenco z ločeno podatkovno vsebino,
    ```powershell
    node scripts/fetch-rss-drafts.mjs
    ```
+
+## Fotografije
+
+Naslovne fotografije so shranjene lokalno v `images/`, saj zunanje povezave na Wikimedio niso zanesljive. Za nov članek v `content/articles.json` vpišite URL fotografije z Wikimedia Commons v `imageUrl` in zaženite:
+
+```powershell
+python scripts/fetch-images.py
+node scripts/build-content.mjs
+```
+
+Skript prenese vse še zunanje fotografije (počasi, ker Wikimedia omejuje hitrost), jih pretvori v WebP in v `imageUrl` zapiše lokalno pot (izvorni URL ostane v `imageSource`). Dokler fotografije ni, stran samodejno pokaže ilustracijo rubrike.
 
 ## Kaj urediti pred objavo
 

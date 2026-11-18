@@ -36,33 +36,47 @@ const DEFAULT_TITLE = "AI Dnevnik — Najnovejše novice s področja umetne inte
 const DEFAULT_DESCRIPTION =
   "AI Dnevnik — slovenski portal za najnovejše novice, analize in preglede s področja umetne inteligence, jezikovnih modelov, robotike in evropske regulacije.";
 
-function createEditorialSvg(variant) {
-  const palettes = {
-    nvidia: { bg1: "#0f172a", bg2: "#1e293b", accent: "#ef4444", accent2: "#38bdf8" },
-    gemini: { bg1: "#172554", bg2: "#1e40af", accent: "#60a5fa", accent2: "#a5f3fc" },
-    slovenija: { bg1: "#064e3b", bg2: "#047857", accent: "#34d399", accent2: "#fde047" },
-    anthropic: { bg1: "#27272a", bg2: "#3f3f46", accent: "#f97316", accent2: "#fdba74" },
-    robotika: { bg1: "#311042", bg2: "#581c87", accent: "#e879f9", accent2: "#38bdf8" },
-    fuzija: { bg1: "#1e1b4b", bg2: "#312e81", accent: "#f43f5e", accent2: "#fbbf24" },
-    svet: { bg1: "#0c4a6e", bg2: "#0369a1", accent: "#38bdf8", accent2: "#bae6fd" },
-    dogodki: { bg1: "#14532d", bg2: "#166534", accent: "#4ade80", accent2: "#facc15" },
-    varnost: { bg1: "#1f2937", bg2: "#111827", accent: "#10b981", accent2: "#60a5fa" },
-    fable: { bg1: "#3b0764", bg2: "#6b21a8", accent: "#fb923c", accent2: "#f472b6" },
-    zanimivo: { bg1: "#451a03", bg2: "#92400e", accent: "#f59e0b", accent2: "#38bdf8" }
-  };
+const MONTHS_SHORT = ["jan", "feb", "mar", "apr", "maj", "jun", "jul", "avg", "sep", "okt", "nov", "dec"];
+const ARCHIVE_PAGE = 12;
+const GRID_COUNT = 7;
 
-  const p = palettes[variant] || palettes.gemini;
-  return `<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustracija članka">
-    <defs>
-      <linearGradient id="g-${variant}" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="${p.bg1}" />
-        <stop offset="100%" stop-color="${p.bg2}" />
-      </linearGradient>
-    </defs>
-    <rect width="800" height="450" fill="url(#g-${variant})" />
-    <circle cx="400" cy="225" r="140" fill="none" stroke="${p.accent}" stroke-width="2" opacity="0.4" />
-    <circle cx="400" cy="225" r="70" fill="${p.accent2}" opacity="0.22" />
-  </svg>`;
+function shortDate(item) {
+  const d = new Date(item.timestamp);
+  if (Number.isNaN(d.getTime())) return item.dateLabel;
+  return `${d.getDate()}. ${MONTHS_SHORT[d.getMonth()]}`;
+}
+
+function sourcesLabel(n) {
+  const mod100 = n % 100;
+  if (mod100 === 1) return `${n} vir`;
+  if (mod100 === 2) return `${n} vira`;
+  if (mod100 === 3 || mod100 === 4) return `${n} viri`;
+  return `${n} virov`;
+}
+
+function metaLine(item, { long = false } = {}) {
+  const parts = [
+    `<span>${long ? item.dateLabel : shortDate(item)}</span>`,
+    `<span>${item.readMinutes} min${long ? " branja" : ""}</span>`
+  ];
+  const n = (item.sources || []).length;
+  if (n) parts.push(`<span class="meta-sources" title="${(item.sources || []).map((s) => s.label.split(" — ")[0]).join(", ")}">${sourcesLabel(n)}</span>`);
+  return `<div class="card-meta">${parts.join("")}</div>`;
+}
+
+function badgeHtml(item, { withFlag = true } = {}) {
+  const flag = withFlag && item.breaking ? `<span class="badge-flag">Udarno</span>` : "";
+  return `<span class="badge cat-${item.category}">${flag}${CATEGORY_LABELS[item.category]}</span>`;
+}
+
+function photoHtml(item, { lazy = true, credit = true } = {}) {
+  return `<img src="${item.imageUrl}" alt="${item.imageAlt}"${lazy ? ' loading="lazy"' : ""} decoding="async" data-art-category="${item.category}" data-art-seed="${item.id}" referrerpolicy="no-referrer" />${credit ? `<span class="photo-credit">${item.imageCredit}</span>` : ""}`;
+}
+
+function bookmarkBtn(id, size = 14) {
+  return `<button type="button" class="bookmark-mini ${isBookmarked(id) ? "saved" : ""}" data-bookmark-id="${id}" aria-label="${isBookmarked(id) ? "Odstrani iz shranjenih" : "Shrani članek"}">
+    <svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+  </button>`;
 }
 
 const state = {
@@ -74,7 +88,8 @@ const state = {
   chartMetric: "intelligence",
   bookmarks: JSON.parse(localStorage.getItem("aidnevnik_bookmarks") || "[]"),
   theme: localStorage.getItem("aidnevnik_theme") || "light",
-  activeArticleId: null
+  activeArticleId: null,
+  archiveVisible: ARCHIVE_PAGE
 };
 
 const els = {
@@ -116,6 +131,13 @@ const els = {
   modalArt: document.getElementById("modal-art"),
   modalPhotoCredit: document.getElementById("modal-photo-credit"),
   modalTitle: document.getElementById("modal-title"),
+  modalDek: document.getElementById("modal-dek"),
+  modalScroll: document.getElementById("modal-scroll"),
+  modalProgressBar: document.getElementById("modal-progress-bar"),
+  archiveBlock: document.getElementById("archive-block"),
+  archiveList: document.getElementById("archive-list"),
+  loadMoreBtn: document.getElementById("load-more-btn"),
+  categoryNav: document.querySelector(".category-nav"),
   modalMeta: document.getElementById("modal-meta"),
   modalTakeaways: document.getElementById("modal-takeaways"),
   modalBody: document.getElementById("modal-body"),
@@ -137,30 +159,8 @@ const els = {
   weeklySection: document.getElementById("weekly-summary-section")
 };
 
-function renderCardSources(sources = []) {
-  if (!sources.length) return "";
-  const links = sources
-    .map((s) => {
-      const shortName = s.label.split(" — ")[0];
-      return `<a href="${s.url}" target="_blank" rel="noopener noreferrer" data-source-link="true">${shortName}</a>`;
-    })
-    .join(", ");
-  return `<div class="card-sources">Viri: ${links}</div>`;
-}
-
 function attachImageFallbacks(root = document) {
-  root.querySelectorAll("img[data-fallback-variant]").forEach((img) => {
-    img.addEventListener(
-      "error",
-      () => {
-        const parent = img.parentElement;
-        if (parent) {
-          parent.innerHTML = createEditorialSvg(img.dataset.fallbackVariant);
-        }
-      },
-      { once: true }
-    );
-  });
+  if (window.attachArtFallbacks) window.attachArtFallbacks(root);
 }
 
 function applyTheme(theme) {
@@ -168,6 +168,8 @@ function applyTheme(theme) {
   els.html.setAttribute("data-theme", theme);
   els.themeLabel.textContent = theme === "dark" ? "Svetli način" : "Temni način";
   localStorage.setItem("aidnevnik_theme", theme);
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+  if (themeMeta) themeMeta.setAttribute("content", theme === "dark" ? "#14130f" : "#f7f4ee");
 }
 
 function saveBookmarks() {
@@ -215,7 +217,7 @@ function updateSeoMetadata(article) {
 }
 
 function renderTicker() {
-  els.tickerTrack.innerHTML = TICKER_ITEMS.map(
+  const itemsHtml = TICKER_ITEMS.map(
     (item) => `
       <button type="button" class="ticker-item" data-article-id="${item.articleId}">
         <span class="ticker-time">${item.time}</span>
@@ -223,6 +225,10 @@ function renderTicker() {
       </button>
     `
   ).join("");
+  // Vsebina je podvojena, da trak teče brez preskoka (animacija premakne za -50 %).
+  els.tickerTrack.innerHTML = itemsHtml + itemsHtml.replace(/<button /g, '<button tabindex="-1" aria-hidden="true" ');
+  const chars = TICKER_ITEMS.reduce((n, i) => n + i.text.length, 0);
+  els.tickerTrack.style.setProperty("--ticker-duration", `${Math.max(40, Math.round(chars / 7))}s`);
 }
 
 function renderHero() {
@@ -236,26 +242,17 @@ function renderHero() {
   const side = ARTICLES.filter((a) => a.isHeroSide).slice(0, 3);
 
   els.heroLead.dataset.articleId = lead.id;
+  els.heroLead.tabIndex = 0;
   els.heroLead.innerHTML = `
-    <div class="hero-art">
-      <img src="${lead.imageUrl}" alt="${lead.imageAlt}" data-fallback-variant="${lead.variant}" referrerpolicy="no-referrer" />
-      <span class="photo-credit">${lead.imageCredit}</span>
-    </div>
+    <div class="hero-art">${photoHtml(lead, { lazy: false })}</div>
     <div class="hero-lead-body">
       <div class="card-top-row">
-        <span class="badge ${lead.breaking ? "breaking" : ""}">${lead.breaking ? "UDARNO · " : ""}${CATEGORY_LABELS[lead.category]}</span>
-        <button type="button" class="bookmark-mini ${isBookmarked(lead.id) ? "saved" : ""}" data-bookmark-id="${lead.id}" aria-label="Shrani članek">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-        </button>
+        ${badgeHtml(lead)}
+        ${bookmarkBtn(lead.id, 15)}
       </div>
       <h1 class="hero-lead-title">${lead.title}</h1>
       <p class="hero-lead-excerpt">${lead.excerpt}</p>
-      <div class="card-meta">
-        <span>${lead.dateLabel}</span>
-        <span>${lead.readMinutes} min branja</span>
-      </div>
-      <div class="ai-byline">Napisala UI</div>
-      ${renderCardSources(lead.sources)}
+      ${metaLine(lead, { long: true })}
     </div>
   `;
   attachImageFallbacks(els.heroLead);
@@ -263,25 +260,20 @@ function renderHero() {
   els.heroSide.innerHTML = side
     .map(
       (item) => `
-      <article class="hero-side-card" data-article-id="${item.id}">
+      <article class="hero-side-card cat-${item.category}" data-article-id="${item.id}" tabindex="0">
         <div class="card-top-row">
-          <span class="badge">${CATEGORY_LABELS[item.category]}</span>
-          <button type="button" class="bookmark-mini ${isBookmarked(item.id) ? "saved" : ""}" data-bookmark-id="${item.id}" aria-label="Shrani članek">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-          </button>
+          ${badgeHtml(item)}
+          ${bookmarkBtn(item.id)}
         </div>
+        <div class="hero-side-thumb card-art">${photoHtml(item, { credit: false })}</div>
         <h3>${item.title}</h3>
         <p>${item.excerpt}</p>
-        <div class="card-meta">
-          <span>${item.dateLabel}</span>
-          <span>${item.readMinutes} min</span>
-        </div>
-        <div class="ai-byline">Napisala UI</div>
-        ${renderCardSources(item.sources)}
+        ${metaLine(item)}
       </article>
     `
     )
     .join("");
+  attachImageFallbacks(els.heroSide);
   if (window.annotateGlossary) {
     window.annotateGlossary(els.heroLead);
     window.annotateGlossary(els.heroSide);
@@ -314,6 +306,41 @@ function getFilteredArticles() {
   return list;
 }
 
+function articleCardHtml(item, { feature = false } = {}) {
+  return `
+      <article class="article-card cat-${item.category}${feature ? " is-feature" : ""}" data-article-id="${item.id}" tabindex="0">
+        <div class="card-art">${photoHtml(item)}</div>
+        <div class="card-content">
+          <div class="card-top-row">
+            ${badgeHtml(item)}
+            ${bookmarkBtn(item.id)}
+          </div>
+          <h3 class="card-title">${item.title}</h3>
+          <p class="card-excerpt">${item.excerpt}</p>
+          ${metaLine(item)}
+        </div>
+      </article>
+    `;
+}
+
+function archiveItemHtml(item) {
+  const d = new Date(item.timestamp);
+  const dateHtml = Number.isNaN(d.getTime())
+    ? item.dateLabel
+    : `<b>${d.getDate()}.</b>${MONTHS_SHORT[d.getMonth()]}`;
+  return `
+      <li class="archive-item cat-${item.category}" data-article-id="${item.id}" tabindex="0">
+        <span class="archive-date">${dateHtml}</span>
+        <span>
+          ${badgeHtml(item)}
+          <span class="archive-item-title">${item.title}</span>
+          <span class="archive-item-meta">${item.readMinutes} min branja</span>
+        </span>
+        <span class="archive-thumb">${photoHtml(item, { credit: false })}</span>
+      </li>
+    `;
+}
+
 function renderFeed() {
   const query = state.search.trim();
   const hasActiveFilter = state.category !== "vse" || query !== "";
@@ -333,40 +360,29 @@ function renderFeed() {
 
   if (items.length === 0) {
     els.articlesGrid.innerHTML = "";
+    els.archiveBlock.classList.add("hidden");
     els.emptyState.classList.remove("hidden");
     return;
   }
 
   els.emptyState.classList.add("hidden");
-  els.articlesGrid.innerHTML = items
-    .map(
-      (item) => `
-      <article class="article-card" data-article-id="${item.id}">
-        <div class="card-art">
-          <img src="${item.imageUrl}" alt="${item.imageAlt}" loading="lazy" data-fallback-variant="${item.variant}" referrerpolicy="no-referrer" />
-          <span class="photo-credit">${item.imageCredit}</span>
-        </div>
-        <div class="card-content">
-          <div class="card-top-row">
-            <span class="badge ${item.breaking ? "breaking" : ""}">${CATEGORY_LABELS[item.category]}</span>
-            <button type="button" class="bookmark-mini ${isBookmarked(item.id) ? "saved" : ""}" data-bookmark-id="${item.id}" aria-label="Shrani članek">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-            </button>
-          </div>
-          <h3 class="card-title">${item.title}</h3>
-          <p class="card-excerpt">${item.excerpt}</p>
-          <div class="card-meta">
-            <span>${item.dateLabel}</span>
-            <span>${item.readMinutes} min</span>
-          </div>
-          <div class="ai-byline">Napisala UI</div>
-          ${renderCardSources(item.sources)}
-        </div>
-      </article>
-    `
-    )
+
+  // Prvih nekaj člankov je kartic s fotografijo (prvi širši), ostali gredo v kompakten arhivski seznam.
+  const gridItems = items.slice(0, GRID_COUNT);
+  const archiveItems = items.slice(GRID_COUNT);
+  els.articlesGrid.innerHTML = gridItems
+    .map((item, i) => articleCardHtml(item, { feature: i === 0 && gridItems.length > 2 }))
     .join("");
   attachImageFallbacks(els.articlesGrid);
+
+  els.archiveBlock.classList.toggle("hidden", archiveItems.length === 0);
+  const visible = archiveItems.slice(0, state.archiveVisible);
+  els.archiveList.innerHTML = visible.map(archiveItemHtml).join("");
+  attachImageFallbacks(els.archiveList);
+  const remaining = archiveItems.length - visible.length;
+  els.loadMoreBtn.classList.toggle("hidden", remaining <= 0);
+  els.loadMoreBtn.textContent = `Naloži več člankov (še ${remaining})`;
+
   if (window.annotateGlossary) {
     window.annotateGlossary(els.articlesGrid);
   }
@@ -377,7 +393,7 @@ function renderTrending() {
   els.trendingList.innerHTML = top
     .map(
       (item) => `
-      <li class="trending-item" data-article-id="${item.id}">
+      <li class="trending-item cat-${item.category}" data-article-id="${item.id}" tabindex="0">
         <div>
           <span class="trending-title">${item.title}</span>
           <span class="trending-meta">${CATEGORY_LABELS[item.category]} · ${item.readMinutes} min branja</span>
@@ -391,8 +407,10 @@ function renderTrending() {
 function updateModalBookmarkButton(id) {
   const saved = isBookmarked(id);
   els.modalBookmarkLabel.textContent = saved ? "Shranjeno" : "Shrani";
-  els.modalBookmarkBtn.style.borderColor = saved ? "var(--accent)" : "";
-  els.modalBookmarkBtn.style.color = saved ? "var(--accent)" : "";
+  els.modalBookmarkBtn.style.borderColor = saved ? "var(--text)" : "";
+  els.modalBookmarkBtn.style.color = saved ? "var(--text)" : "";
+  const icon = els.modalBookmarkBtn.querySelector("svg");
+  if (icon) icon.style.fill = saved ? "currentColor" : "none";
 }
 
 function openArticleModal(id, { updateUrl = true } = {}) {
@@ -400,21 +418,24 @@ function openArticleModal(id, { updateUrl = true } = {}) {
   if (!article) return;
   state.activeArticleId = id;
 
-  els.modalCategory.textContent = CATEGORY_LABELS[article.category];
-  els.modalCategory.className = `badge ${article.breaking ? "breaking" : ""}`;
+  els.modalCategory.innerHTML = `${article.breaking ? '<span class="badge-flag">Udarno</span>' : ""}${CATEGORY_LABELS[article.category]}`;
+  els.modalCategory.className = `badge cat-${article.category}`;
   els.modalStandaloneLink.href = `clanek/${article.id}.html`;
-  els.modalArt.innerHTML = `<img src="${article.imageUrl}" alt="${article.imageAlt}" data-fallback-variant="${article.variant}" referrerpolicy="no-referrer" />`;
+  els.modalArt.innerHTML = photoHtml(article, { lazy: false, credit: false });
   attachImageFallbacks(els.modalArt);
   els.modalPhotoCredit.textContent = `${article.imageCredit} (Wikimedia Commons)`;
   els.modalTitle.textContent = article.title;
+  els.modalDek.textContent = article.excerpt;
   els.modalMeta.innerHTML = `
+    <span class="byline">Napisala UI</span>
+    <span>·</span>
     <span>${article.dateLabel}</span>
     <span>·</span>
     <span>${article.readMinutes} min branja</span>
   `;
   els.modalTakeaways.innerHTML = `
     <h4>Ključni poudarki</h4>
-    <ul>${article.takeaways.map((t) => `<li>${t}</li>`).join("")}</ul>
+    <ol>${article.takeaways.map((t) => `<li>${t}</li>`).join("")}</ol>
   `;
   els.modalBody.innerHTML = article.body.map((p) => `<p>${p}</p>`).join("");
   if (window.annotateGlossary) {
@@ -426,14 +447,14 @@ function openArticleModal(id, { updateUrl = true } = {}) {
   els.modalSources.innerHTML = sources.length
     ? `
       <h4>Uporabljeni viri</h4>
-      <ul>
+      <ol>
         ${sources
           .map(
             (s) =>
               `<li><a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.label}</a></li>`
           )
           .join("")}
-      </ul>
+      </ol>
     `
     : "";
   els.modalSources.classList.toggle("hidden", sources.length === 0);
@@ -448,6 +469,15 @@ function openArticleModal(id, { updateUrl = true } = {}) {
   els.modalCopyLabel.textContent = "Kopiraj";
   els.modal.classList.remove("hidden");
   document.body.style.overflow = "hidden";
+  els.modalScroll.scrollTop = 0;
+  updateModalProgress();
+}
+
+function updateModalProgress() {
+  const el = els.modalScroll;
+  const max = el.scrollHeight - el.clientHeight;
+  const p = max > 0 ? Math.min(1, el.scrollTop / max) : 0;
+  els.modalProgressBar.style.setProperty("--p", p.toFixed(3));
 }
 
 function closeArticleModal({ updateUrl = true } = {}) {
@@ -490,7 +520,7 @@ function renderBookmarksDrawer() {
     .map(
       (item) => `
       <div class="bookmark-item">
-        <span class="badge" style="align-self: flex-start;">${CATEGORY_LABELS[item.category]}</span>
+        <span style="align-self: flex-start;">${badgeHtml(item, { withFlag: false })}</span>
         <h4 data-open-bookmark="${item.id}">${item.title}</h4>
         <div class="bookmark-item-foot">
           <span>${item.dateLabel} · ${item.readMinutes} min</span>
@@ -504,6 +534,7 @@ function renderBookmarksDrawer() {
 
 function setCategory(category) {
   state.category = category;
+  state.archiveVisible = ARCHIVE_PAGE;
   document.querySelectorAll(".nav-tab").forEach((tab) => {
     tab.classList.toggle("active", tab.dataset.category === category);
   });
@@ -530,7 +561,7 @@ function showChartTooltip(model, cx, cy, svgRect) {
   if (!els.chartTooltip || !els.modelsChartWrap) return;
   const wrapRect = els.modelsChartWrap.getBoundingClientRect();
   const relX = ((cx / 620) * svgRect.width) + (svgRect.left - wrapRect.left);
-  const relY = ((cy / 300) * svgRect.height) + (svgRect.top - wrapRect.top);
+  const relY = ((cy / 270) * svgRect.height) + (svgRect.top - wrapRect.top);
   els.chartTooltip.innerHTML = `
     <strong>${model.name}</strong> (${model.provider})<br>
     Inteligenca: <b>${model.intelligenceNote || "—"}</b><br>
@@ -571,8 +602,8 @@ function renderModelsChart() {
   }
 
   const W = 620;
-  const H = 300;
-  const pad = { top: 24, right: 34, bottom: 44, left: 56 };
+  const H = 270;
+  const pad = { top: 26, right: 34, bottom: 44, left: 56 };
   const plotW = W - pad.left - pad.right;
   const plotH = H - pad.top - pad.bottom;
 
@@ -634,6 +665,7 @@ function renderModelsChart() {
     ${gridLines.join("")}
     <text class="scatter-axis-label" x="${pad.left + plotW / 2}" y="${H - 6}" text-anchor="middle">Cena vhodnih tokenov API ($ / 1M)</text>
     <text class="scatter-axis-label" x="14" y="${pad.top + plotH / 2}" text-anchor="middle" transform="rotate(-90 14 ${pad.top + plotH / 2})">${yTitle}</text>
+    <text class="scatter-quadrant-label" x="${pad.left + 8}" y="${pad.top + 12}">↖ BOLJŠE RAZMERJE</text>
     ${pointsMarkup}
   `;
 
@@ -706,19 +738,24 @@ function renderModelsTable() {
     return (b.intelligenceIndex ?? -1) - (a.intelligenceIndex ?? -1) || (b.chatElo ?? -1) - (a.chatElo ?? -1);
   });
 
+  const textCell = (v) => `<span class="metric-text">${v}</span>`;
+
   els.modelsTableBody.innerHTML = rows
     .map((m) => {
       const eloStr = m.chatElo !== null
-        ? `${m.chatElo}${m.chatEloErr ? ` <span class="metric-subnote">${m.chatRank}. mesto (${m.chatEloErr})</span>` : `<span class="metric-subnote">${m.chatRank}. mesto</span>`}`
+        ? `${m.chatElo}<span class="metric-subnote">${m.chatRank}. mesto${m.chatEloErr ? ` (${m.chatEloErr})` : ""}</span>`
         : "—";
       const intelStr = m.intelligenceIndex !== null
         ? `${m.intelligenceIndex}<span class="metric-subnote">${m.intelligenceNote}</span>`
-        : m.intelligenceNote || "—";
+        : textCell(m.intelligenceNote || "—");
+      const priceStr = m.inputPrice !== null ? m.priceDisplay : textCell(m.priceDisplay);
 
       return `
         <tr>
           <td class="model-name-cell">
-            <strong>${m.name}</strong>
+            <button type="button" class="model-name-btn" aria-expanded="false" title="Prikaži opis modela">
+              <strong>${m.name}</strong><span class="chev" aria-hidden="true">▾</span>
+            </button>
             <span class="model-highlight-note">${m.highlight}</span>
           </td>
           <td>
@@ -727,9 +764,9 @@ function renderModelsTable() {
               ${m.provider}
             </span>
           </td>
-          <td class="metric-cell-mono">${intelStr}</td>
-          <td class="metric-cell-mono">${eloStr}</td>
-          <td class="metric-cell-mono">${m.priceDisplay}</td>
+          <td class="metric-cell-mono num">${intelStr}</td>
+          <td class="metric-cell-mono num">${eloStr}</td>
+          <td class="metric-cell-mono num">${priceStr}</td>
           <td>${m.speedLabel}</td>
           <td>${m.contextLabel}</td>
           <td>${m.availability}</td>
@@ -843,6 +880,7 @@ function bindEvents() {
 
   els.searchInput.addEventListener("input", (e) => {
     state.search = e.target.value;
+    state.archiveVisible = ARCHIVE_PAGE;
     els.clearSearch.classList.toggle("hidden", state.search.trim() === "");
     renderAll();
   });
@@ -856,6 +894,7 @@ function bindEvents() {
 
   els.sortSelect.addEventListener("change", (e) => {
     state.sort = e.target.value;
+    state.archiveVisible = ARCHIVE_PAGE;
     renderAll();
   });
 
@@ -946,6 +985,30 @@ function bindEvents() {
   });
 
   window.addEventListener("hashchange", handleHashRoute);
+
+  els.loadMoreBtn.addEventListener("click", () => {
+    state.archiveVisible += ARCHIVE_PAGE;
+    renderFeed();
+  });
+
+  els.modalScroll.addEventListener("scroll", updateModalProgress, { passive: true });
+
+  // Tipkovnica: Enter/presledek odpre članek na fokusirani kartici
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Enter" && e.key !== " ") return;
+    const card = e.target.closest && e.target.closest("[data-article-id][tabindex]");
+    if (!card || e.target !== card) return;
+    e.preventDefault();
+    openArticleModal(card.dataset.articleId);
+  });
+
+  const updateNavFade = () => {
+    const sc = els.categoryTabs;
+    els.categoryNav.classList.toggle("can-scroll", sc.scrollWidth - sc.clientWidth - sc.scrollLeft > 4);
+  };
+  els.categoryTabs.addEventListener("scroll", updateNavFade, { passive: true });
+  window.addEventListener("resize", updateNavFade);
+  updateNavFade();
   els.newsletterForm.addEventListener("submit", handleNewsletterSubmit);
 
   if (els.modelProviderFilters) {
@@ -959,6 +1022,16 @@ function bindEvents() {
       renderModelsChart();
       renderChatLeaderboard();
       renderModelsTable();
+    });
+  }
+
+  if (els.modelsTableBody) {
+    els.modelsTableBody.addEventListener("click", (e) => {
+      const btn = e.target.closest(".model-name-btn");
+      if (!btn) return;
+      const cell = btn.closest(".model-name-cell");
+      const open = cell.classList.toggle("open");
+      btn.setAttribute("aria-expanded", String(open));
     });
   }
 

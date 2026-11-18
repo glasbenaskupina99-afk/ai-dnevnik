@@ -58,7 +58,7 @@ window.AI_DNEVNIK_DATA = {
       "isHeroLead": false,
       "breaking": false,
       "variant": "nvidia",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg/960px-Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg",
+      "imageUrl": "images/nvidia-huang-odstop.webp",
       "imageAlt": "Jensen Huang med nastopom na Univerzi Stanford leta 2026",
       "imageCredit": "Foto: Anderseidesvik / CC BY-SA 4.0",
       "tags": [
@@ -91,7 +91,8 @@ window.AI_DNEVNIK_DATA = {
           "label": "Substack (The Median) — Is Huang's exit an NVIDIA problem?",
           "url": "https://dcthemedian.substack.com/p/is-huangs-exit-an-nvidia-problem"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg/960px-Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg"
     },
     {
       "id": "gemini-4-hydrogen",
@@ -105,7 +106,7 @@ window.AI_DNEVNIK_DATA = {
       "isHeroSide": false,
       "breaking": false,
       "variant": "gemini",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Tensor_Processing_Unit_3.0.jpg/960px-Tensor_Processing_Unit_3.0.jpg",
+      "imageUrl": "images/gemini-4-hydrogen.webp",
       "imageAlt": "Googlova strojna enota TPU za pospeševanje umetne inteligence",
       "imageCredit": "Foto: Zinskauf / CC BY-SA 4.0",
       "tags": [
@@ -138,7 +139,8 @@ window.AI_DNEVNIK_DATA = {
           "label": "Substack (The Median) — Weekly AI Recap",
           "url": "https://dcthemedian.substack.com/p/is-huangs-exit-an-nvidia-problem"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Tensor_Processing_Unit_3.0.jpg/960px-Tensor_Processing_Unit_3.0.jpg"
     },
     {
       "id": "dublin-vrh-slovenija",
@@ -397,7 +399,7 @@ window.AI_DNEVNIK_DATA = {
       "readMinutes": 4,
       "views": 4920,
       "variant": "fuzija",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/EAST_Tokamak_plasma_image3.jpg",
+      "imageUrl": "images/deepmind-jedrska-fuzija.webp",
       "imageAlt": "Posnetek plazme v fuzijskem reaktorju tokamak EAST",
       "imageCredit": "Foto: Xiang Gao idr. / CC BY 3.0",
       "tags": [
@@ -425,7 +427,8 @@ window.AI_DNEVNIK_DATA = {
           "label": "MIT News — Faster, trustworthy AI models for climate prediction",
           "url": "https://news.mit.edu/2026/new-research-could-lead-faster-trustworthy-ai-models-climate-prediction-1112"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/1/1a/EAST_Tokamak_plasma_image3.jpg"
     },
     {
       "id": "claude-fable-52",
@@ -645,7 +648,7 @@ window.AI_DNEVNIK_DATA = {
       "readMinutes": 4,
       "views": 6120,
       "variant": "slovenija",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Kraken_Supercomputer_%283592578852%29.jpg/960px-Kraken_Supercomputer_%283592578852%29.jpg",
+      "imageUrl": "images/slovenija-tovarna-ui-slaif.webp",
       "imageAlt": "Strežniške omare visokozmogljivega superračunalniškega sistema",
       "imageCredit": "Foto: Oak Ridge National Laboratory / CC BY 2.0",
       "tags": [
@@ -677,7 +680,8 @@ window.AI_DNEVNIK_DATA = {
           "label": "Univerza na Primorskem — Slovenian Artificial Intelligence Factory",
           "url": "https://www.famnit.upr.si/en/news/up-part-of-the-slovenian-artificial-intelligence-factory/"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Kraken_Supercomputer_%283592578852%29.jpg/960px-Kraken_Supercomputer_%283592578852%29.jpg"
     },
     {
       "id": "evropski-parlament-ui-demokracija",
@@ -777,7 +781,7 @@ window.AI_DNEVNIK_DATA = {
       "readMinutes": 4,
       "views": 5410,
       "variant": "anthropic",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Cybersecurity_Visuals_Challenge_2019_-_Rebecca_Wang.jpg",
+      "imageUrl": "images/gpt6-astra-mythos-varnost.webp",
       "imageAlt": "Ilustracija kibernetske varnosti in zaščite digitalnih sistemov",
       "imageCredit": "Foto: Rebecca Wang / CC BY 4.0",
       "tags": [
@@ -813,7 +817,8 @@ window.AI_DNEVNIK_DATA = {
           "label": "AI Release Tracker — November 2026 Model Tracker",
           "url": "https://aireleasetracker.com/"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Cybersecurity_Visuals_Challenge_2019_-_Rebecca_Wang.jpg"
     },
     {
       "id": "x-tweetcraft-minecraft",
@@ -867,7 +872,7 @@ window.AI_DNEVNIK_DATA = {
       "views": 7410,
       "breaking": true,
       "variant": "svet",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/CTBC_payment_terminal_at_self-checkout_of_Carrefour_Rende_Store.jpg/960px-CTBC_payment_terminal_at_self-checkout_of_Carrefour_Rende_Store.jpg",
+      "imageUrl": "images/openai-chatgpt-wallet.webp",
       "imageAlt": "Samopostrežna blagajna in plačilni terminal za brezstično plačevanje",
       "imageCredit": "Foto: Matt Zhuang / CC BY-SA 4.0",
       "tags": [
@@ -895,7 +900,8 @@ window.AI_DNEVNIK_DATA = {
           "label": "TechCrunch — ChatGPT's new Wallet lets AI agents shop and check out for you",
           "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/CTBC_payment_terminal_at_self-checkout_of_Carrefour_Rende_Store.jpg/960px-CTBC_payment_terminal_at_self-checkout_of_Carrefour_Rende_Store.jpg"
     },
     {
       "id": "x-vending-bench-kartel",
@@ -1093,7 +1099,7 @@ window.AI_DNEVNIK_DATA = {
       "isHeroLead": true,
       "breaking": true,
       "variant": "gemini",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Building92microsoft.jpg/960px-Building92microsoft.jpg",
+      "imageUrl": "images/microsoft-ignite-mai-transparentnost.webp",
       "imageAlt": "Sedež podjetja Microsoft v Redmondu (stavba 92)",
       "imageCredit": "Foto: Coolcaesar / CC BY-SA 4.0",
       "tags": [
@@ -1121,7 +1127,8 @@ window.AI_DNEVNIK_DATA = {
           "label": "TestingCatalog — Microsoft launches seven MAI models at Ignite 2026",
           "url": "https://www.testingcatalog.com/microsoft-launches-seven-mai-models-at-ignite-2026/"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Building92microsoft.jpg/960px-Building92microsoft.jpg"
     },
     {
       "id": "anthropic-ipo-cena-nasdaq",
@@ -1264,7 +1271,7 @@ window.AI_DNEVNIK_DATA = {
       "views": 5340,
       "breaking": false,
       "variant": "varnost",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Quadcopter_camera_drone_in_flight.jpg/960px-Quadcopter_camera_drone_in_flight.jpg",
+      "imageUrl": "images/vals-vojska-igra-varnost.webp",
       "imageAlt": "Dron s kamero v letu",
       "imageCredit": "Foto: Josh Sorenson / CC0",
       "tags": [
@@ -1288,7 +1295,8 @@ window.AI_DNEVNIK_DATA = {
           "label": "TechCrunch — AI models can be tricked into identifying civilians as targets",
           "url": "https://techcrunch.com/2026/11/17/ai-models-can-be-tricked-into-identifying-civilians-as-military-targets-by-telling-them-its-a-game/"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Quadcopter_camera_drone_in_flight.jpg/960px-Quadcopter_camera_drone_in_flight.jpg"
     },
     {
       "id": "x-jensen-huang-video-memi",
@@ -1420,7 +1428,7 @@ window.AI_DNEVNIK_DATA = {
       "views": 6740,
       "breaking": false,
       "variant": "gemini",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Googleplex_HQ_%28cropped%29.jpg/960px-Googleplex_HQ_%28cropped%29.jpg",
+      "imageUrl": "images/google-gemini-4-carbon-hydrogen-novosti.webp",
       "imageAlt": "Sedež podjetja Google (Googleplex) v Kaliforniji",
       "imageCredit": "Foto: Asoundd / CC BY-SA 4.0",
       "tags": [
@@ -1452,7 +1460,8 @@ window.AI_DNEVNIK_DATA = {
           "label": "OrcaRouter — Gemini 4 Hydrogen powers free Tasks in Gemini",
           "url": "https://www.orcarouter.ai/blog/gemini-4-hydrogen-tasks-free-rollout"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Googleplex_HQ_%28cropped%29.jpg/960px-Googleplex_HQ_%28cropped%29.jpg"
     }
   ]
 };
