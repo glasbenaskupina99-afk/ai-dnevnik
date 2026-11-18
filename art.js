@@ -148,6 +148,9 @@
 
   // Zamenja vsako sliko z data-art-category, ki se ne naloži, z ilustracijo rubrike.
   window.attachArtFallbacks = function (root) {
+    (root || document).querySelectorAll(".art-fallback[data-art-category]:empty").forEach((el) => {
+      el.innerHTML = window.createCategoryArt(el.dataset.artCategory, el.dataset.artSeed);
+    });
     (root || document).querySelectorAll("img[data-art-category]").forEach((img) => {
       const swap = () => {
         const holder = document.createElement("span");

@@ -83,6 +83,10 @@ function badgeHtml(item, { withFlag = true } = {}) {
 }
 
 function photoHtml(item, { lazy = true, credit = true } = {}) {
+  if (!item.imageUrl) {
+    const art = window.createCategoryArt ? window.createCategoryArt(item.category, item.id) : "";
+    return `<span class="art-fallback">${art}</span>${credit && item.imageCredit ? `<span class="photo-credit">${item.imageCredit}</span>` : ""}`;
+  }
   return `<img src="${item.imageUrl}" alt="${item.imageAlt}"${lazy ? ' loading="lazy"' : ""} decoding="async" data-art-category="${item.category}" data-art-seed="${item.id}" referrerpolicy="no-referrer" />${credit ? `<span class="photo-credit">${item.imageCredit}</span>` : ""}`;
 }
 
@@ -436,7 +440,7 @@ function openArticleModal(id, { updateUrl = true } = {}) {
   els.modalStandaloneLink.href = `clanek/${article.id}.html`;
   els.modalArt.innerHTML = photoHtml(article, { lazy: false, credit: false });
   attachImageFallbacks(els.modalArt);
-  els.modalPhotoCredit.textContent = `${article.imageCredit} (Wikimedia Commons)`;
+  els.modalPhotoCredit.textContent = article.imageUrl ? `${article.imageCredit} (Wikimedia Commons)` : article.imageCredit || "";
   els.modalTitle.textContent = article.title;
   els.modalDek.textContent = article.excerpt;
   els.modalMeta.innerHTML = `

@@ -28,7 +28,7 @@ window.AI_DNEVNIK_MODELS = {
       "speedLabel": "Globoko sklepanje",
       "contextLabel": "1M tokenov",
       "availability": "Splošno (API / Ultra)",
-      "highlight": "Vrh lestvic LMArene in AA v5; uvodna cena 2 $/10 $ velja do 30. novembra (od decembra 4 $/20 $)."
+      "highlight": "Vrh lestvice LMArena za pogovor; na AA v5 za Claude Fable 5.2 (65). Uvodna cena 2 $/10 $ velja do 30. novembra (od decembra 4 $/20 $)."
     },
     {
       "id": "gpt-6-2-astra",
@@ -36,7 +36,7 @@ window.AI_DNEVNIK_MODELS = {
       "provider": "OpenAI",
       "providerColor": "#10b981",
       "intelligenceIndex": null,
-      "intelligenceNote": "2. mesto AA v5 (nad Carbon)",
+      "intelligenceNote": "2. mesto AA v5 (navedba ob izidu)",
       "chatElo": null,
       "chatEloErr": "",
       "chatRank": null,
@@ -46,7 +46,7 @@ window.AI_DNEVNIK_MODELS = {
       "speedLabel": "Standard / Ultrafast",
       "contextLabel": "1,05M tokenov",
       "availability": "Splošno (API / ChatGPT)",
-      "highlight": "Novi paradni model OpenAI (17. nov.): 20 % cenejši od GPT-6 Astra, 97 % na GPQA Diamond in 2. mesto na AA v5."
+      "highlight": "Novi paradni model OpenAI (17. nov.): 20 % cenejši od GPT-6 Astra, 97 % na GPQA Diamond; ob izidu poročano 2. mesto na AA v5."
     },
     {
       "id": "gpt-6-2-sol",
@@ -140,21 +140,21 @@ window.AI_DNEVNIK_MODELS = {
     },
     {
       "id": "claude-fable-5",
-      "name": "Claude Fable 5 (High) / 5.2",
+      "name": "Claude Fable 5.2 (Max)",
       "provider": "Anthropic",
       "providerColor": "#ea580c",
-      "intelligenceIndex": null,
-      "intelligenceNote": "Vrh splošnih lestvic",
+      "intelligenceIndex": 65,
+      "intelligenceNote": "65 (AA v5.0.1, Max); High 62",
       "chatElo": 1504,
       "chatEloErr": "",
       "chatRank": 5,
-      "inputPrice": null,
-      "outputPrice": null,
-      "priceDisplay": "Po naročnini / API",
-      "speedLabel": "Hiter odziv",
+      "inputPrice": 8,
+      "outputPrice": 40,
+      "priceDisplay": "8,00 $ / 40,00 $",
+      "speedLabel": "Prilagodljivo sklepanje (Max / High / Medium)",
       "contextLabel": "—",
-      "availability": "Splošno na voljo",
-      "highlight": "Zelo priljubljen za vsakodnevno pisanje, urejanje besedil in tekoč pogovor."
+      "availability": "Splošno (API / Claude)",
+      "highlight": "Najvišja ocena doslej na indeksu AA v5 (65 pri nastavitvi Max). Cena je 20 % nižja od predhodnika; Elo na LMAreni velja za Fable 5 (High), ocena za 5.2 še ni objavljena."
     },
     {
       "id": "claude-opus-46",

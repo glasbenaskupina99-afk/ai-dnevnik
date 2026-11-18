@@ -49,7 +49,11 @@ const articlesDir = path.join(ROOT, "clanek");
 fs.mkdirSync(articlesDir, { recursive: true });
 
 const isRemote = (url = "") => /^https?:\/\//.test(url);
-const absImage = (url) => (isRemote(url) ? url : `${SITE_URL}/${url}`);
+const absImage = (url) => (!url ? `${SITE_URL}/favicon.svg` : isRemote(url) ? url : `${SITE_URL}/${url}`);
+const imgOrArt = (item, extra = "") =>
+  item.imageUrl
+    ? `<img src="${escapeHtml(pageImage(item.imageUrl))}" alt="${escapeHtml(item.imageAlt)}"${extra} data-art-category="${item.category}" data-art-seed="${item.id}" referrerpolicy="no-referrer" />`
+    : `<span class="art-fallback" data-art-category="${item.category}" data-art-seed="${item.id}"></span>`;
 const pageImage = (url) => (isRemote(url) ? url : `../${url}`);
 
 const LOGO_SVG = `<svg width="32" height="32" viewBox="0 0 64 64" fill="none">
@@ -95,7 +99,7 @@ for (const article of articles) {
     .map(
       (r) => `
           <a class="related-card cat-${r.category}" href="${r.id}.html">
-            <div class="card-art"><img src="${escapeHtml(pageImage(r.imageUrl))}" alt="${escapeHtml(r.imageAlt)}" loading="lazy" data-art-category="${r.category}" data-art-seed="${r.id}" referrerpolicy="no-referrer" /></div>
+            <div class="card-art">${imgOrArt(r, ' loading="lazy"')}</div>
             <span class="badge cat-${r.category}">${escapeHtml(categoryLabels[r.category] || r.category)}</span>
             <h3>${escapeHtml(r.title)}</h3>
             <div class="card-meta"><span>${escapeHtml(r.dateLabel)}</span><span>${r.readMinutes} min</span></div>
@@ -155,9 +159,9 @@ for (const article of articles) {
 
   <figure class="article-hero modal-figure">
     <div class="modal-art">
-      <img src="${escapeHtml(pageImage(article.imageUrl))}" alt="${escapeHtml(article.imageAlt)}" data-art-category="${article.category}" data-art-seed="${article.id}" referrerpolicy="no-referrer" />
+      ${imgOrArt(article)}
     </div>
-    <figcaption class="modal-photo-credit">${escapeHtml(article.imageCredit)} (Wikimedia Commons)</figcaption>
+    <figcaption class="modal-photo-credit">${escapeHtml(article.imageCredit)}${article.imageUrl ? " (Wikimedia Commons)" : ""}</figcaption>
   </figure>
 
   <main class="container subpage-shell">

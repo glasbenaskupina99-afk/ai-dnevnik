@@ -1,6 +1,6 @@
 // Samodejno ustvarjeno iz content/articles.json prek scripts/build-content.mjs
 window.AI_DNEVNIK_DATA = {
-  "updatedAt": "2026-11-18T00:45:00+01:00",
+  "updatedAt": "2026-11-18T01:55:00+01:00",
   "categoryLabels": {
     "modeli": "Modeli in raziskave",
     "slovenija": "Slovenija in EU",
@@ -9,6 +9,16 @@ window.AI_DNEVNIK_DATA = {
     "zanimivo": "Zanimivo z X"
   },
   "tickerItems": [
+    {
+      "time": "01:50",
+      "text": "Claude Fable 5.2 vodi indeks Artificial Analysis s 65 točkami (Max), pred Gemini 4 Carbon (60)",
+      "articleId": "claude-fable-52"
+    },
+    {
+      "time": "08:42",
+      "text": "RTV SLO: decembra prva nagrada Pascal za literaturo, ki jo je napisala UI; prevajalci zahtevajo označevanje",
+      "articleId": "prevajalci-pisatelji-ui-nagrada-pascal"
+    },
     {
       "time": "00:40",
       "text": "OpenAI izdal GPT-6.2 Astra (8 $/40 $, 2. mesto AA v5) in GPT-6.2 Sol z načinom Ultrafast",
@@ -46,6 +56,135 @@ window.AI_DNEVNIK_DATA = {
     }
   ],
   "articles": [
+    {
+      "id": "prevajalci-pisatelji-ui-nagrada-pascal",
+      "title": "Prevajalci in pisatelji o UI: decembra prva nagrada »Pascal« za literaturo izpod peresa umetne inteligence",
+      "excerpt": "V pogovoru na TV Slovenija so strokovnjaki opozorili na upad naročil za tehnično prevajanje, na zahtevo po označevanju knjig, prevedenih z UI, in na odprti slovenski model GaMS, ki podatke ohranja doma.",
+      "category": "slovenija",
+      "dateLabel": "17. november 2026",
+      "timestamp": "2026-11-17T08:42:00",
+      "readMinutes": 4,
+      "views": 2140,
+      "isHeroLead": false,
+      "breaking": false,
+      "variant": "slovenija",
+      "imageUrl": "",
+      "imageAlt": "Ilustracija rubrike Slovenija in EU",
+      "imageCredit": "Ilustracija: AI Dnevnik",
+      "tags": [
+        "Prevajanje",
+        "Književnost",
+        "GaMS",
+        "Slovenščina"
+      ],
+      "takeaways": [
+        "Decembra bodo prvič podelili nagrado Pascal za literarna dela, ki jih je napisala umetna inteligenca.",
+        "Naročila za tehnično prevajanje so močno upadla, ker podjetja besedila prevajajo kar sama z orodji UI.",
+        "Odprti slovenski model GaMS je brezplačen in ga je mogoče namestiti lokalno, tako da podatki ostanejo pri uporabniku."
+      ],
+      "body": [
+        "V pogovorni oddaji TV Slovenija o prevajanju in književnosti v času umetne inteligence so sodelovali raziskovalec računalniškega jezikoslovja in prevajalec Jan Jona Javoršek, pisatelj in urednik Aljoša Harlamov, Amalija Maček z Oddelka za prevajalstvo Filozofske fakultete UL, prevajalec Borut Rismal ter Domen Vreš s Fakultete za računalništvo in informatiko UL.",
+        "Ena od novic pogovora je nagrada Pascal, ki jo bodo decembra prvič podelili za literarna dela »izpod peresa umetne inteligence«. Javoršek jo je označil za zanimiv in pravzaprav pozitiven razvoj, saj odpira vprašanje odgovornosti: avtorstvo je pri UI lahko zapleteno, odgovornost pa ne, saj jo za objavljeno nosita založnik in urednik. Harlamov je bil bolj odklonilen in je dejal, da knjige, za katero bi vedel, da jo je napisala UI, ne bi prebral.",
+        "Amalija Maček je opozorila, da je prevajalska stroka močno prizadeta. Naročila za tehnične prevode so strmo upadla, ker podjetja prevajajo sama, praški študijski program za prevajanje in tolmačenje pa se po njenih besedah zapira z januarjem 2027. V Nemčiji morajo knjige, prevedene z UI ali s pomočjo UI, že označiti, enako zahteva tudi Društvo slovenskih književnih prevajalcev. Za slovenščino je strojni prevod še vedno treba skrbno popraviti (post-editing).",
+        "Domen Vreš je predstavil GaMS, velik odprti jezikovni model za slovenščino, ki je brezplačno dostopen prek portala povejmo.si. Ker ga je mogoče namestiti lokalno, podatki ostanejo pri uporabniku, namenjen pa je predvsem prilagajanju za konkretne naloge v podjetjih, manj pa klepetu."
+      ],
+      "sources": [
+        {
+          "label": "RTV SLO — Krasni novi um: Prevodi in književnost v času umetne inteligence",
+          "url": "https://www.rtvslo.si/kultura/krasni-novi-um-prevodi-in-knjizevnost-v-casu-umetne-inteligence/800319"
+        }
+      ]
+    },
+    {
+      "id": "united-prepoved-ui-agentov",
+      "title": "United Airlines prepovedal osebne UI-agente: rezervacij, ki jih opravi agent, letalska družba ne bo več priznavala",
+      "excerpt": "Ameriški prevoznik omejuje nepooblaščene UI-asistente pri nakupu vozovnic in upravljanju rezervacij — tudi kadar jih potnik nadzira. Kot razloga navaja varnost in zasebnost.",
+      "category": "posel",
+      "dateLabel": "11. november 2026",
+      "timestamp": "2026-11-11T18:00:00",
+      "readMinutes": 3,
+      "views": 3870,
+      "isHeroLead": false,
+      "breaking": false,
+      "variant": "svet",
+      "imageUrl": "",
+      "imageAlt": "Ilustracija rubrike Posel in infrastruktura",
+      "imageCredit": "Ilustracija: AI Dnevnik",
+      "tags": [
+        "UI-agenti",
+        "Letalstvo",
+        "Zasebnost",
+        "United"
+      ],
+      "takeaways": [
+        "United omejuje nepooblaščene UI-agente na svojih digitalnih kanalih ter prek turističnih agencij in agregatorjev.",
+        "Rezervacije, ki jih ustvari ali spremeni UI-agent, lahko družba prekliče brez obvestila; za rezervacije pred 11. novembrom to ne velja.",
+        "Agenti lahko še vedno prikazujejo Unitedove cene, ne smejo pa dokončati nakupa v imenu stranke."
+      ],
+      "body": [
+        "Letalska družba United Airlines je 11. novembra objavila, da omejuje nepooblaščene UI-agente tretjih oseb pri rezervaciji letov in upravljanju rezervacij v imenu potnikov. Pravila za rezervacije, prodajo vozovnic in distribucijo so posodobili tako, da veljajo tudi za agente, ki jih uporabljajo turistične agencije in spletni agregatorji.",
+        "Kot razloga družba navaja varnost in zasebnost. Potnike opozarja, da z deljenjem prijavnih podatkov z osebnimi asistenti UI tvegajo razkritje občutljivih podatkov, dejanja takšnih orodij pa lahko privedejo do nenamernih nakupov, sprememb računa ali porabe milj v programu MileagePlus. Omejitev velja tudi, kadar agenta neposredno nadzira potnik.",
+        "Med rezervacijami, ki jih United lahko prekliče brez obvestila, so zdaj tudi tiste, ki jih je ustvaril ali spremenil UI-agent. Rezervacij, opravljenih pred 11. novembrom, zgolj zaradi uporabe agenta ne bodo preklicali. Agencije in platforme lahko lastna orodja UI uporabljajo le z Unitedovim dovoljenjem.",
+        "Prepoved ni nujno trajna: družba pravi, da bo tehnologijo še naprej spremljala. Podobne omejitve za nepooblaščene agente so po poročanju Digital Trends uvedli tudi Amazon in več velikih bank."
+      ],
+      "sources": [
+        {
+          "label": "Skift — United Airlines Moves to Block Personal AI Agents From Booking Flights",
+          "url": "https://skift.com/2026/11/11/united-airlines-moves-to-block-personal-ai-agents-from-booking-flights/"
+        },
+        {
+          "label": "AirlineGeeks — United Bans AI Agents From Booking Flights For Customers",
+          "url": "https://airlinegeeks.com/2026/11/11/united-bans-ai-agents-from-booking-flights-for-customers/"
+        },
+        {
+          "label": "Digital Trends — United Airlines is grounding AI travel agents",
+          "url": "https://digitaltrends.com/computing/united-airlines-is-grounding-ai-travel-agents-and-safety-is-just-one-of-the-concerns"
+        }
+      ]
+    },
+    {
+      "id": "cloudflare-kitesurf-odprta-koda",
+      "title": "Cloudflare odprl kodo brskalnika Kitesurf: lahek spletni pogon za UI-agente brez Chromiuma",
+      "excerpt": "Eksperimentalni brskalnik, napisan v Rustu in zgrajen za platformo Workers, je zdaj na voljo pod licenco Apache 2.0. Cloudflare ga za zahtevnejše strani še ne priporoča kot edino rešitev.",
+      "category": "modeli",
+      "dateLabel": "13. november 2026",
+      "timestamp": "2026-11-13T17:00:00",
+      "readMinutes": 3,
+      "views": 2610,
+      "isHeroLead": false,
+      "breaking": false,
+      "variant": "varnost",
+      "imageUrl": "",
+      "imageAlt": "Ilustracija rubrike Modeli in raziskave",
+      "imageCredit": "Ilustracija: AI Dnevnik",
+      "tags": [
+        "Cloudflare",
+        "Brskalniki",
+        "UI-agenti",
+        "Odprta koda"
+      ],
+      "takeaways": [
+        "Kitesurf je odprtokoden pod licenco Apache 2.0; kodo lahko razvijalci poganjajo lokalno ali na Cloudflare Workers.",
+        "Pogon teče v izoliranih okoljih V8 in ne temelji na Chromiumu, sestavljen pa je iz odprtih komponent (Blitz, Stylo, Boa).",
+        "Ne podpira videa, WebGL in trajnih prijavljenih sej, zato Cloudflare za zahtevne strani svetuje Chromium kot rezervo."
+      ],
+      "body": [
+        "Cloudflare je 13. novembra objavil izvorno kodo brskalnika Kitesurf, ki ga je razvil posebej za UI-agente. Koda je na GitHubu pod licenco Apache 2.0, zato jo lahko razvijalci berejo, poganjajo lokalno, spreminjajo in namestijo na lastno instanco v okolju Cloudflare Workers.",
+        "Za razliko od večine orodij za avtomatizirano brskanje Kitesurf ne uporablja Chromiuma. Teče v izoliranih okoljih V8 na platformi Workers in je sestavljen iz odprtokodnih gradnikov: modularnega izrisovalnika Blitz, Firefoxovega razčlenjevalnika CSS Stylo in pogona JavaScript Boa. Projekt se je začel kot prenos odprtokodnega pogona Obscura, napisanega v Rustu.",
+        "Cloudflare poudarja, da je brskalnik še v intenzivnem razvoju. Ne podpira videa, WebGL, preverjanj botov na podlagi prstnih odtisov TLS in trajnih prijavljenih sej, zato za zahtevnejše strani priporoča Chromium kot rezervno možnost.",
+        "Komentatorji opozarjajo še na varnost: pri lastni namestitvi je ta v rokah upravljavca, saj pogon privzeto nima overjanja in je dostopen prek javnega URL-ja."
+      ],
+      "sources": [
+        {
+          "label": "Cloudflare Blog — Kitesurf is now open source",
+          "url": "https://blog.cloudflare.com/kitesurf-open-source/"
+        },
+        {
+          "label": "Phoronix — Cloudflare Open Sources Kitesurf",
+          "url": "https://phoronix.com/news/Cloudflare-Kitesurf-Open-Source"
+        }
+      ]
+    },
     {
       "id": "nvidia-huang-odstop",
       "title": "Tektonski premik pri Nvidii: Jensen Huang po 33 letih zapušča čelo družbe",
