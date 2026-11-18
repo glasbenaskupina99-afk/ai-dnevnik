@@ -252,6 +252,8 @@ function renderHero() {
   const isDefaultView = state.category === "vse" && state.search.trim() === "" && state.sort === "newest";
   els.heroSection.classList.toggle("hidden", !isDefaultView);
   els.pulseSection.classList.toggle("hidden", !isDefaultView);
+  // Povzetek tedna sodi le na privzeto naslovnico; pri rubriki ali iskanju bi zakril zadetke.
+  if (els.weeklySection) els.weeklySection.classList.toggle("hidden", !isDefaultView);
 
   if (!isDefaultView || !ARTICLES.length) return;
 
@@ -884,8 +886,17 @@ function bindEvents() {
 
   els.categoryTabs.addEventListener("click", (e) => {
     const tab = e.target.closest(".nav-tab");
-    if (!tab || !tab.dataset.category) return;
+    if (!tab) return;
+    if (!tab.dataset.category) {
+      // »Povzetek tedna« je viden le na privzeti naslovnici — najprej ponastavi filtre.
+      if (tab.getAttribute("href") === "#weekly-summary-section" && els.weeklySection.classList.contains("hidden")) {
+        resetAllFilters();
+      }
+      return;
+    }
     setCategory(tab.dataset.category);
+    const mainTop = document.getElementById("main").getBoundingClientRect().top + window.scrollY;
+    if (window.scrollY > mainTop) window.scrollTo({ top: mainTop - 8, behavior: "smooth" });
   });
 
   document.querySelectorAll(".footer-cat-link").forEach((btn) => {

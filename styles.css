@@ -1277,6 +1277,11 @@ a {
   padding-bottom: 64px;
 }
 
+/* Pri izbrani rubriki ali iskanju so novice takoj pod vrstico filtra */
+.filter-banner:not(.hidden) ~ .editorial-layout {
+  margin-top: 8px;
+}
+
 .section-head {
   display: flex;
   align-items: flex-end;
