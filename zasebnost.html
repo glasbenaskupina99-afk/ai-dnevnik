@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="sl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politika zasebnosti in piškotki — AI Dnevnik</title>
+  <meta name="description" content="Informacije o obdelavi osebnih podatkov, prijavi na e-novice, lokalni shrambi brskalnika in analitiki brez piškotkov na portalu AI Dnevnik." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="masthead">
+    <div class="container masthead-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
+            <rect x="2" y="2" width="60" height="60" rx="14" fill="#12151c" />
+            <rect x="2.75" y="2.75" width="58.5" height="58.5" rx="13.25" stroke="#ffffff" stroke-opacity="0.14" stroke-width="1.5" />
+            <rect x="21" y="45" width="22" height="5.5" rx="2.5" fill="#faf9f6" />
+            <path d="M22 43L18.5 31L32 16L45.5 31L42 43H22Z" fill="#faf9f6" />
+            <line x1="32" y1="31.5" x2="32" y2="16.5" stroke="#12151c" stroke-width="2.4" stroke-linecap="round" />
+            <circle cx="32" cy="32" r="4.5" fill="#1d4ed8" />
+            <circle cx="32" cy="32" r="1.9" fill="#93c5fd" />
+            <circle cx="32" cy="11.5" r="3.6" fill="#dc2626" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>AI DNEVNIK</strong>
+          <small>UMETNA INTELIGENCA · SLOVENIJA &amp; SVET</small>
+        </span>
+      </a>
+      <div class="subpage-actions">
+        <a href="index.html" class="icon-action-btn">← Nazaj na novice</a>
+        <button type="button" class="utility-btn" id="theme-toggle"><span id="theme-label">Temni način</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container subpage-shell">
+    <article class="prose-card">
+      <span class="section-kicker">VARSTVO PODATKOV (GDPR)</span>
+      <h1 class="standalone-title">Politika zasebnosti in piškotki</h1>
+      <p>Zadnja posodobitev: 13. november 2026</p>
+
+      <div class="info-callout">
+        <strong>Upravljavec podatkov (osnutek pred objavo):</strong><br />
+        AI Dnevnik — vnesite naziv izdajatelja oz. podjetja in naslov<br />
+        E-pošta za varstvo podatkov: <a href="mailto:urednistvo@aidnevnik.si">urednistvo@aidnevnik.si</a> (fiktivni naslov — zamenjajte pred objavo)
+      </div>
+
+      <h2>1. Katere podatke zbiramo</h2>
+      <ul>
+        <li><strong>Prijava na tedenske e-novice:</strong> zbiramo izključno vaš e-poštni naslov na podlagi vaše izrecne privolitve (potrditveno polje ob obrazcu). Uporabljamo ga samo za pošiljanje tedenskega pregleda novic portala AI Dnevnik.</li>
+        <li><strong>Lokalna shramba brskalnika (<code>localStorage</code>):</strong> v vašem brskalniku shranjujemo le izbrano barvno temo (svetli/temni način) ter seznam člankov, ki ste jih shranili pod <em>Shranjeno</em>. Ti podatki se ne pošiljajo na naše strežnike.</li>
+      </ul>
+
+      <h2>2. Piškotki in merjenje obiska</h2>
+      <p>Portal AI Dnevnik ne uporablja oglaševalskih ali sledilnih piškotkov tretjih oseb. Če je v konfiguraciji vključena analitika obiska (npr. Plausible ali Umami), deluje brez piškotkov in brez shranjevanja osebnih podatkov obiskovalcev.</p>
+
+      <h2>3. Vaše pravice po GDPR</h2>
+      <p>Svojo privolitev za prejemanje e-novic lahko kadarkoli prekličete s klikom na povezavo za odjavo v vsakem sporočilu ali z zahtevo na <a href="mailto:urednistvo@aidnevnik.si">urednistvo@aidnevnik.si</a>. Prav tako lahko kadarkoli zahtevate vpogled, popravek ali izbris svojih podatkov.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <span>© 2026 AI Dnevnik — Portal za umetno inteligenco.</span>
+      <div class="subpage-footer-links">
+        <a href="index.html">Naslovnica</a>
+        <a href="uredniska-nacela.html">Uredniška načela</a>
+        <a href="metodologija.html">Metodologija</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const apply = (t) => {
+      document.documentElement.setAttribute("data-theme", t);
+      localStorage.setItem("aidnevnik_theme", t);
+      document.getElementById("theme-label").textContent = t === "dark" ? "Svetli način" : "Temni način";
+    };
+    apply(localStorage.getItem("aidnevnik_theme") || "light");
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      apply(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark");
+    });
+  </script>
+</body>
+</html>

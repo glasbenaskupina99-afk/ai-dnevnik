@@ -1,0 +1,6 @@
+# Začasne in izhodne datoteke za družbena omrežja / predpomnilniki
+output/
+scripts/__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

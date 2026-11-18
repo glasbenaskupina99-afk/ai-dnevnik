@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metodologija meritev — AI Dnevnik</title>
+  <meta name="description" content="Pojasnilo virov in metodologije za podatke v razdelku Utrip UI v številkah na portalu AI Dnevnik." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="masthead">
+    <div class="container masthead-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
+            <rect x="2" y="2" width="60" height="60" rx="14" fill="#12151c" />
+            <rect x="2.75" y="2.75" width="58.5" height="58.5" rx="13.25" stroke="#ffffff" stroke-opacity="0.14" stroke-width="1.5" />
+            <rect x="21" y="45" width="22" height="5.5" rx="2.5" fill="#faf9f6" />
+            <path d="M22 43L18.5 31L32 16L45.5 31L42 43H22Z" fill="#faf9f6" />
+            <line x1="32" y1="31.5" x2="32" y2="16.5" stroke="#12151c" stroke-width="2.4" stroke-linecap="round" />
+            <circle cx="32" cy="32" r="4.5" fill="#1d4ed8" />
+            <circle cx="32" cy="32" r="1.9" fill="#93c5fd" />
+            <circle cx="32" cy="11.5" r="3.6" fill="#dc2626" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>AI DNEVNIK</strong>
+          <small>UMETNA INTELIGENCA · SLOVENIJA &amp; SVET</small>
+        </span>
+      </a>
+      <div class="subpage-actions">
+        <a href="index.html" class="icon-action-btn">← Nazaj na novice</a>
+        <button type="button" class="utility-btn" id="theme-toggle"><span id="theme-label">Temni način</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container subpage-shell">
+    <article class="prose-card">
+      <span class="section-kicker">PODATKI IN KAZALNIKI</span>
+      <h1 class="standalone-title">Metodologija meritev (Utrip UI v številkah)</h1>
+      <p>Številke v pasici <strong>Utrip UI v številkah</strong> na naslovni strani povzemajo ključne preverljive kazalnike o sprejemanju umetne inteligence v Sloveniji in globalni infrastrukturi:</p>
+
+      <ul>
+        <li><strong>Uporaba generativne UI med prebivalci Slovenije (70 %+):</strong> temelji na javno objavljenih izsledkih raziskav <em>Mediana TGI</em> in poročanjih ob dogodku <em>AI WEEK Slovenija</em> (november 2026).</li>
+        <li><strong>Uvajanje UI v slovenskih podjetjih (38 %):</strong> povzeto po letnih podatkih <em>Statističnega urada RS (SURS)</em> in zborničnih analizah <em>GZS</em> za podjetja z 10 ali več zaposlenimi.</li>
+        <li><strong>Cena API za jezikovne modele (npr. Gemini 4 Hydrogen — 1,50 $ / 1M vhodnih tokenov):</strong> povzeto po javnih tehničnih najavah in objavljenih cenikih ponudnikov.</li>
+        <li><strong>Energetska zmogljivost podatkovnih centrov (910 MW):</strong> temelji na uradnih borznih in pogodbenih objavah podjetij (npr. Riot Platforms / Anthropic v Teksasu).</li>
+      </ul>
+
+      <h2>Posodabljanje kazalnikov</h2>
+      <p>Kazalnike na naslovnici osvežujemo ob objavi novih uradnih statističnih poročil ali večjih spremembah na trgu infrastrukture in modelov UI. Vsi podatki v člankih vsebujejo povezavo do izvirnega poročila.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <span>© 2026 AI Dnevnik — Portal za umetno inteligenco.</span>
+      <div class="subpage-footer-links">
+        <a href="index.html">Naslovnica</a>
+        <a href="uredniska-nacela.html">Uredniška načela</a>
+        <a href="zasebnost.html">Politika zasebnosti</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="glossary.js"></script>
+  <script>
+    const apply = (t) => {
+      document.documentElement.setAttribute("data-theme", t);
+      localStorage.setItem("aidnevnik_theme", t);
+      document.getElementById("theme-label").textContent = t === "dark" ? "Svetli način" : "Temni način";
+    };
+    apply(localStorage.getItem("aidnevnik_theme") || "light");
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      apply(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark");
+    });
+  </script>
+</body>
+</html>
