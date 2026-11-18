@@ -624,7 +624,7 @@ window.AI_DNEVNIK_DATA = {
       "readMinutes": 3,
       "views": 3470,
       "variant": "varnost",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Electrical_Substation.JPG",
+      "imageUrl": "images/ai-forts-energetika.webp",
       "imageAlt": "Visokonapetostna razdelilna transformatorska postaja",
       "imageCredit": "Foto: Wtshymanski / Javna domena",
       "tags": [
@@ -651,7 +651,8 @@ window.AI_DNEVNIK_DATA = {
           "label": "Fast Company — AI Hardware & Inference Speedups (Cerebras, d-Matrix)",
           "url": "https://www.fastcompany.com/91612044/foundational-ai-next-big-things-in-tech-2026"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Electrical_Substation.JPG"
     },
     {
       "id": "tozba-varnost-ui-san-francisco",
