@@ -10,6 +10,19 @@ const contentPath = path.join(ROOT, "content", "articles.json");
 const raw = JSON.parse(fs.readFileSync(contentPath, "utf8"));
 const { categoryLabels, tickerItems, articles, updatedAt } = raw;
 
+// Časi člankov so zapisani v ljubljanskem času brez časovnega pasu (npr. "2026-11-19T01:00:00").
+// Dodamo pravi zamik (CET +01:00 / CEST +02:00), da rezultat ni odvisen od računalnika, ki gradi.
+function withTz(ts = "") {
+  if (!ts || /([zZ]|[+-]\d{2}:?\d{2})$/.test(ts)) return ts;
+  const asUtc = new Date(`${ts}Z`);
+  const name = new Intl.DateTimeFormat("en-US", { timeZone: "Europe/Ljubljana", timeZoneName: "longOffset" })
+    .formatToParts(asUtc)
+    .find((p) => p.type === "timeZoneName").value; // npr. "GMT+01:00"
+  const offset = name === "GMT" ? "+00:00" : name.replace("GMT", "");
+  return `${ts}${offset}`;
+}
+const tsDate = (ts) => new Date(withTz(ts));
+
 function escapeHtml(str = "") {
   return String(str)
     .replace(/&/g, "&amp;")
@@ -68,7 +81,7 @@ const LOGO_SVG = `<svg width="32" height="32" viewBox="0 0 64 64" fill="none">
           </svg>`;
 
 function relatedFor(article) {
-  const byDate = (x, y) => new Date(y.timestamp) - new Date(x.timestamp);
+  const byDate = (x, y) => tsDate(y.timestamp) - tsDate(x.timestamp);
   const same = articles.filter((a) => a.id !== article.id && a.category === article.category).sort(byDate);
   const others = articles.filter((a) => a.id !== article.id && a.category !== article.category).sort(byDate);
   return [...same, ...others].slice(0, 3);
@@ -84,8 +97,8 @@ for (const article of articles) {
     headline: article.title,
     description: article.excerpt,
     image: [ogImage],
-    datePublished: article.timestamp,
-    dateModified: article.timestamp,
+    datePublished: withTz(article.timestamp),
+    dateModified: withTz(article.timestamp),
     inLanguage: "sl",
     publisher: {
       "@type": "Organization",
@@ -343,11 +356,11 @@ fs.writeFileSync(path.join(ROOT, "robots.txt"), robots, "utf8");
 
 // 5. Ustvari RSS 2.0 vir (rss.xml) za 25 najnovejših člankov
 const rssItems = [...articles]
-  .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
+  .sort((a, b) => tsDate(b.timestamp) - tsDate(a.timestamp))
   .slice(0, 25)
   .map((a) => {
     const link = `${SITE_URL}/clanek/${a.id}.html`;
-    const pubDate = new Date(a.timestamp).toUTCString();
+    const pubDate = tsDate(a.timestamp).toUTCString();
     const cat = categoryLabels[a.category] || a.category;
     return `    <item>
       <title>${escapeHtml(a.title)}</title>
@@ -367,7 +380,7 @@ const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
     <link>${SITE_URL}/</link>
     <description>Slovenski portal za najnovejše novice, analize in primerjave modelov s področja umetne inteligence.</description>
     <language>sl</language>
-    <lastBuildDate>${new Date(updatedAt).toUTCString()}</lastBuildDate>
+    <lastBuildDate>${tsDate(updatedAt).toUTCString()}</lastBuildDate>
     <atom:link href="${SITE_URL}/rss.xml" rel="self" type="application/rss+xml" />
 ${rssItems}
   </channel>

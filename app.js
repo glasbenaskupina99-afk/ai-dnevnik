@@ -973,6 +973,15 @@ function init() {
     window.annotateGlossary(els.pulseSection);
   }
   bindEvents();
+  // Ob vrnitvi z gumbom »nazaj« (predpomnilnik brskalnika) ali spremembi v drugem zavihku
+  // ponovno preberi shranjene članke, da števec in oznake niso zastareli.
+  const refreshBookmarks = () => {
+    state.bookmarks = readJson("aidnevnik_bookmarks", []);
+    saveBookmarks();
+    renderAll();
+  };
+  window.addEventListener("pageshow", (e) => { if (e.persisted) refreshBookmarks(); });
+  window.addEventListener("storage", (e) => { if (e.key === "aidnevnik_bookmarks") refreshBookmarks(); });
   handleHashRoute();
   initCookielessAnalytics();
 }
