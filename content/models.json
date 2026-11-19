@@ -1,17 +1,35 @@
 {
-  "updatedAt": "2026-11-18",
+  "updatedAt": "2026-11-19",
   "sources": [
     { "label": "Artificial Analysis — Independent AI Model & API Leaderboard", "url": "https://artificialanalysis.ai/" },
     { "label": "LMArena (Chatbot Arena) — Text / Conversational Elo", "url": "https://arena.ai/" }
   ],
   "models": [
     {
+      "id": "gemini-4-neon",
+      "name": "Gemini 4 Neon (xhigh)",
+      "provider": "Google",
+      "providerColor": "#2563eb",
+      "intelligenceIndex": 61,
+      "intelligenceNote": "61,0 (AA v5 · xhigh)",
+      "chatElo": null,
+      "chatEloErr": "",
+      "chatRank": null,
+      "inputPrice": 3.0,
+      "outputPrice": 15.0,
+      "priceDisplay": "3,00 $ / 15,00 $",
+      "speedLabel": "Hitro sklepanje (4 ravni)",
+      "contextLabel": "1M tokenov",
+      "availability": "Splošno (API / Pro & Ultra)",
+      "highlight": "Novi Googlov model (18. nov.): 61 točk na AA v5 pri ceni 3 $/15 $, idealno ravnovesje med Carbonom in Hydrogenom."
+    },
+    {
       "id": "gemini-4-carbon",
       "name": "Gemini 4 Carbon (High)",
       "provider": "Google",
       "providerColor": "#2563eb",
       "intelligenceIndex": 60,
-      "intelligenceNote": "~60 (AA v5)",
+      "intelligenceNote": "60,0 (AA v5)",
       "chatElo": 1526,
       "chatEloErr": "± 10",
       "chatRank": 1,
@@ -28,8 +46,8 @@
       "name": "GPT-6.2 Astra",
       "provider": "OpenAI",
       "providerColor": "#10b981",
-      "intelligenceIndex": null,
-      "intelligenceNote": "2. mesto AA v5 (nad Carbon)",
+      "intelligenceIndex": 62.1,
+      "intelligenceNote": "62,1 (AA v5 · 2. mesto)",
       "chatElo": null,
       "chatEloErr": "",
       "chatRank": null,
@@ -38,7 +56,7 @@
       "priceDisplay": "8,00 $ / 40,00 $",
       "speedLabel": "Standard / Ultrafast",
       "contextLabel": "1,05M tokenov",
-      "availability": "Splošno (API / ChatGPT)",
+      "availability": "Splošno (API / ChatGPT Work)",
       "highlight": "Novi paradni model OpenAI (17. nov.): 20 % cenejši od GPT-6 Astra, 97 % na GPQA Diamond in 2. mesto na AA v5."
     },
     {
@@ -136,18 +154,18 @@
       "name": "Claude Fable 5 (High) / 5.2",
       "provider": "Anthropic",
       "providerColor": "#ea580c",
-      "intelligenceIndex": null,
-      "intelligenceNote": "Vrh splošnih lestvic",
+      "intelligenceIndex": 64.6,
+      "intelligenceNote": "64,6 (AA v5 · 1. mesto)",
       "chatElo": 1504,
       "chatEloErr": "",
       "chatRank": 5,
-      "inputPrice": null,
-      "outputPrice": null,
-      "priceDisplay": "Po naročnini / API",
+      "inputPrice": 8.0,
+      "outputPrice": 40.0,
+      "priceDisplay": "8,00 $ / 40,00 $",
       "speedLabel": "Hiter odziv",
-      "contextLabel": "—",
+      "contextLabel": "1M tokenov",
       "availability": "Splošno na voljo",
-      "highlight": "Zelo priljubljen za vsakodnevno pisanje, urejanje besedil in tekoč pogovor."
+      "highlight": "Vodilni model na indeksu Artificial Analysis v5 (64,6) in priljubljen za pisanje ter dialog."
     },
     {
       "id": "claude-opus-46",

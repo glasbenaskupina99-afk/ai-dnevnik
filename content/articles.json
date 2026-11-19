@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T00:55:00+01:00",
+  "updatedAt": "2026-11-19T01:02:00+01:00",
   "categoryLabels": {
     "modeli": "Modeli in raziskave",
     "slovenija": "Slovenija in EU",
@@ -9,9 +9,19 @@
   },
   "tickerItems": [
     {
+      "time": "01:00",
+      "text": "Google DeepMind izdal Gemini 4 Neon: 61 točk na AA v5 (xhigh), 1M kontekst in cena 3 $/15 $ na 1M tokenov",
+      "articleId": "google-gemini-4-neon"
+    },
+    {
       "time": "00:50",
       "text": "Anthropic IPO določil ceno 83 $ na delnico (~1,5 bilijona $ vrednosti) + 26 mrd $ naložb; danes na Nasdaq kot ANT",
       "articleId": "anthropic-ipo-83-nasdaq-zacetek"
+    },
+    {
+      "time": "00:40",
+      "text": "OpenAI GPT-6.2 Astra (62,1 na AA v5 · 2. mesto, 8 $/40 $) in GPT-6.2 Sol že v ChatGPT Work, Codexu in API",
+      "articleId": "openai-gpt-62-astra-sol"
     },
     {
       "time": "00:30",
@@ -24,19 +34,9 @@
       "articleId": "altman-nadella-nadzor-infrastruktura"
     },
     {
-      "time": "20:10",
-      "text": "Humyn Labs zbral 47 mio $ za snemanje resničnega sveta z dvokamerno strojno opremo za ameriško robotiko",
-      "articleId": "humyn-labs-robotika-podatki"
-    },
-    {
       "time": "19:00",
       "text": "Z omrežja X: OpenAI priznal, da so GPT-6.2 spremenili nekaj dni pred izidom brez ponovnih testov vplivnežev",
       "articleId": "x-gpt62-preizkusi-zadnji-hip"
-    },
-    {
-      "time": "00:40",
-      "text": "OpenAI izdal GPT-6.2 Astra (8 $/40 $, 2. mesto AA v5) in GPT-6.2 Sol z načinom Ultrafast",
-      "articleId": "openai-gpt-62-astra-sol"
     },
     {
       "time": "00:35",
@@ -1510,7 +1510,7 @@
       "timestamp": "2026-11-19T00:30:00",
       "readMinutes": 3,
       "views": 6290,
-      "isHeroSide": true,
+      "isHeroSide": false,
       "breaking": false,
       "variant": "varnost",
       "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Citibank_K%C5%8Dbe_Branch.jpg/960px-Citibank_K%C5%8Dbe_Branch.jpg",
@@ -1651,6 +1651,52 @@
         {
           "label": "MLQ — OpenAI's GPT-6.2 Astra splits early testers after last-minute changes",
           "url": "https://mlq.ai/news/openais-gpt-62-astra-splits-its-early-testers-and-an-openai-lead-says-the-model-changed-in-its-last-days-before-launch/"
+        }
+      ]
+    },
+    {
+      "id": "google-gemini-4-neon",
+      "title": "Google DeepMind predstavil Gemini 4 Neon: vrhunsko sklepanje pri 61 točkah AA v5 in ceni 3 $ / 15 $",
+      "excerpt": "Novi model zapolnjuje prostor med Carbonom in Hydrogenom, prinaša 1-milijonski kontekst, štiri ravni razmišljanja do xhigh ter tesno povezavo z orodji Antigravity in aplikacijo Gemini.",
+      "category": "modeli",
+      "dateLabel": "19. november 2026",
+      "timestamp": "2026-11-19T01:00:00",
+      "readMinutes": 4,
+      "views": 8310,
+      "isHeroSide": true,
+      "breaking": false,
+      "variant": "gemini",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/SC-APC_fiber_optic_cable.jpg/960px-SC-APC_fiber_optic_cable.jpg",
+      "imageAlt": "Optični kabel za hiter prenos podatkov",
+      "imageCredit": "Foto: Alexceltare2 / CC BY-SA 4.0",
+      "tags": [
+        "Google DeepMind",
+        "Gemini 4 Neon",
+        "Benchmarki",
+        "API"
+      ],
+      "takeaways": [
+        "Google DeepMind je 18. novembra predstavil Gemini 4 Neon kot hitrejši in ugodnejši most med paradnim Carbonom in vsakodnevnim Hydrogenom.",
+        "Pri najvišji ravni razmišljanja (xhigh) je Neon dosegel 61 točk na indeksu Artificial Analysis v5 — tik za Claude Fable 5.2 (64,6) in GPT-6.2 Astra (62,1).",
+        "Cena API znaša 3 USD na milijon vhodnih (0,15 USD za predpomnjen vhod) in 15 USD na milijon izhodnih tokenov ob enotnem milijonskem kontekstu."
+      ],
+      "body": [
+        "Le nekaj dni po predstavitvi modelov Gemini 4 Hydrogen in splošnem odprtju modela Carbon je Google DeepMind 18. novembra svojo četrto generacijo dopolnil še z modelom Gemini 4 Neon. Zasnovan je kot zlato ravnovesje med najglobljim analitičnim sklepanjem in hitrostjo za pogoste inženirske, analitične ter znanstvene delovne tokove.",
+        "Model temelji na arhitekturi Gemini 4 Carbon, podpira besedilo, slike, zvok in video v enotnem kontekstnem oknu do milijona tokenov ter omogoča natančno nastavljanje napora sklepanja na štirih stopnjah (Low, Medium, High in Extra High). Pri stopnji xhigh je na neodvisnem indeksu inteligence Artificial Analysis v5 zbral 61 točk, kar ga postavlja tik za vodilna modela Claude Fable 5.2 in GPT-6.2 Astra.",
+        "Z izjemno konkurenčno ceno 3 dolarje na milijon vhodnih (0,15 dolarja za predpomnjen vhod) in 15 dolarjev na milijon izhodnih tokenov je Gemini 4 Neon že vključen v razvijalska orodja Google Antigravity — tudi v kombiniranem načinu Orchestrator (Neon + Hydrogen) — ter se postopoma uvaja v aplikacijo Gemini za naročnike paketov Google AI Pro in Ultra."
+      ],
+      "sources": [
+        {
+          "label": "Google Blog — Introducing Gemini 4 Neon",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+        },
+        {
+          "label": "Google DeepMind — Gemini 4 Neon Model Card",
+          "url": "https://deepmind.google/models/model-cards/gemini-4-neon/"
+        },
+        {
+          "label": "9to5Google — Google announces Gemini 4 Neon",
+          "url": "https://9to5google.com/2026/11/18/gemini-4-neon-announcement/"
         }
       ]
     }
