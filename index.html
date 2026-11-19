@@ -7,84 +7,97 @@
   <meta name="description" content="AI Dnevnik — slovenski portal za najnovejše novice, analize in preglede s področja umetne inteligence, jezikovnih modelov, robotike in evropske regulacije." />
   <link rel="canonical" href="https://aidnevnik.si/" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="theme-color" content="#f7f4ee" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="AI Dnevnik" />
   <meta property="og:title" content="AI Dnevnik — Najnovejše novice s področja umetne inteligence" />
   <meta property="og:description" content="Slovenski portal za najnovejše novice, analize in preglede s področja umetne inteligence, jezikovnih modelov, robotike in evropske regulacije." />
   <meta property="og:url" content="https://aidnevnik.si/" />
   <meta name="twitter:card" content="summary_large_image" />
+  <script>
+    /* Tema se nastavi pred izrisom, da ni utripa svetle strani v temnem načinu. */
+    try { document.documentElement.setAttribute("data-theme", localStorage.getItem("aidnevnik_theme") || "light"); } catch (e) {}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Preskoči na vsebino</a>
+
   <!-- Zgornja informativna vrstica -->
   <div class="utility-bar">
     <div class="container utility-inner">
       <div class="utility-left">
         <span class="live-dot" aria-hidden="true"></span>
-        <span class="utility-date">Četrtek, 19. november 2026</span>
+        <span class="utility-date"><span class="date-long">Četrtek, 19. november 2026</span><span class="date-short">19. 11. 2026</span></span>
         <span class="utility-sep">·</span>
-        <span class="utility-edition">Zadnja posodobitev ob 01:02 CET</span>
+        <span class="utility-edition">Zadnja posodobitev ob 01:08 CET</span>
       </div>
       <div class="utility-right">
         <button type="button" class="utility-btn" id="bookmarks-toggle" aria-label="Prikaži shranjene članke">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-          <span>Shranjeno (<span id="bookmark-count">0</span>)</span>
+          <span class="btn-label">Shranjeno</span>
+          <span class="count-pill" id="bookmark-count">0</span>
         </button>
         <button type="button" class="utility-btn" id="theme-toggle" aria-label="Preklopi med svetlim in temnim načinom">
           <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
           <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-          <span id="theme-label">Temni način</span>
+          <span class="btn-label" id="theme-label">Temni način</span>
         </button>
       </div>
     </div>
   </div>
 
-  <!-- Glava portala -->
-  <header class="masthead">
-    <div class="container masthead-inner">
-      <div class="brand-wrap">
-        <a href="#" class="brand-logo" id="reset-home">
-          <span class="brand-mark" aria-hidden="true">
-            <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
-              <rect x="2" y="2" width="60" height="60" rx="14" fill="#12151c" />
-              <rect x="2.75" y="2.75" width="58.5" height="58.5" rx="13.25" stroke="#ffffff" stroke-opacity="0.14" stroke-width="1.5" />
-              <rect x="21" y="45" width="22" height="5.5" rx="2.5" fill="#faf9f6" />
-              <path d="M22 43L18.5 31L32 16L45.5 31L42 43H22Z" fill="#faf9f6" />
-              <line x1="32" y1="31.5" x2="32" y2="16.5" stroke="#12151c" stroke-width="2.4" stroke-linecap="round" />
-              <circle cx="32" cy="32" r="4.5" fill="#1d4ed8" />
-              <circle cx="32" cy="32" r="1.9" fill="#93c5fd" />
-              <circle cx="32" cy="11.5" r="3.6" fill="#dc2626" />
-            </svg>
-          </span>
-          <span class="brand-text">
-            <strong>AI DNEVNIK</strong>
-            <small>UMETNA INTELIGENCA · SLOVENIJA &amp; SVET</small>
-          </span>
-        </a>
+  <!-- Časopisna glava -->
+  <header class="masthead masthead-home">
+    <div class="container masthead-top">
+      <div class="masthead-edition">
+        <span>Spletna izdaja</span>
+        <strong>Ljubljana · Leto I</strong>
       </div>
+
+      <a href="#" class="brand-logo brand-logo-lg" id="reset-home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="44" height="44" viewBox="0 0 64 64" fill="none">
+            <rect x="2" y="2" width="60" height="60" rx="14" fill="#16140f" />
+            <rect x="2.75" y="2.75" width="58.5" height="58.5" rx="13.25" stroke="#ffffff" stroke-opacity="0.14" stroke-width="1.5" />
+            <rect x="21" y="45" width="22" height="5.5" rx="2.5" fill="#f7f4ee" />
+            <path d="M22 43L18.5 31L32 16L45.5 31L42 43H22Z" fill="#f7f4ee" />
+            <line x1="32" y1="31.5" x2="32" y2="16.5" stroke="#16140f" stroke-width="2.4" stroke-linecap="round" />
+            <circle cx="32" cy="32" r="4.5" fill="#2a4f8f" />
+            <circle cx="32" cy="32" r="1.9" fill="#c9d7f2" />
+            <circle cx="32" cy="11.5" r="3.6" fill="#b3361f" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>AI Dnevnik</strong>
+          <small>Umetna inteligenca · Slovenija &amp; svet</small>
+        </span>
+      </a>
 
       <div class="search-wrap">
         <label for="search-input" class="sr-only">Iskanje po novicah</label>
         <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        <input type="search" id="search-input" placeholder="Išči novice, modele, podjetja (npr. Gemini, Slovenija, NVIDIA)..." autocomplete="off" />
+        <input type="search" id="search-input" placeholder="Išči novice, modele, podjetja …" autocomplete="off" />
         <button type="button" id="clear-search" class="clear-search hidden" aria-label="Počisti iskanje">×</button>
       </div>
     </div>
 
     <!-- Navigacija po rubrikah -->
     <nav class="category-nav" aria-label="Rubrike">
-      <div class="container nav-scroll" id="category-tabs">
-        <button type="button" class="nav-tab active" data-category="vse">Vse novice</button>
-        <button type="button" class="nav-tab" data-category="modeli">Modeli in raziskave</button>
-        <button type="button" class="nav-tab" data-category="slovenija">Slovenija in EU</button>
-        <button type="button" class="nav-tab" data-category="posel">Posel in infrastruktura</button>
-        <button type="button" class="nav-tab" data-category="robotika">Robotika in znanost</button>
-        <button type="button" class="nav-tab" data-category="zanimivo">Zanimivo z X</button>
-        <a href="#weekly-summary-section" class="nav-tab nav-tab-highlight nav-tab-push">Povzetek tedna</a>
-        <a href="#models-section" class="nav-tab nav-tab-highlight">Primerjava modelov</a>
+      <div class="container">
+        <div class="nav-scroll" id="category-tabs">
+          <button type="button" class="nav-tab active" data-category="vse">Vse novice</button>
+          <button type="button" class="nav-tab cat-modeli" data-category="modeli"><i class="cat-dot" aria-hidden="true"></i>Modeli in raziskave</button>
+          <button type="button" class="nav-tab cat-slovenija" data-category="slovenija"><i class="cat-dot" aria-hidden="true"></i>Slovenija in EU</button>
+          <button type="button" class="nav-tab cat-posel" data-category="posel"><i class="cat-dot" aria-hidden="true"></i>Posel in infrastruktura</button>
+          <button type="button" class="nav-tab cat-robotika" data-category="robotika"><i class="cat-dot" aria-hidden="true"></i>Robotika in znanost</button>
+          <button type="button" class="nav-tab cat-zanimivo" data-category="zanimivo"><i class="cat-dot" aria-hidden="true"></i>Zanimivo z X</button>
+          <a href="#weekly-summary-section" class="nav-tab nav-tab-highlight nav-tab-push">Povzetek tedna</a>
+          <a href="#models-section" class="nav-tab nav-tab-highlight">Primerjava modelov</a>
+        </div>
       </div>
     </nav>
   </header>
@@ -92,14 +105,19 @@
   <!-- Trak z udarnimi vestmi -->
   <div class="ticker-bar" aria-label="Zadnje vesti">
     <div class="container ticker-inner">
-      <span class="ticker-label">V ŽIVO</span>
-      <div class="ticker-track" id="ticker-track">
-        <!-- Napolnjeno z JS -->
+      <span class="ticker-label"><span class="live-dot" aria-hidden="true"></span>V živo</span>
+      <div class="ticker-viewport">
+        <div class="ticker-track" id="ticker-track">
+          <!-- Napolnjeno z JS -->
+        </div>
       </div>
     </div>
   </div>
 
-  <main class="container main-content">
+  <main class="container main-content" id="main">
+    <!-- Oglasno mesto: pasica pod trakom »V živo« (namizje) -->
+    <div class="ad-slot ad-wide ad-billboard" data-slot="billboard" data-show="desktop"></div>
+
     <!-- Obvestilo o aktivnem filtru ali iskanju -->
     <div id="filter-banner" class="filter-banner hidden">
       <span id="filter-status-text"></span>
@@ -116,33 +134,44 @@
       </div>
     </section>
 
+    <!-- Oglasno mesto: pod glavno novico (mobilno) -->
+    <div class="ad-slot ad-wide" data-slot="mobile-top" data-show="mobile"></div>
+
     <!-- Trak s ključnimi številkami (Utrip UI) -->
     <section id="pulse-section" class="pulse-strip" aria-label="Utrip UI v številkah">
       <div class="pulse-header">
-        <span class="section-kicker">UTRIP UI V ŠTEVILKAH · NOVEMBER 2026</span>
+        <span class="section-kicker">Utrip UI v številkah · November 2026</span>
       </div>
       <div class="pulse-grid">
         <div class="pulse-card">
-          <div class="pulse-value">70 %+</div>
+          <div class="pulse-value">70<span class="pulse-unit">%+</span></div>
+          <div class="pulse-bar" aria-hidden="true"><span style="--v: 70%"></span></div>
+          <div class="pulse-compare">vsak četrti dnevno</div>
           <div class="pulse-label">prebivalcev Slovenije je v 2026 že uporabilo generativno UI; vsak četrti jo uporablja vsak dan.</div>
         </div>
         <div class="pulse-card">
-          <div class="pulse-value">38 %</div>
+          <div class="pulse-value">38<span class="pulse-unit">%</span></div>
+          <div class="pulse-bar" aria-hidden="true"><span style="--v: 38%"></span><span class="pulse-bar-ghost" style="--v: 22%"></span></div>
+          <div class="pulse-compare"><i class="sw sw-ghost"></i>lani 22 %</div>
           <div class="pulse-label">slovenskih podjetij z 10+ zaposlenimi že uporablja UI (skok z lanskih 22 %, a le 9 % ima formalne smernice).</div>
         </div>
         <div class="pulse-card">
-          <div class="pulse-value">1,50 $</div>
+          <div class="pulse-value">1,50<span class="pulse-unit">$</span></div>
+          <div class="pulse-bar" aria-hidden="true"><span style="--v: 18.75%"></span><span class="pulse-bar-ghost" style="--v: 100%"></span></div>
+          <div class="pulse-compare"><i class="sw sw-ghost"></i>za primerjavo: GPT-6.2 Astra 8 $</div>
           <div class="pulse-label">cena za milijon vhodnih tokenov pri novem modelu Gemini 4 Hydrogen (kontekst 1M tokenov).</div>
         </div>
         <div class="pulse-card">
-          <div class="pulse-value">910 MW</div>
+          <div class="pulse-value">910<span class="pulse-unit">MW</span></div>
+          <div class="pulse-bar pulse-bar-blocks" aria-hidden="true"><span style="--v: 91%"></span></div>
+          <div class="pulse-compare">≈ 0,9 GW od 1 GW</div>
           <div class="pulse-label">moč zakupljenega podatkovnega centra za Anthropic v Teksasu v okviru pogodbe, vredne do 54 mrd $.</div>
         </div>
       </div>
     </section>
 
-    <!-- Tedenski pregled (Povzetek tedna) -->
-    <section id="weekly-summary-section" class="weekly-section" aria-label="Povzetek tedna">
+    <!-- Tedenski pregled (Povzetek tedna) — pas čez celo širino -->
+    <section id="weekly-summary-section" class="weekly-section band band-tint" aria-label="Povzetek tedna">
       <!-- Napolnjeno z JS iz data/weekly-summary-bundle.js -->
     </section>
 
@@ -165,6 +194,15 @@
           <!-- Napolnjeno z JS -->
         </div>
 
+        <!-- Oglasno mesto: med karticami in seznamom starejših člankov -->
+        <div class="ad-slot ad-infeed" data-slot="infeed" data-show="all"></div>
+
+        <div id="archive-block" class="archive-block hidden">
+          <h3 class="archive-title">Starejši članki</h3>
+          <ol id="archive-list" class="archive-list"></ol>
+          <button type="button" id="load-more-btn" class="load-more-btn hidden">Naloži več člankov</button>
+        </div>
+
         <div id="empty-state" class="empty-state hidden">
           <h3>Ni najdenih novic</h3>
           <p>Za izbrano iskalno poizvedbo ali filter trenutno ni zadetkov. Poskusite z drugim ključnim pojmom.</p>
@@ -177,7 +215,7 @@
         <!-- Najbolj brano -->
         <div class="sidebar-box">
           <div class="sidebar-head">
-            <span class="section-kicker">LESTVICA BRANOSTI</span>
+            <span class="section-kicker">Lestvica branosti</span>
             <h3>Najbolj brano ta teden</h3>
           </div>
           <ol id="trending-list" class="trending-list">
@@ -188,37 +226,44 @@
         <!-- Prihajajoči mejniki -->
         <div class="sidebar-box">
           <div class="sidebar-head">
-            <span class="section-kicker">KOLEDAR MEJNIKOV</span>
+            <span class="section-kicker">Koledar mejnikov</span>
             <h3>Kaj spremljamo v prihodnjih dneh</h3>
           </div>
           <ul class="milestone-list">
             <li>
-              <span class="milestone-date">13.–15. NOV</span>
-              <div>
-                <strong>Neformalni vrh EU v Dublinu</strong>
-                <p>Voditelji držav o prihodnosti, varnosti in konkurenčni regulaciji UI v Evropi.</p>
-              </div>
-            </li>
-            <li>
-              <span class="milestone-date">18. NOV</span>
+              <span class="milestone-date"><b>18.</b>nov</span>
               <div>
                 <strong>Določitev cene IPO za Anthropic</strong>
-                <p>Zaključek borzne predstavitvene turneje pred javno ponudbo delnic.</p>
+                <p>Zaključek borzne predstavitvene turneje; napovedani razpon je 70–78 $ na delnico.</p>
               </div>
             </li>
             <li>
-              <span class="milestone-date">19. NOV</span>
+              <span class="milestone-date"><b>19.</b>nov</span>
               <div>
                 <strong>Začetek trgovanja pod oznako ANT</strong>
                 <p>Pričakovani borzni prvenec podjetja Anthropic na borzi Nasdaq.</p>
               </div>
             </li>
+            <li>
+              <span class="milestone-date"><b>30.</b>nov</span>
+              <div>
+                <strong>Konec uvodne cene Gemini 4 Carbon</strong>
+                <p>Od decembra se cena API dvigne z 2 $ / 10 $ na 4 $ / 20 $ za milijon tokenov.</p>
+              </div>
+            </li>
+            <li>
+              <span class="milestone-date"><b>dec</b>2026</span>
+              <div>
+                <strong>Prva podelitev nagrade Pascal</strong>
+                <p>Nagrada za literarna dela, ki jih je napisala umetna inteligenca.</p>
+              </div>
+            </li>
           </ul>
         </div>
 
-        <!-- E-novice -->
-        <div class="sidebar-box newsletter-box">
-          <span class="section-kicker">TEDENSKI POVZETEK</span>
+        <!-- E-novice (lepljivo ob drsenju) -->
+        <div class="sidebar-box newsletter-box" id="newsletter">
+          <span class="section-kicker">Tedenski povzetek</span>
           <h3>AI Dnevnik v vašem nabiralniku</h3>
           <p>Vsak petek zjutraj prejmete kratek, preverjen izbor najpomembnejših novic iz sveta UI v slovenščini.</p>
           <form id="newsletter-form" class="newsletter-form">
@@ -235,11 +280,14 @@
       </aside>
     </section>
 
-    <!-- Primerjava AI modelov (Artificial Analysis + LMArena Pogovor) -->
-    <section id="models-section" class="models-section" aria-label="Primerjava modelov umetne inteligence">
+    <!-- Oglasno mesto: pred primerjavo modelov (namizje) -->
+    <div class="ad-slot ad-wide ad-pre-models" data-slot="pre-models" data-show="desktop"></div>
+
+    <!-- Primerjava AI modelov — temen »podatkovni« pas -->
+    <section id="models-section" class="models-section band band-dark" aria-label="Primerjava modelov umetne inteligence">
       <div class="models-header">
         <div class="models-title-group">
-          <div class="models-eyebrow">Neodvisni merilni pregledi · <span id="models-updated-label">November 2026</span></div>
+          <div class="models-eyebrow">Podatkovni oddelek · Neodvisni merilni pregledi · <span id="models-updated-label">November 2026</span></div>
           <h2>Primerjava vodilnih modelov umetne inteligence</h2>
           <p class="models-subtitle">Pregled zmogljivosti po indeksu <strong>Artificial Analysis v5</strong> (razmišljanje, koda, znanje) ter posebna lestvica za <strong>vsakodnevni pogovor</strong> na podlagi anonimnih primerjav odgovorov uporabnikov (blind test na LMAreni).</p>
         </div>
@@ -297,7 +345,7 @@
       <div class="models-table-card">
         <div class="models-table-head">
           <h3>Primerjalna tabela vseh ključnih parametrov</h3>
-          <span class="models-table-hint">Prikazani so le potrjeni podatki iz javnih meritev; znak »—« pomeni, da uradna enotna številka ni objavljena.</span>
+          <span class="models-table-hint">Prikazani so le potrjeni podatki iz javnih meritev; znak »—« pomeni, da uradna enotna številka ni objavljena. Za opis modela kliknite njegovo ime.</span>
         </div>
         <div class="models-table-wrap">
           <table class="models-table">
@@ -305,9 +353,9 @@
               <tr>
                 <th>Model</th>
                 <th>Ponudnik</th>
-                <th>Inteligenca (AA v5)</th>
-                <th>Pogovor (Elo)</th>
-                <th>Cena API (vhod / izhod na 1M)</th>
+                <th class="num">Inteligenca<br><small>AA v5</small></th>
+                <th class="num">Pogovor<br><small>Elo</small></th>
+                <th class="num">Cena API<br><small>vhod / izhod na 1M</small></th>
                 <th>Hitrost</th>
                 <th>Kontekst</th>
                 <th>Dostopnost</th>
@@ -329,8 +377,19 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <strong>AI DNEVNIK</strong>
+        <span class="footer-logo">
+          <svg width="28" height="28" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <rect x="2" y="2" width="60" height="60" rx="14" fill="currentColor" />
+            <rect x="21" y="45" width="22" height="5.5" rx="2.5" fill="var(--bg)" />
+            <path d="M22 43L18.5 31L32 16L45.5 31L42 43H22Z" fill="var(--bg)" />
+            <line x1="32" y1="31.5" x2="32" y2="16.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+            <circle cx="32" cy="32" r="4.5" fill="#2a4f8f" />
+            <circle cx="32" cy="11.5" r="3.6" fill="#b3361f" />
+          </svg>
+          <strong>AI Dnevnik</strong>
+        </span>
         <p>Slovenski portal za spremljanje razvoja umetne inteligence doma in po svetu. Vse vsebine so pripravljene v slovenščini s poudarkom na tehnični natančnosti in evropskem kontekstu.</p>
+        <a href="#newsletter" class="footer-cta">Prijava na tedenske e-novice →</a>
       </div>
       <div class="footer-links">
         <div>
@@ -350,6 +409,7 @@
             <li><a href="metodologija.html">Metodologija meritev</a></li>
             <li><a href="zasebnost.html">Politika zasebnosti (GDPR)</a></li>
             <li><a href="kontakt.html">Impressum in kontakt</a></li>
+            <li><a href="zasebnost.html#piskotki" data-consent-open>Nastavitve piškotkov</a></li>
           </ul>
         </div>
       </div>
@@ -360,49 +420,12 @@
     </div>
   </footer>
 
-  <!-- Modalno okno za branje celotnega članka -->
-  <div id="article-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal-panel">
-      <div class="modal-toolbar">
-        <span id="modal-category" class="badge"></span>
-        <div class="modal-actions">
-          <a id="modal-standalone-link" class="icon-action-btn modal-standalone-link" href="#">Samostojna stran ↗</a>
-          <button type="button" id="modal-bookmark-btn" class="icon-action-btn" aria-label="Shrani članek">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-            <span id="modal-bookmark-label">Shrani</span>
-          </button>
-          <button type="button" id="modal-copy-btn" class="icon-action-btn" aria-label="Kopiraj povezavo">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-            <span id="modal-copy-label">Kopiraj</span>
-          </button>
-          <button type="button" id="modal-close-btn" class="close-btn" aria-label="Zapri članek">×</button>
-        </div>
-      </div>
-      <div class="modal-scroll">
-        <figure class="modal-figure">
-          <div id="modal-art" class="modal-art"></div>
-          <figcaption id="modal-photo-credit" class="modal-photo-credit"></figcaption>
-        </figure>
-        <h2 id="modal-title" class="modal-title"></h2>
-        <div id="modal-meta" class="modal-meta"></div>
-        <div class="glossary-hint-bar">
-          <span>Namig: dotakni se ali postavi miško na <span class="glossary-hint-sample">podčrtan izraz</span> za razlago.</span>
-        </div>
-        <div id="modal-takeaways" class="modal-takeaways"></div>
-        <div id="modal-body" class="modal-body"></div>
-        <div id="modal-sources" class="modal-sources"></div>
-        <p id="modal-ai-note" class="modal-ai-note"></p>
-        <div id="modal-tags" class="modal-tags"></div>
-      </div>
-    </div>
-  </div>
-
   <!-- Stranski predal za shranjene članke -->
   <div id="bookmarks-drawer" class="drawer-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
     <div class="drawer-panel">
       <div class="drawer-head">
         <div>
-          <span class="section-kicker">BRALNI SEZNAM</span>
+          <span class="section-kicker">Bralni seznam</span>
           <h3 id="drawer-title">Shranjeni članki</h3>
         </div>
         <button type="button" id="drawer-close-btn" class="close-btn" aria-label="Zapri seznam">×</button>
@@ -414,10 +437,13 @@
   </div>
 
   <script src="config.js"></script>
+  <script src="consent.js"></script>
   <script src="data/articles-bundle.js"></script>
   <script src="data/models-bundle.js"></script>
   <script src="data/weekly-summary-bundle.js"></script>
+  <script src="art.js"></script>
   <script src="glossary.js"></script>
+  <script src="ads.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T01:02:00+01:00",
+  "updatedAt": "2026-11-19T01:08:00+01:00",
   "categoryLabels": {
     "modeli": "Modeli in raziskave",
     "slovenija": "Slovenija in EU",
@@ -46,6 +46,138 @@
   ],
   "articles": [
     {
+      "id": "prevajalci-pisatelji-ui-nagrada-pascal",
+      "title": "Prevajalci in pisatelji o UI: decembra prva nagrada »Pascal« za literaturo izpod peresa umetne inteligence",
+      "excerpt": "V pogovoru na TV Slovenija so strokovnjaki opozorili na upad naročil za tehnično prevajanje, na zahtevo po označevanju knjig, prevedenih z UI, in na odprti slovenski model GaMS, ki podatke ohranja doma.",
+      "category": "slovenija",
+      "dateLabel": "17. november 2026",
+      "timestamp": "2026-11-17T08:42:00",
+      "readMinutes": 4,
+      "views": 2140,
+      "isHeroLead": false,
+      "breaking": false,
+      "variant": "slovenija",
+      "imageUrl": "",
+      "imageAlt": "Ilustracija rubrike Slovenija in EU",
+      "imageCredit": "Ilustracija: AI Dnevnik",
+      "tags": [
+        "Prevajanje",
+        "Književnost",
+        "GaMS",
+        "Slovenščina"
+      ],
+      "takeaways": [
+        "Decembra bodo prvič podelili nagrado Pascal za literarna dela, ki jih je napisala umetna inteligenca.",
+        "Naročila za tehnično prevajanje so močno upadla, ker podjetja besedila prevajajo kar sama z orodji UI.",
+        "Odprti slovenski model GaMS je brezplačen in ga je mogoče namestiti lokalno, tako da podatki ostanejo pri uporabniku."
+      ],
+      "body": [
+        "V pogovorni oddaji TV Slovenija o prevajanju in književnosti v času umetne inteligence so sodelovali raziskovalec računalniškega jezikoslovja in prevajalec Jan Jona Javoršek, pisatelj in urednik Aljoša Harlamov, Amalija Maček z Oddelka za prevajalstvo Filozofske fakultete UL, prevajalec Borut Rismal ter Domen Vreš s Fakultete za računalništvo in informatiko UL.",
+        "Ena od novic pogovora je nagrada Pascal, ki jo bodo decembra prvič podelili za literarna dela »izpod peresa umetne inteligence«. Javoršek jo je označil za zanimiv in pravzaprav pozitiven razvoj, saj odpira vprašanje odgovornosti: avtorstvo je pri UI lahko zapleteno, odgovornost pa ne, saj jo za objavljeno nosita založnik in urednik. Harlamov je bil bolj odklonilen in je dejal, da knjige, za katero bi vedel, da jo je napisala UI, ne bi prebral.",
+        "Amalija Maček je opozorila, da je prevajalska stroka močno prizadeta. Naročila za tehnične prevode so strmo upadla, ker podjetja prevajajo sama, praški študijski program za prevajanje in tolmačenje pa se po njenih besedah zapira z januarjem 2027. V Nemčiji morajo knjige, prevedene z UI ali s pomočjo UI, že označiti, enako zahteva tudi Društvo slovenskih književnih prevajalcev. Za slovenščino je strojni prevod še vedno treba skrbno popraviti (post-editing).",
+        "Domen Vreš je predstavil GaMS, velik odprti jezikovni model za slovenščino, ki je brezplačno dostopen prek portala povejmo.si. Ker ga je mogoče namestiti lokalno, podatki ostanejo pri uporabniku, namenjen pa je predvsem prilagajanju za konkretne naloge v podjetjih, manj pa klepetu."
+      ],
+      "sources": [
+        {
+          "label": "RTV SLO — Krasni novi um: Prevodi in književnost v času umetne inteligence",
+          "url": "https://www.rtvslo.si/kultura/krasni-novi-um-prevodi-in-knjizevnost-v-casu-umetne-inteligence/800319"
+        }
+      ],
+      "isHeroSide": false
+    },
+    {
+      "id": "united-prepoved-ui-agentov",
+      "title": "United Airlines prepovedal osebne UI-agente: rezervacij, ki jih opravi agent, letalska družba ne bo več priznavala",
+      "excerpt": "Ameriški prevoznik omejuje nepooblaščene UI-asistente pri nakupu vozovnic in upravljanju rezervacij — tudi kadar jih potnik nadzira. Kot razloga navaja varnost in zasebnost.",
+      "category": "posel",
+      "dateLabel": "11. november 2026",
+      "timestamp": "2026-11-11T18:00:00",
+      "readMinutes": 3,
+      "views": 3870,
+      "isHeroLead": false,
+      "breaking": false,
+      "variant": "svet",
+      "imageUrl": "",
+      "imageAlt": "Ilustracija rubrike Posel in infrastruktura",
+      "imageCredit": "Ilustracija: AI Dnevnik",
+      "tags": [
+        "UI-agenti",
+        "Letalstvo",
+        "Zasebnost",
+        "United"
+      ],
+      "takeaways": [
+        "United omejuje nepooblaščene UI-agente na svojih digitalnih kanalih ter prek turističnih agencij in agregatorjev.",
+        "Rezervacije, ki jih ustvari ali spremeni UI-agent, lahko družba prekliče brez obvestila; za rezervacije pred 11. novembrom to ne velja.",
+        "Agenti lahko še vedno prikazujejo Unitedove cene, ne smejo pa dokončati nakupa v imenu stranke."
+      ],
+      "body": [
+        "Letalska družba United Airlines je 11. novembra objavila, da omejuje nepooblaščene UI-agente tretjih oseb pri rezervaciji letov in upravljanju rezervacij v imenu potnikov. Pravila za rezervacije, prodajo vozovnic in distribucijo so posodobili tako, da veljajo tudi za agente, ki jih uporabljajo turistične agencije in spletni agregatorji.",
+        "Kot razloga družba navaja varnost in zasebnost. Potnike opozarja, da z deljenjem prijavnih podatkov z osebnimi asistenti UI tvegajo razkritje občutljivih podatkov, dejanja takšnih orodij pa lahko privedejo do nenamernih nakupov, sprememb računa ali porabe milj v programu MileagePlus. Omejitev velja tudi, kadar agenta neposredno nadzira potnik.",
+        "Med rezervacijami, ki jih United lahko prekliče brez obvestila, so zdaj tudi tiste, ki jih je ustvaril ali spremenil UI-agent. Rezervacij, opravljenih pred 11. novembrom, zgolj zaradi uporabe agenta ne bodo preklicali. Agencije in platforme lahko lastna orodja UI uporabljajo le z Unitedovim dovoljenjem.",
+        "Prepoved ni nujno trajna: družba pravi, da bo tehnologijo še naprej spremljala. Podobne omejitve za nepooblaščene agente so po poročanju Digital Trends uvedli tudi Amazon in več velikih bank."
+      ],
+      "sources": [
+        {
+          "label": "Skift — United Airlines Moves to Block Personal AI Agents From Booking Flights",
+          "url": "https://skift.com/2026/11/11/united-airlines-moves-to-block-personal-ai-agents-from-booking-flights/"
+        },
+        {
+          "label": "AirlineGeeks — United Bans AI Agents From Booking Flights For Customers",
+          "url": "https://airlinegeeks.com/2026/11/11/united-bans-ai-agents-from-booking-flights-for-customers/"
+        },
+        {
+          "label": "Digital Trends — United Airlines is grounding AI travel agents",
+          "url": "https://digitaltrends.com/computing/united-airlines-is-grounding-ai-travel-agents-and-safety-is-just-one-of-the-concerns"
+        }
+      ],
+      "isHeroSide": false
+    },
+    {
+      "id": "cloudflare-kitesurf-odprta-koda",
+      "title": "Cloudflare odprl kodo brskalnika Kitesurf: lahek spletni pogon za UI-agente brez Chromiuma",
+      "excerpt": "Eksperimentalni brskalnik, napisan v Rustu in zgrajen za platformo Workers, je zdaj na voljo pod licenco Apache 2.0. Cloudflare ga za zahtevnejše strani še ne priporoča kot edino rešitev.",
+      "category": "modeli",
+      "dateLabel": "13. november 2026",
+      "timestamp": "2026-11-13T17:00:00",
+      "readMinutes": 3,
+      "views": 2610,
+      "isHeroLead": false,
+      "breaking": false,
+      "variant": "varnost",
+      "imageUrl": "",
+      "imageAlt": "Ilustracija rubrike Modeli in raziskave",
+      "imageCredit": "Ilustracija: AI Dnevnik",
+      "tags": [
+        "Cloudflare",
+        "Brskalniki",
+        "UI-agenti",
+        "Odprta koda"
+      ],
+      "takeaways": [
+        "Kitesurf je odprtokoden pod licenco Apache 2.0; kodo lahko razvijalci poganjajo lokalno ali na Cloudflare Workers.",
+        "Pogon teče v izoliranih okoljih V8 in ne temelji na Chromiumu, sestavljen pa je iz odprtih komponent (Blitz, Stylo, Boa).",
+        "Ne podpira videa, WebGL in trajnih prijavljenih sej, zato Cloudflare za zahtevne strani svetuje Chromium kot rezervo."
+      ],
+      "body": [
+        "Cloudflare je 13. novembra objavil izvorno kodo brskalnika Kitesurf, ki ga je razvil posebej za UI-agente. Koda je na GitHubu pod licenco Apache 2.0, zato jo lahko razvijalci berejo, poganjajo lokalno, spreminjajo in namestijo na lastno instanco v okolju Cloudflare Workers.",
+        "Za razliko od večine orodij za avtomatizirano brskanje Kitesurf ne uporablja Chromiuma. Teče v izoliranih okoljih V8 na platformi Workers in je sestavljen iz odprtokodnih gradnikov: modularnega izrisovalnika Blitz, Firefoxovega razčlenjevalnika CSS Stylo in pogona JavaScript Boa. Projekt se je začel kot prenos odprtokodnega pogona Obscura, napisanega v Rustu.",
+        "Cloudflare poudarja, da je brskalnik še v intenzivnem razvoju. Ne podpira videa, WebGL, preverjanj botov na podlagi prstnih odtisov TLS in trajnih prijavljenih sej, zato za zahtevnejše strani priporoča Chromium kot rezervno možnost.",
+        "Komentatorji opozarjajo še na varnost: pri lastni namestitvi je ta v rokah upravljavca, saj pogon privzeto nima overjanja in je dostopen prek javnega URL-ja."
+      ],
+      "sources": [
+        {
+          "label": "Cloudflare Blog — Kitesurf is now open source",
+          "url": "https://blog.cloudflare.com/kitesurf-open-source/"
+        },
+        {
+          "label": "Phoronix — Cloudflare Open Sources Kitesurf",
+          "url": "https://phoronix.com/news/Cloudflare-Kitesurf-Open-Source"
+        }
+      ],
+      "isHeroSide": false
+    },
+    {
       "id": "nvidia-huang-odstop",
       "title": "Tektonski premik pri Nvidii: Jensen Huang po 33 letih zapušča čelo družbe",
       "excerpt": "Soustanovitelj najvrednejšega proizvajalca čipov za UI je odstopil z mesta glavnega izvršnega direktorja in člana uprave. Vodenje začasno prevzema dolgoletna finančna direktorica Colette Kress.",
@@ -57,7 +189,7 @@
       "isHeroLead": false,
       "breaking": false,
       "variant": "nvidia",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg/960px-Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg",
+      "imageUrl": "images/nvidia-huang-odstop.webp",
       "imageAlt": "Jensen Huang med nastopom na Univerzi Stanford leta 2026",
       "imageCredit": "Foto: Anderseidesvik / CC BY-SA 4.0",
       "tags": [
@@ -90,7 +222,9 @@
           "label": "Substack (The Median) — Is Huang's exit an NVIDIA problem?",
           "url": "https://dcthemedian.substack.com/p/is-huangs-exit-an-nvidia-problem"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg/960px-Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg",
+      "isHeroSide": false
     },
     {
       "id": "gemini-4-hydrogen",
@@ -104,7 +238,7 @@
       "isHeroSide": false,
       "breaking": false,
       "variant": "gemini",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Tensor_Processing_Unit_3.0.jpg/960px-Tensor_Processing_Unit_3.0.jpg",
+      "imageUrl": "images/gemini-4-hydrogen.webp",
       "imageAlt": "Googlova strojna enota TPU za pospeševanje umetne inteligence",
       "imageCredit": "Foto: Zinskauf / CC BY-SA 4.0",
       "tags": [
@@ -137,7 +271,9 @@
           "label": "Substack (The Median) — Weekly AI Recap",
           "url": "https://dcthemedian.substack.com/p/is-huangs-exit-an-nvidia-problem"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Tensor_Processing_Unit_3.0.jpg/960px-Tensor_Processing_Unit_3.0.jpg",
+      "isHeroLead": false
     },
     {
       "id": "dublin-vrh-slovenija",
@@ -175,7 +311,8 @@
           "label": "Siol.net — Slovenija za razumno regulacijo umetne inteligence",
           "url": "https://siol.net/novice/slovenija/slovenija-po-jansevih-besedah-za-razumno-regulacijo-umetne-inteligence-706248"
         }
-      ]
+      ],
+      "isHeroLead": false
     },
     {
       "id": "anthropic-ipo-teksas",
@@ -213,7 +350,8 @@
           "label": "AI Weekly — Anthropic IPO & Riot Platforms Corsicana Deal",
           "url": "https://aiweekly.co/ai-news-today/edition/2026-11-13"
         }
-      ]
+      ],
+      "isHeroLead": false
     },
     {
       "id": "slovenija-statistika-2026",
@@ -253,7 +391,9 @@
           "label": "GZS — Umetna inteligenca vse bolj prisotna v podjetjih in vsakdanjem življenju",
           "url": "https://www.gzs.si/zdruzenje_za_informatiko_in_telekomunikacije/Novice/ArticleId/91898/umetna-inteligenca-vse-bolj-prisotna-v-podjetjih-in-vsakdanjem-zivljenju"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "agentska-robotika-berkeley",
@@ -265,7 +405,7 @@
       "readMinutes": 5,
       "views": 5340,
       "variant": "robotika",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Humanoid_robot_at_Science_Square_Tsukuba.jpg/960px-Humanoid_robot_at_Science_Square_Tsukuba.jpg",
+      "imageUrl": "images/agentska-robotika-berkeley.webp",
       "imageAlt": "Humanoidni robot v raziskovalnem središču",
       "imageCredit": "Foto: Syced / CC0",
       "tags": [
@@ -293,7 +433,10 @@
           "label": "Fast Company — Foundational AI & Next Big Things in Tech 2026",
           "url": "https://www.fastcompany.com/91612044/foundational-ai-next-big-things-in-tech-2026"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Humanoid_robot_at_Science_Square_Tsukuba.jpg/960px-Humanoid_robot_at_Science_Square_Tsukuba.jpg",
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "ai-week-evolucija-slovenija",
@@ -345,7 +488,9 @@
           "label": "Delo.si — Poročilo o rabi UI in AI Week Slovenija",
           "url": "https://www.delo.si/novice/znanoteh/umetno-inteligenco-uporablja-ze-vec-kot-70-odstotkov-slovencev"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "strateski-svet-slovenija",
@@ -384,7 +529,9 @@
           "label": "Dnevnik.si — Člani strateškega sveta za UI in digitalizacijo",
           "url": "https://www.dnevnik.si/novice/slovenija/vladi-bo-po-novem-svetoval-tudi-podkaster-selakovic-2840907/"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "deepmind-jedrska-fuzija",
@@ -396,7 +543,7 @@
       "readMinutes": 4,
       "views": 4920,
       "variant": "fuzija",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/EAST_Tokamak_plasma_image3.jpg",
+      "imageUrl": "images/deepmind-jedrska-fuzija.webp",
       "imageAlt": "Posnetek plazme v fuzijskem reaktorju tokamak EAST",
       "imageCredit": "Foto: Xiang Gao idr. / CC BY 3.0",
       "tags": [
@@ -424,7 +571,10 @@
           "label": "MIT News — Faster, trustworthy AI models for climate prediction",
           "url": "https://news.mit.edu/2026/new-research-could-lead-faster-trustworthy-ai-models-climate-prediction-1112"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/1/1a/EAST_Tokamak_plasma_image3.jpg",
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "claude-fable-52",
@@ -468,7 +618,9 @@
           "label": "Wikipedia — 2026 in artificial intelligence",
           "url": "https://en.wikipedia.org/wiki/2026_in_artificial_intelligence"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "ai-forts-energetika",
@@ -480,7 +632,7 @@
       "readMinutes": 3,
       "views": 3470,
       "variant": "varnost",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Electrical_Substation.JPG",
+      "imageUrl": "images/ai-forts-energetika.webp",
       "imageAlt": "Visokonapetostna razdelilna transformatorska postaja",
       "imageCredit": "Foto: Wtshymanski / Javna domena",
       "tags": [
@@ -507,7 +659,10 @@
           "label": "Fast Company — AI Hardware & Inference Speedups (Cerebras, d-Matrix)",
           "url": "https://www.fastcompany.com/91612044/foundational-ai-next-big-things-in-tech-2026"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Electrical_Substation.JPG",
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "tozba-varnost-ui-san-francisco",
@@ -552,7 +707,9 @@
           "label": "Public Citizen — Coalition files landmark lawsuit against AI labs",
           "url": "https://www.citizen.org/news/coalition-of-nonprofits-files-landmark-lawsuit-to-stop-development-of-advanced-ai-systems-at-anthropic-google-meta-openai-and-spacexsi-that-proliferate-bioweapons-and-cyberattacks/"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "meta-muse-ember-agenti",
@@ -592,7 +749,9 @@
           "label": "MNB Research — Major AI models launched September to November 2026",
           "url": "https://www.mnbresearch.com/blog/insights-2/every-major-ai-model-launched-from-september-to-november-2026-explained-in-one-page-390"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "nvidia-groot-2-isaac-lab-3",
@@ -632,7 +791,9 @@
           "label": "The Robot Report — NVIDIA launches GR00T 2 and Isaac Lab 3.0 at CoRL",
           "url": "https://www.therobotreport.com/nvidia-launches-gr00t-2-isaac-lab-3-0-corl/"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "slovenija-tovarna-ui-slaif",
@@ -644,7 +805,7 @@
       "readMinutes": 4,
       "views": 6120,
       "variant": "slovenija",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Kraken_Supercomputer_%283592578852%29.jpg/960px-Kraken_Supercomputer_%283592578852%29.jpg",
+      "imageUrl": "images/slovenija-tovarna-ui-slaif.webp",
       "imageAlt": "Strežniške omare visokozmogljivega superračunalniškega sistema",
       "imageCredit": "Foto: Oak Ridge National Laboratory / CC BY 2.0",
       "tags": [
@@ -676,7 +837,10 @@
           "label": "Univerza na Primorskem — Slovenian Artificial Intelligence Factory",
           "url": "https://www.famnit.upr.si/en/news/up-part-of-the-slovenian-artificial-intelligence-factory/"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Kraken_Supercomputer_%283592578852%29.jpg/960px-Kraken_Supercomputer_%283592578852%29.jpg",
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "evropski-parlament-ui-demokracija",
@@ -724,7 +888,9 @@
           "label": "Generation Impact — EU AI Act Implementation Timeline (Reg. 2026/1744)",
           "url": "https://generationimpact.global/blog/ai-regulation-2026/"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "energetska-stiska-podatkovni-centri",
@@ -764,7 +930,9 @@
           "label": "Private Markets Wire — AI infrastructure deals and fundraising",
           "url": "https://privatemarketswire.com/p/private-markets-wire-ai-infrastructure-major-deals-and-26-billion-fundraising-lead-the-week"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "gpt6-astra-mythos-varnost",
@@ -776,7 +944,7 @@
       "readMinutes": 4,
       "views": 5410,
       "variant": "anthropic",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Cybersecurity_Visuals_Challenge_2019_-_Rebecca_Wang.jpg",
+      "imageUrl": "images/gpt6-astra-mythos-varnost.webp",
       "imageAlt": "Ilustracija kibernetske varnosti in zaščite digitalnih sistemov",
       "imageCredit": "Foto: Rebecca Wang / CC BY 4.0",
       "tags": [
@@ -812,7 +980,10 @@
           "label": "AI Release Tracker — November 2026 Model Tracker",
           "url": "https://aireleasetracker.com/"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Cybersecurity_Visuals_Challenge_2019_-_Rebecca_Wang.jpg",
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "x-tweetcraft-minecraft",
@@ -853,7 +1024,9 @@
           "label": "TBreak — Tweetcraft: Minecraft meets X through AI",
           "url": "https://tbreak.com/tweetcraft-minecraft-x-ai-multiplayer/"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "openai-chatgpt-wallet",
@@ -866,7 +1039,7 @@
       "views": 7410,
       "breaking": true,
       "variant": "svet",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/CTBC_payment_terminal_at_self-checkout_of_Carrefour_Rende_Store.jpg/960px-CTBC_payment_terminal_at_self-checkout_of_Carrefour_Rende_Store.jpg",
+      "imageUrl": "images/openai-chatgpt-wallet.webp",
       "imageAlt": "Samopostrežna blagajna in plačilni terminal za brezstično plačevanje",
       "imageCredit": "Foto: Matt Zhuang / CC BY-SA 4.0",
       "tags": [
@@ -894,7 +1067,10 @@
           "label": "TechCrunch — ChatGPT's new Wallet lets AI agents shop and check out for you",
           "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/CTBC_payment_terminal_at_self-checkout_of_Carrefour_Rende_Store.jpg/960px-CTBC_payment_terminal_at_self-checkout_of_Carrefour_Rende_Store.jpg",
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "x-vending-bench-kartel",
@@ -934,7 +1110,9 @@
           "label": "TechCrunch — When an AI model was tasked with running a vending machine",
           "url": "https://techcrunch.com/2026/07/29/claude-opus-5-became-downright-ruthless-when-tasked-with-running-a-vending-machine/"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "drogue-plavajoci-podatkovni-centri",
@@ -970,7 +1148,9 @@
           "label": "TechCrunch — Floating data centers powered by the ocean's heat",
           "url": "https://techcrunch.com/2026/11/13/this-young-startup-wants-to-power-floating-data-centers-with-the-oceans-heat-and-investors-are-already-on-board/"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "x-vibe-coding-letalski-sim",
@@ -1006,7 +1186,9 @@
           "label": "Differ Blog — The Builders Behind 2026's Weirdest Viral AI Apps",
           "url": "https://blog.getdiffer.com/builders-behind-2026-weirdest-viral-ai-apps"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "google-ai-opozorila-plazovi",
@@ -1042,7 +1224,9 @@
           "label": "Emergent — Google AI landslide early warning system launches",
           "url": "https://emergent.sh/news/google-ai-landslide-warning-system-launches"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "anthropic-varnostna-merila-evals",
@@ -1078,7 +1262,9 @@
           "label": "Anthropic Research — Building strong safety evaluations",
           "url": "https://www.anthropic.com/research/building-strong-safety-evaluations"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "microsoft-ignite-mai-transparentnost",
@@ -1090,10 +1276,9 @@
       "readMinutes": 5,
       "views": 8850,
       "isHeroLead": false,
-      "isHeroSide": true,
-      "breaking": false,
+      "breaking": true,
       "variant": "gemini",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Building92microsoft.jpg/960px-Building92microsoft.jpg",
+      "imageUrl": "images/microsoft-ignite-mai-transparentnost.webp",
       "imageAlt": "Sedež podjetja Microsoft v Redmondu (stavba 92)",
       "imageCredit": "Foto: Coolcaesar / CC BY-SA 4.0",
       "tags": [
@@ -1121,7 +1306,9 @@
           "label": "TestingCatalog — Microsoft launches seven MAI models at Ignite 2026",
           "url": "https://www.testingcatalog.com/microsoft-launches-seven-mai-models-at-ignite-2026/"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Building92microsoft.jpg/960px-Building92microsoft.jpg",
+      "isHeroSide": true
     },
     {
       "id": "anthropic-ipo-cena-nasdaq",
@@ -1163,7 +1350,8 @@
           "label": "KuCoin News — Anthropic targets up to $1.4T valuation ahead of Nov 19 debut",
           "url": "https://www.kucoin.com/news/flash/anthropic-eyes-1-trillion-valuation-in-november-2026-nasdaq-ipo"
         }
-      ]
+      ],
+      "isHeroLead": false
     },
     {
       "id": "openai-vgrajeni-varnostni-pregledi-kalifornija",
@@ -1209,7 +1397,8 @@
           "label": "AI Weekly — Nov 17 Edition: California AG sues OpenAI",
           "url": "https://aiweekly.co/ai-news-today/edition/2026-11-17"
         }
-      ]
+      ],
+      "isHeroLead": false
     },
     {
       "id": "slovenija-podjetja-prehod-2026",
@@ -1251,7 +1440,8 @@
           "label": "GZS — Umetna inteligenca vse bolj prisotna v podjetjih in vsakdanjem življenju",
           "url": "https://www.gzs.si/zdruzenje_za_informatiko_in_telekomunikacije/Novice/ArticleId/91898/umetna-inteligenca-vse-bolj-prisotna-v-podjetjih-in-vsakdanjem-zivljenju"
         }
-      ]
+      ],
+      "isHeroLead": false
     },
     {
       "id": "vals-vojska-igra-varnost",
@@ -1264,7 +1454,7 @@
       "views": 5340,
       "breaking": false,
       "variant": "varnost",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Quadcopter_camera_drone_in_flight.jpg/960px-Quadcopter_camera_drone_in_flight.jpg",
+      "imageUrl": "images/vals-vojska-igra-varnost.webp",
       "imageAlt": "Dron s kamero v letu",
       "imageCredit": "Foto: Josh Sorenson / CC0",
       "tags": [
@@ -1288,7 +1478,10 @@
           "label": "TechCrunch — AI models can be tricked into identifying civilians as targets",
           "url": "https://techcrunch.com/2026/11/17/ai-models-can-be-tricked-into-identifying-civilians-as-military-targets-by-telling-them-its-a-game/"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Quadcopter_camera_drone_in_flight.jpg/960px-Quadcopter_camera_drone_in_flight.jpg",
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "x-jensen-huang-video-memi",
@@ -1325,7 +1518,9 @@
           "label": "Business Insider — The wildest AI video memes flooding X after Nvidia CEO shakeup",
           "url": "https://www.businessinsider.com/best-ai-memes-jensen-huang-affair-scandal-nvidia-chips-2026-11"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "x-max-cameron-satira-cigarete",
@@ -1362,7 +1557,9 @@
           "label": "Creative Boom — Max Cameron roasts AI tech arrogance with satirical packs",
           "url": "https://www.creativeboom.com/news/max-cameron-roasts-the-arrogance-of-ai-tech-bros-with-subversive-cigarette-packaging/"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "openai-gpt-62-astra-sol",
@@ -1373,8 +1570,7 @@
       "timestamp": "2026-11-18T00:35:00",
       "readMinutes": 5,
       "views": 9120,
-      "isHeroSide": true,
-      "breaking": false,
+      "breaking": true,
       "variant": "svet",
       "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/CSIRO_ScienceImage_11313_The_CSIRO_GPU_cluster_at_the_data_centre.jpg/960px-CSIRO_ScienceImage_11313_The_CSIRO_GPU_cluster_at_the_data_centre.jpg",
       "imageAlt": "Visokozmogljiva grafična gruča v podatkovnem centru",
@@ -1408,7 +1604,9 @@
           "label": "Crypto Briefing — OpenAI launches GPT-6.2 Astra and Sol",
           "url": "https://cryptobriefing.com/openai-launches-gpt-6-2-astra-sol/"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": true
     },
     {
       "id": "google-gemini-4-carbon-hydrogen-novosti",
@@ -1421,7 +1619,7 @@
       "views": 6740,
       "breaking": false,
       "variant": "gemini",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Googleplex_HQ_%28cropped%29.jpg/960px-Googleplex_HQ_%28cropped%29.jpg",
+      "imageUrl": "images/google-gemini-4-carbon-hydrogen-novosti.webp",
       "imageAlt": "Sedež podjetja Google (Googleplex) v Kaliforniji",
       "imageCredit": "Foto: Asoundd / CC BY-SA 4.0",
       "tags": [
@@ -1453,7 +1651,10 @@
           "label": "OrcaRouter — Gemini 4 Hydrogen powers free Tasks in Gemini",
           "url": "https://www.orcarouter.ai/blog/gemini-4-hydrogen-tasks-free-rollout"
         }
-      ]
+      ],
+      "imageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Googleplex_HQ_%28cropped%29.jpg/960px-Googleplex_HQ_%28cropped%29.jpg",
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "anthropic-ipo-83-nasdaq-zacetek",
@@ -1499,7 +1700,8 @@
           "label": "ET CIO — Google, Nvidia, Microsoft among seven firms committing $26B",
           "url": "https://cio.economictimes.indiatimes.com/news/investments/google-nvidia-microsoft-among-seven-firms-committing-usd-26-billion-to-anthropic/135728598"
         }
-      ]
+      ],
+      "isHeroSide": false
     },
     {
       "id": "citibank-agenti-odgovornost-vdori",
@@ -1537,7 +1739,8 @@
           "label": "TechCrunch — Banks warn customers using AI agents are on their own if hacked",
           "url": "https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/"
         }
-      ]
+      ],
+      "isHeroLead": false
     },
     {
       "id": "altman-nadella-nadzor-infrastruktura",
@@ -1578,7 +1781,9 @@
           "label": "TechCrunch — Satya Nadella says lots of critical infrastructure is unpatchable",
           "url": "https://techcrunch.com/2026/11/18/amidst-fears-of-ai-cyberattacks-satya-nadella-says-lots-of-critical-infrastructure-is-unpatchable/"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "humyn-labs-robotika-podatki",
@@ -1615,7 +1820,9 @@
           "label": "TechCrunch — Accel backs Humyn Labs with $47M for robotics training data",
           "url": "https://techcrunch.com/2026/11/18/accel-backs-indias-humyn-labs-to-supply-training-data-needed-by-u-s-robotics-ai-developers/"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "x-gpt62-preizkusi-zadnji-hip",
@@ -1652,7 +1859,9 @@
           "label": "MLQ — OpenAI's GPT-6.2 Astra splits early testers after last-minute changes",
           "url": "https://mlq.ai/news/openais-gpt-62-astra-splits-its-early-testers-and-an-openai-lead-says-the-model-changed-in-its-last-days-before-launch/"
         }
-      ]
+      ],
+      "isHeroLead": false,
+      "isHeroSide": false
     },
     {
       "id": "google-gemini-4-neon",
@@ -1698,7 +1907,8 @@
           "label": "9to5Google — Google announces Gemini 4 Neon",
           "url": "https://9to5google.com/2026/11/18/gemini-4-neon-announcement/"
         }
-      ]
+      ],
+      "isHeroLead": false
     }
   ]
 }

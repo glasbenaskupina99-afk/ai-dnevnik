@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="sl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloudflare odprl kodo brskalnika Kitesurf: lahek spletni pogon za UI-agente brez Chromiuma — AI Dnevnik</title>
+  <meta name="description" content="Eksperimentalni brskalnik, napisan v Rustu in zgrajen za platformo Workers, je zdaj na voljo pod licenco Apache 2.0. Cloudflare ga za zahtevnejše strani še ne priporoča kot edino rešitev." />
+  <link rel="canonical" href="https://aidnevnik.si/clanek/cloudflare-kitesurf-odprta-koda.html" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="AI Dnevnik" />
+  <meta property="og:title" content="Cloudflare odprl kodo brskalnika Kitesurf: lahek spletni pogon za UI-agente brez Chromiuma" />
+  <meta property="og:description" content="Eksperimentalni brskalnik, napisan v Rustu in zgrajen za platformo Workers, je zdaj na voljo pod licenco Apache 2.0. Cloudflare ga za zahtevnejše strani še ne priporoča kot edino rešitev." />
+  <meta property="og:image" content="https://aidnevnik.si/favicon.svg" />
+  <meta property="og:url" content="https://aidnevnik.si/clanek/cloudflare-kitesurf-odprta-koda.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cloudflare odprl kodo brskalnika Kitesurf: lahek spletni pogon za UI-agente brez Chromiuma" />
+  <meta name="twitter:description" content="Eksperimentalni brskalnik, napisan v Rustu in zgrajen za platformo Workers, je zdaj na voljo pod licenco Apache 2.0. Cloudflare ga za zahtevnejše strani še ne priporoča kot edino rešitev." />
+  <meta name="twitter:image" content="https://aidnevnik.si/favicon.svg" />
+  <script>
+    try { document.documentElement.setAttribute("data-theme", localStorage.getItem("aidnevnik_theme") || "light"); } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Cloudflare odprl kodo brskalnika Kitesurf: lahek spletni pogon za UI-agente brez Chromiuma","description":"Eksperimentalni brskalnik, napisan v Rustu in zgrajen za platformo Workers, je zdaj na voljo pod licenco Apache 2.0. Cloudflare ga za zahtevnejše strani še ne priporoča kot edino rešitev.","image":["https://aidnevnik.si/favicon.svg"],"datePublished":"2026-11-13T17:00:00","dateModified":"2026-11-13T17:00:00","inLanguage":"sl","publisher":{"@type":"Organization","name":"AI Dnevnik","url":"https://aidnevnik.si"},"mainEntityOfPage":"https://aidnevnik.si/clanek/cloudflare-kitesurf-odprta-koda.html"}</script>
+</head>
+<body class="article-page">
+  <div class="read-progress" aria-hidden="true"><span id="read-progress-bar"></span></div>
+  <header class="masthead">
+    <div class="container masthead-inner">
+      <a href="../index.html" class="brand-logo">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
+            <rect x="2" y="2" width="60" height="60" rx="14" fill="#16140f" />
+            <rect x="2.75" y="2.75" width="58.5" height="58.5" rx="13.25" stroke="#ffffff" stroke-opacity="0.14" stroke-width="1.5" />
+            <rect x="21" y="45" width="22" height="5.5" rx="2.5" fill="#f7f4ee" />
+            <path d="M22 43L18.5 31L32 16L45.5 31L42 43H22Z" fill="#f7f4ee" />
+            <line x1="32" y1="31.5" x2="32" y2="16.5" stroke="#16140f" stroke-width="2.4" stroke-linecap="round" />
+            <circle cx="32" cy="32" r="4.5" fill="#2a4f8f" />
+            <circle cx="32" cy="32" r="1.9" fill="#c9d7f2" />
+            <circle cx="32" cy="11.5" r="3.6" fill="#b3361f" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>AI Dnevnik</strong>
+          <small>Umetna inteligenca · Slovenija &amp; svet</small>
+        </span>
+      </a>
+      <div class="subpage-actions">
+        <a href="../index.html" class="icon-action-btn">← Vse novice</a>
+        <button type="button" class="utility-btn" id="theme-toggle" aria-label="Preklopi temo">
+          <span id="theme-label">Temni način</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <figure class="article-hero modal-figure">
+    <div class="modal-art">
+      <span class="art-fallback" data-art-category="modeli" data-art-seed="cloudflare-kitesurf-odprta-koda"></span>
+    </div>
+    <figcaption class="modal-photo-credit">Ilustracija: AI Dnevnik</figcaption>
+  </figure>
+
+  <main class="container subpage-shell">
+    <article class="prose-card standalone-article">
+      <span class="badge cat-modeli">Modeli in raziskave</span>
+      <h1 class="standalone-title">Cloudflare odprl kodo brskalnika Kitesurf: lahek spletni pogon za UI-agente brez Chromiuma</h1>
+      <p class="article-dek">Eksperimentalni brskalnik, napisan v Rustu in zgrajen za platformo Workers, je zdaj na voljo pod licenco Apache 2.0. Cloudflare ga za zahtevnejše strani še ne priporoča kot edino rešitev.</p>
+      <div class="modal-meta">
+        <span class="byline">Napisala UI</span>
+        <span>·</span>
+        <span>13. november 2026</span>
+        <span>·</span>
+        <span>3 min branja</span>
+      </div>
+
+      <div class="article-actions">
+        <button type="button" class="icon-action-btn" id="bookmark-btn" data-id="cloudflare-kitesurf-odprta-koda" aria-pressed="false">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+          <span id="bookmark-label">Shrani</span>
+        </button>
+        <button type="button" class="icon-action-btn" id="share-btn" data-url="https://aidnevnik.si/clanek/cloudflare-kitesurf-odprta-koda.html" data-title="Cloudflare odprl kodo brskalnika Kitesurf: lahek spletni pogon za UI-agente brez Chromiuma">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"></line><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"></line></svg>
+          <span id="share-label">Deli</span>
+        </button>
+      </div>
+
+      <div class="glossary-hint-bar">
+        <span>Namig: dotakni se ali postavi miško na <span class="glossary-hint-sample">podčrtan izraz</span> za hitro razlago.</span>
+      </div>
+
+      <div class="modal-takeaways">
+        <h4>Ključni poudarki</h4>
+        <ol><li>Kitesurf je odprtokoden pod licenco Apache 2.0; kodo lahko razvijalci poganjajo lokalno ali na Cloudflare Workers.</li><li>Pogon teče v izoliranih okoljih V8 in ne temelji na Chromiumu, sestavljen pa je iz odprtih komponent (Blitz, Stylo, Boa).</li><li>Ne podpira videa, WebGL in trajnih prijavljenih sej, zato Cloudflare za zahtevne strani svetuje Chromium kot rezervo.</li></ol>
+      </div>
+
+      <div class="modal-body">
+        <p>Cloudflare je 13. novembra objavil izvorno kodo brskalnika Kitesurf, ki ga je razvil posebej za UI-agente. Koda je na GitHubu pod licenco Apache 2.0, zato jo lahko razvijalci berejo, poganjajo lokalno, spreminjajo in namestijo na lastno instanco v okolju Cloudflare Workers.</p>
+        <p>Za razliko od večine orodij za avtomatizirano brskanje Kitesurf ne uporablja Chromiuma. Teče v izoliranih okoljih V8 na platformi Workers in je sestavljen iz odprtokodnih gradnikov: modularnega izrisovalnika Blitz, Firefoxovega razčlenjevalnika CSS Stylo in pogona JavaScript Boa. Projekt se je začel kot prenos odprtokodnega pogona Obscura, napisanega v Rustu.</p>
+        <div class="ad-slot ad-inline" data-slot="article-inline" data-show="mobile"></div>
+        <p>Cloudflare poudarja, da je brskalnik še v intenzivnem razvoju. Ne podpira videa, WebGL, preverjanj botov na podlagi prstnih odtisov TLS in trajnih prijavljenih sej, zato za zahtevnejše strani priporoča Chromium kot rezervno možnost.</p>
+        <p>Komentatorji opozarjajo še na varnost: pri lastni namestitvi je ta v rokah upravljavca, saj pogon privzeto nima overjanja in je dostopen prek javnega URL-ja.</p>
+      </div>
+
+      <div class="modal-sources">
+        <h4>Uporabljeni viri</h4>
+        <ol>
+          <li><a href="https://blog.cloudflare.com/kitesurf-open-source/" target="_blank" rel="noopener noreferrer">Cloudflare Blog — Kitesurf is now open source</a></li>
+          <li><a href="https://phoronix.com/news/Cloudflare-Kitesurf-Open-Source" target="_blank" rel="noopener noreferrer">Phoronix — Cloudflare Open Sources Kitesurf</a></li>
+        </ol>
+      </div>
+
+      <p class="modal-ai-note">Članek je napisala UI na podlagi javno dostopnih virov.</p>
+
+      <div class="modal-tags">
+        <span class="tag-chip">#Cloudflare</span><span class="tag-chip">#Brskalniki</span><span class="tag-chip">#UI-agenti</span><span class="tag-chip">#Odprta koda</span>
+      </div>
+    </article>
+
+    <section class="related-block" aria-label="Preberite tudi">
+      <h2>Preberite tudi</h2>
+      <div class="related-grid">
+          <a class="related-card cat-modeli" href="google-gemini-4-neon.html">
+            <div class="card-art"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/SC-APC_fiber_optic_cable.jpg/960px-SC-APC_fiber_optic_cable.jpg" alt="Optični kabel za hiter prenos podatkov" loading="lazy" data-art-category="modeli" data-art-seed="google-gemini-4-neon" referrerpolicy="no-referrer" /></div>
+            <span class="badge cat-modeli">Modeli in raziskave</span>
+            <h3>Google DeepMind predstavil Gemini 4 Neon: vrhunsko sklepanje pri 61 točkah AA v5 in ceni 3 $ / 15 $</h3>
+            <div class="card-meta"><span>19. november 2026</span><span>4 min</span></div>
+          </a>
+          <a class="related-card cat-modeli" href="openai-gpt-62-astra-sol.html">
+            <div class="card-art"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/CSIRO_ScienceImage_11313_The_CSIRO_GPU_cluster_at_the_data_centre.jpg/960px-CSIRO_ScienceImage_11313_The_CSIRO_GPU_cluster_at_the_data_centre.jpg" alt="Visokozmogljiva grafična gruča v podatkovnem centru" loading="lazy" data-art-category="modeli" data-art-seed="openai-gpt-62-astra-sol" referrerpolicy="no-referrer" /></div>
+            <span class="badge cat-modeli">Modeli in raziskave</span>
+            <h3>OpenAI predstavil GPT-6.2 Astra in Sol: 20 % nižja cena paradnega modela in 2. mesto na lestvici AA v5</h3>
+            <div class="card-meta"><span>18. november 2026</span><span>5 min</span></div>
+          </a>
+          <a class="related-card cat-modeli" href="microsoft-ignite-mai-transparentnost.html">
+            <div class="card-art"><img src="../images/microsoft-ignite-mai-transparentnost.webp" alt="Sedež podjetja Microsoft v Redmondu (stavba 92)" loading="lazy" data-art-category="modeli" data-art-seed="microsoft-ignite-mai-transparentnost" referrerpolicy="no-referrer" /></div>
+            <span class="badge cat-modeli">Modeli in raziskave</span>
+            <h3>Microsoft Ignite 2026: sedem novih lastnih modelov MAI in globalna pobuda za preglednost agentov</h3>
+            <div class="card-meta"><span>18. november 2026</span><span>5 min</span></div>
+          </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <span>© 2026 AI Dnevnik — Portal za umetno inteligenco.</span>
+      <div class="subpage-footer-links">
+        <a href="../index.html">Naslovnica</a>
+        <a href="../uredniska-nacela.html">Uredniška načela</a>
+        <a href="../zasebnost.html">Zasebnost</a>
+        <a href="../kontakt.html">Kontakt</a>
+        <a href="../zasebnost.html#piskotki" data-consent-open>Piškotki</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../config.js"></script>
+  <script src="../consent.js"></script>
+  <script src="../ads.js"></script>
+  <script src="../art.js"></script>
+  <script src="../glossary.js"></script>
+  <script>
+    window.attachArtFallbacks && window.attachArtFallbacks(document);
+    const apply = (t) => {
+      document.documentElement.setAttribute("data-theme", t);
+      try { localStorage.setItem("aidnevnik_theme", t); } catch (e) {}
+      const lbl = document.getElementById("theme-label");
+      if (lbl) lbl.textContent = t === "dark" ? "Svetli način" : "Temni način";
+    };
+    apply(document.documentElement.getAttribute("data-theme") || "light");
+    document.getElementById("theme-toggle")?.addEventListener("click", () => {
+      apply(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark");
+    });
+    // Shrani članek v bralni seznam (isti seznam kot na naslovnici)
+    const bBtn = document.getElementById("bookmark-btn");
+    const readBm = () => { try { return JSON.parse(localStorage.getItem("aidnevnik_bookmarks") || "[]"); } catch (e) { return []; } };
+    const paintBm = () => {
+      const on = readBm().includes(bBtn.dataset.id);
+      bBtn.setAttribute("aria-pressed", String(on));
+      document.getElementById("bookmark-label").textContent = on ? "Shranjeno" : "Shrani";
+    };
+    bBtn.addEventListener("click", () => {
+      let list = readBm();
+      list = list.includes(bBtn.dataset.id) ? list.filter((x) => x !== bBtn.dataset.id) : [...list, bBtn.dataset.id];
+      try { localStorage.setItem("aidnevnik_bookmarks", JSON.stringify(list)); } catch (e) {}
+      paintBm();
+    });
+    paintBm();
+    // Deli: sistemski meni za deljenje ali kopiranje povezave
+    const sBtn = document.getElementById("share-btn");
+    sBtn.addEventListener("click", async () => {
+      const lbl = document.getElementById("share-label");
+      const data = { title: sBtn.dataset.title, url: sBtn.dataset.url };
+      try {
+        if (navigator.share) { await navigator.share(data); return; }
+        await navigator.clipboard.writeText(data.url);
+        lbl.textContent = "Povezava kopirana";
+      } catch (e) {
+        if (e && e.name === "AbortError") return;
+        lbl.textContent = "Kopiranje ni uspelo";
+      }
+      setTimeout(() => { lbl.textContent = "Deli"; }, 2000);
+    });
+    const bar = document.getElementById("read-progress-bar");
+    const onScroll = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.setProperty("--p", max > 0 ? Math.min(1, window.scrollY / max).toFixed(3) : 0);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  </script>
+</body>
+</html>

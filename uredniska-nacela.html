@@ -17,19 +17,19 @@
       <a href="index.html" class="brand-logo">
         <span class="brand-mark" aria-hidden="true">
           <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
-            <rect x="2" y="2" width="60" height="60" rx="14" fill="#12151c" />
+            <rect x="2" y="2" width="60" height="60" rx="14" fill="#16140f" />
             <rect x="2.75" y="2.75" width="58.5" height="58.5" rx="13.25" stroke="#ffffff" stroke-opacity="0.14" stroke-width="1.5" />
-            <rect x="21" y="45" width="22" height="5.5" rx="2.5" fill="#faf9f6" />
-            <path d="M22 43L18.5 31L32 16L45.5 31L42 43H22Z" fill="#faf9f6" />
-            <line x1="32" y1="31.5" x2="32" y2="16.5" stroke="#12151c" stroke-width="2.4" stroke-linecap="round" />
-            <circle cx="32" cy="32" r="4.5" fill="#1d4ed8" />
-            <circle cx="32" cy="32" r="1.9" fill="#93c5fd" />
-            <circle cx="32" cy="11.5" r="3.6" fill="#dc2626" />
+            <rect x="21" y="45" width="22" height="5.5" rx="2.5" fill="#f7f4ee" />
+            <path d="M22 43L18.5 31L32 16L45.5 31L42 43H22Z" fill="#f7f4ee" />
+            <line x1="32" y1="31.5" x2="32" y2="16.5" stroke="#16140f" stroke-width="2.4" stroke-linecap="round" />
+            <circle cx="32" cy="32" r="4.5" fill="#2a4f8f" />
+            <circle cx="32" cy="32" r="1.9" fill="#c9d7f2" />
+            <circle cx="32" cy="11.5" r="3.6" fill="#b3361f" />
           </svg>
         </span>
         <span class="brand-text">
-          <strong>AI DNEVNIK</strong>
-          <small>UMETNA INTELIGENCA · SLOVENIJA &amp; SVET</small>
+          <strong>AI Dnevnik</strong>
+          <small>Umetna inteligenca · Slovenija &amp; svet</small>
         </span>
       </a>
       <div class="subpage-actions">
@@ -77,10 +77,11 @@
   <script>
     const apply = (t) => {
       document.documentElement.setAttribute("data-theme", t);
-      localStorage.setItem("aidnevnik_theme", t);
+      try { localStorage.setItem("aidnevnik_theme", t); } catch (e) {}
       document.getElementById("theme-label").textContent = t === "dark" ? "Svetli način" : "Temni način";
     };
-    apply(localStorage.getItem("aidnevnik_theme") || "light");
+    let saved = "light"; try { saved = localStorage.getItem("aidnevnik_theme") || "light"; } catch (e) {}
+    apply(saved);
     document.getElementById("theme-toggle").addEventListener("click", () => {
       apply(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark");
     });

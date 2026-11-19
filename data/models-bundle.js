@@ -158,21 +158,21 @@ window.AI_DNEVNIK_MODELS = {
     },
     {
       "id": "claude-fable-5",
-      "name": "Claude Fable 5 (High) / 5.2",
+      "name": "Claude Fable 5.2 (Max)",
       "provider": "Anthropic",
       "providerColor": "#ea580c",
-      "intelligenceIndex": 64.6,
-      "intelligenceNote": "64,6 (AA v5 · 1. mesto)",
+      "intelligenceIndex": 65,
+      "intelligenceNote": "65 (AA v5.0.1, Max); High 62",
       "chatElo": 1504,
       "chatEloErr": "",
       "chatRank": 5,
       "inputPrice": 8,
       "outputPrice": 40,
       "priceDisplay": "8,00 $ / 40,00 $",
-      "speedLabel": "Hiter odziv",
-      "contextLabel": "1M tokenov",
-      "availability": "Splošno na voljo",
-      "highlight": "Vodilni model na indeksu Artificial Analysis v5 (64,6) in priljubljen za pisanje ter dialog."
+      "speedLabel": "Prilagodljivo sklepanje (Max / High / Medium)",
+      "contextLabel": "—",
+      "availability": "Splošno (API / Claude)",
+      "highlight": "Najvišja ocena doslej na indeksu AA v5 (65 pri nastavitvi Max). Cena je 20 % nižja od predhodnika; Elo na LMAreni velja za Fable 5 (High), ocena za 5.2 še ni objavljena."
     },
     {
       "id": "claude-opus-46",
