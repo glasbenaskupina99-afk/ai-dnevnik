@@ -23,11 +23,11 @@
       "chatRank": null,
       "inputPrice": 3,
       "outputPrice": 15,
-      "priceDisplay": "3,00 $ / 15,00 $",
+      "priceDisplay": "3,00 $ / 15,00 $ (uvodno)",
       "speedLabel": "Hitro sklepanje (4 ravni)",
       "contextLabel": "1M tokenov",
-      "availability": "Splošno (API / Pro & Ultra)",
-      "highlight": "Novi Googlov model (18. nov.): 61 točk na AA v5 pri ceni 3 $/15 $, idealno ravnovesje med Carbonom in Hydrogenom."
+      "availability": "API (plačljivo) / Gemini Pro & Ultra",
+      "highlight": "Novi Googlov model (18. nov.): 61 točk na AA v5 (3. mesto) in skoraj dvakrat hitrejši od Carbona. Uvodna cena 3 $/15 $, nato 4 $/20 $; v aplikaciji Gemini nadomešča Argon."
     },
     {
       "id": "gemini-4-carbon",

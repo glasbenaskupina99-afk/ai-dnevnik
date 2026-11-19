@@ -9,8 +9,8 @@ window.AI_DNEVNIK_WEEKLY = {
     {
       "category": "posel",
       "kicker": "Borza, banke in infrastruktura",
-      "headline": "Anthropic na Nasdaq pri 83 $, Citibank svari pred UI-agenti, strežniki pa na morje",
-      "summary": "Anthropic je za današnji borzni prvenec pod oznako ANT določil ceno 83 USD na delnico (~81,34 mrd $ IPO in ~1,5 bilijona $ vrednosti) ob dodatnih 26 milijardah zasebne naložbe sedmih velikanov. Medtem ko OpenAI širi ChatGPT Wallet, je Citibank komitente opozoril, da ob uporabi zunanjih UI-agentov sami nosijo škodo vdorov, startup Drogue pa je zbral 20 mio $ za plavajoče podatkovne centre OTEC.",
+      "headline": "Anthropic na Nasdaq pri 83 $, banke zapirajo vrata UI-agentom, strežniki pa na morje",
+      "summary": "Anthropic je za današnji borzni prvenec pod oznako ANT določil ceno 83 USD na delnico (~81,34 mrd $ IPO in ~1,5 bilijona $ vrednosti) ob dodatnih 26 milijardah zasebne naložbe sedmih velikanov. Medtem ko OpenAI širi ChatGPT Wallet, so Citi in druge velike banke zunanjim UI-agentom prepovedali prijavo v račune strank, startup Drogue pa je zbral 20 mio $ za plavajoče podatkovne centre OTEC.",
       "relatedArticles": [
         {
           "id": "anthropic-ipo-83-nasdaq-zacetek",
@@ -18,7 +18,7 @@ window.AI_DNEVNIK_WEEKLY = {
         },
         {
           "id": "citibank-agenti-odgovornost-vdori",
-          "label": "Opozorilo banke Citibank"
+          "label": "Banke proti UI-agentom"
         },
         {
           "id": "openai-chatgpt-wallet",

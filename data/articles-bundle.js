@@ -26,7 +26,7 @@ window.AI_DNEVNIK_DATA = {
     },
     {
       "time": "00:30",
-      "text": "Citibank opozoril stranke z zunanjimi UI-agenti: ob nepooblaščenih transakcijah ali vdorih ste odgovorni sami",
+      "text": "Citi zunanjim UI-agentom prepovedal prijavo v račune; omejitve tudi pri JPMorganu, BofA in Morgan Stanleyju",
       "articleId": "citibank-agenti-odgovornost-vdori"
     },
     {
@@ -288,7 +288,7 @@ window.AI_DNEVNIK_DATA = {
       "isHeroSide": false,
       "breaking": false,
       "variant": "slovenija",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Berlaymont_EU_flags.jpg/960px-Berlaymont_EU_flags.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Berlaymont_EU_flags.jpg/960px-Berlaymont_EU_flags.jpg",
       "imageAlt": "Zastave Evropske unije pred poslopjem Evropske komisije",
       "imageCredit": "Foto: Hlynz / CC BY-SA 3.0",
       "tags": [
@@ -327,7 +327,7 @@ window.AI_DNEVNIK_DATA = {
       "isHeroSide": false,
       "breaking": false,
       "variant": "anthropic",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Datacenter_Server_Racks_%2822370909788%29.jpg/960px-Datacenter_Server_Racks_%2822370909788%29.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Datacenter_Server_Racks_%2822370909788%29.jpg/960px-Datacenter_Server_Racks_%2822370909788%29.jpg",
       "imageAlt": "Strežniške omare v velikem podatkovnem centru",
       "imageCredit": "Foto: Carl Lender / CC BY 2.0",
       "tags": [
@@ -364,7 +364,7 @@ window.AI_DNEVNIK_DATA = {
       "readMinutes": 4,
       "views": 6150,
       "variant": "slovenija",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Ljubljana_panorama.jpg/960px-Ljubljana_panorama.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Ljubljana_panorama.jpg/960px-Ljubljana_panorama.jpg",
       "imageAlt": "Panorama Ljubljane",
       "imageCredit": "Foto: ppapadeas / CC BY-SA 3.0",
       "tags": [
@@ -449,7 +449,7 @@ window.AI_DNEVNIK_DATA = {
       "readMinutes": 4,
       "views": 4280,
       "variant": "dogodki",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Grad_Brdo_pri_Kranju_%28Brdo_Castle%29.jpg/960px-Grad_Brdo_pri_Kranju_%28Brdo_Castle%29.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Grad_Brdo_pri_Kranju_%28Brdo_Castle%29.jpg/960px-Grad_Brdo_pri_Kranju_%28Brdo_Castle%29.jpg",
       "imageAlt": "Posestvo Brdo pri Kranju, prizorišče konference Evolucija.AI",
       "imageCredit": "Foto: Petar Milošević / CC BY-SA 4.0",
       "tags": [
@@ -503,7 +503,7 @@ window.AI_DNEVNIK_DATA = {
       "readMinutes": 3,
       "views": 3890,
       "variant": "svet",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/University_of_Ljubljana_Palace.jpg/960px-University_of_Ljubljana_Palace.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/University_of_Ljubljana_Palace.jpg/960px-University_of_Ljubljana_Palace.jpg",
       "imageAlt": "Poslopje rektorata Univerze v Ljubljani",
       "imageCredit": "Foto: Petar Milošević / CC BY-SA 4.0",
       "tags": [
@@ -587,7 +587,7 @@ window.AI_DNEVNIK_DATA = {
       "readMinutes": 4,
       "views": 5610,
       "variant": "fable",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Server_Rack_%2854126210834%29.jpg/960px-Server_Rack_%2854126210834%29.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Server_Rack_%2854126210834%29.jpg/960px-Server_Rack_%2854126210834%29.jpg",
       "imageAlt": "Strežniška infrastruktura za delovanje jezikovnih modelov",
       "imageCredit": "Foto: Tony Webster / CC BY 2.0",
       "tags": [
@@ -676,7 +676,7 @@ window.AI_DNEVNIK_DATA = {
       "views": 7150,
       "breaking": true,
       "variant": "varnost",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/SF_County_Superior_Court_01.jpg/960px-SF_County_Superior_Court_01.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/SF_County_Superior_Court_01.jpg/960px-SF_County_Superior_Court_01.jpg",
       "imageAlt": "Višje sodišče okrožja San Francisco v Kaliforniji",
       "imageCredit": "Foto: Cocoablini / CC BY-SA 4.0",
       "tags": [
@@ -722,7 +722,7 @@ window.AI_DNEVNIK_DATA = {
       "readMinutes": 3,
       "views": 5240,
       "variant": "svet",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Meta_Headquarters_Sign.jpg/960px-Meta_Headquarters_Sign.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Meta_Headquarters_Sign.jpg/960px-Meta_Headquarters_Sign.jpg",
       "imageAlt": "Znak pred sedežem podjetja Meta Platforms v Kaliforniji",
       "imageCredit": "Foto: Nokia621 / CC BY-SA 4.0",
       "tags": [
@@ -764,7 +764,7 @@ window.AI_DNEVNIK_DATA = {
       "readMinutes": 5,
       "views": 6380,
       "variant": "robotika",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Halodi_Robotics%27_Perception_Engineer_With_a_Humanoid_Collaborative_Robot.jpg/960px-Halodi_Robotics%27_Perception_Engineer_With_a_Humanoid_Collaborative_Robot.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Halodi_Robotics%27_Perception_Engineer_With_a_Humanoid_Collaborative_Robot.jpg/960px-Halodi_Robotics%27_Perception_Engineer_With_a_Humanoid_Collaborative_Robot.jpg",
       "imageAlt": "Inženir pri testiranju humanoidnega sodelujočega robota",
       "imageCredit": "Foto: Nicholas-halodi / CC BY-SA 4.0",
       "tags": [
@@ -853,7 +853,7 @@ window.AI_DNEVNIK_DATA = {
       "readMinutes": 4,
       "views": 4620,
       "variant": "slovenija",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/European_Parliament_Strasbourg_Hemicycle_-_Diliff.jpg/960px-European_Parliament_Strasbourg_Hemicycle_-_Diliff.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/European_Parliament_Strasbourg_Hemicycle_-_Diliff.jpg/960px-European_Parliament_Strasbourg_Hemicycle_-_Diliff.jpg",
       "imageAlt": "Plenarna dvorana Evropskega parlamenta v Strasbourgu",
       "imageCredit": "Foto: Diliff / CC BY-SA 3.0",
       "tags": [
@@ -903,7 +903,7 @@ window.AI_DNEVNIK_DATA = {
       "readMinutes": 4,
       "views": 4890,
       "variant": "fuzija",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Data_Center_2_%28UNC%29.jpg/960px-Data_Center_2_%28UNC%29.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Data_Center_2_%28UNC%29.jpg/960px-Data_Center_2_%28UNC%29.jpg",
       "imageAlt": "Strežniška vrsta v sodobnem podatkovnem centru",
       "imageCredit": "Foto: Ana Las Heras / CC BY-SA 4.0",
       "tags": [
@@ -997,7 +997,7 @@ window.AI_DNEVNIK_DATA = {
       "views": 6920,
       "breaking": false,
       "variant": "zanimivo",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Zona_Retro_de_Gamepolis.jpg/960px-Zona_Retro_de_Gamepolis.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Zona_Retro_de_Gamepolis.jpg/960px-Zona_Retro_de_Gamepolis.jpg",
       "imageAlt": "Igralni kotiček in računalniške igre na prireditvi Gamepolis",
       "imageCredit": "Foto: Gamepolis / CC BY-SA 4.0",
       "tags": [
@@ -1083,7 +1083,7 @@ window.AI_DNEVNIK_DATA = {
       "readMinutes": 4,
       "views": 6180,
       "variant": "zanimivo",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Snacks_in_vending_machine%2C_PatchWerk_Recording_Studios%2C_2007.jpg/960px-Snacks_in_vending_machine%2C_PatchWerk_Recording_Studios%2C_2007.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Snacks_in_vending_machine%2C_PatchWerk_Recording_Studios%2C_2007.jpg/960px-Snacks_in_vending_machine%2C_PatchWerk_Recording_Studios%2C_2007.jpg",
       "imageAlt": "Prodajni avtomat s prigrizki in pijačo",
       "imageCredit": "Foto: Jon Gos / CC BY 2.0",
       "tags": [
@@ -1125,7 +1125,7 @@ window.AI_DNEVNIK_DATA = {
       "readMinutes": 4,
       "views": 4890,
       "variant": "svet",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/CSCL_Pacific_Ocean.jpg/960px-CSCL_Pacific_Ocean.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/CSCL_Pacific_Ocean.jpg/960px-CSCL_Pacific_Ocean.jpg",
       "imageAlt": "Velika oceanska ladja na odprtem morju",
       "imageCredit": "Foto: MacOrcas / CC BY-SA 4.0",
       "tags": [
@@ -1163,7 +1163,7 @@ window.AI_DNEVNIK_DATA = {
       "readMinutes": 3,
       "views": 5740,
       "variant": "zanimivo",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Atr72_flight_simulator_cockpit_closeup.jpg/960px-Atr72_flight_simulator_cockpit_closeup.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Atr72_flight_simulator_cockpit_closeup.jpg/960px-Atr72_flight_simulator_cockpit_closeup.jpg",
       "imageAlt": "Pilotska kabina letalskega simulatorja",
       "imageCredit": "Foto: Ilari Kousa / CC BY-SA 4.0",
       "tags": [
@@ -1201,7 +1201,7 @@ window.AI_DNEVNIK_DATA = {
       "readMinutes": 3,
       "views": 4320,
       "variant": "gemini",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Oso_Landslide_aerial.jpg/960px-Oso_Landslide_aerial.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Oso_Landslide_aerial.jpg/960px-Oso_Landslide_aerial.jpg",
       "imageAlt": "Posnetek obsežnega zemeljskega plazu iz zraka",
       "imageCredit": "Foto: Mark Reid, USGS / Javna domena",
       "tags": [
@@ -1239,7 +1239,7 @@ window.AI_DNEVNIK_DATA = {
       "readMinutes": 4,
       "views": 4680,
       "variant": "anthropic",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Data_Center_3_%28UNC%29.jpg/960px-Data_Center_3_%28UNC%29.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Data_Center_3_%28UNC%29.jpg/960px-Data_Center_3_%28UNC%29.jpg",
       "imageAlt": "Strežniška infrastruktura v podatkovnem centru",
       "imageCredit": "Foto: Ana Las Heras / CC BY-SA 4.0",
       "tags": [
@@ -1323,7 +1323,7 @@ window.AI_DNEVNIK_DATA = {
       "isHeroSide": false,
       "breaking": false,
       "variant": "anthropic",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/NASDAQ_Times_Square_-_panoramio.jpg/960px-NASDAQ_Times_Square_-_panoramio.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/NASDAQ_Times_Square_-_panoramio.jpg/960px-NASDAQ_Times_Square_-_panoramio.jpg",
       "imageAlt": "Poslopje borze Nasdaq na Times Squaru v New Yorku",
       "imageCredit": "Foto: Roman SUZUKI / CC BY 3.0",
       "tags": [
@@ -1366,7 +1366,7 @@ window.AI_DNEVNIK_DATA = {
       "isHeroSide": false,
       "breaking": false,
       "variant": "varnost",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/San_Francisco_City_Hall%2C_Blue_and_Gold_%28from_Memorial_Court%29_%288692161452%29.jpg/960px-San_Francisco_City_Hall%2C_Blue_and_Gold_%28from_Memorial_Court%29_%288692161452%29.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/San_Francisco_City_Hall%2C_Blue_and_Gold_%28from_Memorial_Court%29_%288692161452%29.jpg/960px-San_Francisco_City_Hall%2C_Blue_and_Gold_%28from_Memorial_Court%29_%288692161452%29.jpg",
       "imageAlt": "Mestna hiša in sodiščni okoliš v San Franciscu",
       "imageCredit": "Foto: GPS / CC BY-SA 2.0",
       "tags": [
@@ -1413,7 +1413,7 @@ window.AI_DNEVNIK_DATA = {
       "isHeroSide": false,
       "breaking": false,
       "variant": "slovenija",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Spiral_stairs_%28Art_Deco%2C_Neboti%C4%8Dnik%2C_Ljubljana%29.jpg/960px-Spiral_stairs_%28Art_Deco%2C_Neboti%C4%8Dnik%2C_Ljubljana%29.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spiral_stairs_%28Art_Deco%2C_Neboti%C4%8Dnik%2C_Ljubljana%29.jpg/960px-Spiral_stairs_%28Art_Deco%2C_Neboti%C4%8Dnik%2C_Ljubljana%29.jpg",
       "imageAlt": "Notranjost ljubljanskega Nebotičnika",
       "imageCredit": "Foto: Petar Milošević / CC BY-SA 4.0",
       "tags": [
@@ -1495,7 +1495,7 @@ window.AI_DNEVNIK_DATA = {
       "views": 7190,
       "breaking": false,
       "variant": "zanimivo",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/-Man_with_a_movie_projector_in_a_projection_booth_at_a_movie_theater-_%28LOC%29_%2855384266832%29.jpg/960px--Man_with_a_movie_projector_in_a_movie_theater-_%28LOC%29_%2855384266832%29.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/-Man_with_a_movie_projector_in_a_projection_booth_at_a_movie_theater-_%28LOC%29_%2855384266832%29.jpg/960px--Man_with_a_movie_projector_in_a_movie_theater-_%28LOC%29_%2855384266832%29.jpg",
       "imageAlt": "Filmski projektor v kinematografski projekcijski sobi",
       "imageCredit": "Foto: The Library of Congress / Brez omejitev",
       "tags": [
@@ -1534,7 +1534,7 @@ window.AI_DNEVNIK_DATA = {
       "views": 6450,
       "breaking": false,
       "variant": "zanimivo",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Coach_and_Horses%2C_Greek_Street%2C_Soho%2C_W1_%282711029239%29.jpg/960px-Coach_and_Horses%2C_Greek_Street%2C_Soho%2C_W1_%282711029239%29.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Coach_and_Horses%2C_Greek_Street%2C_Soho%2C_W1_%282711029239%29.jpg/960px-Coach_and_Horses%2C_Greek_Street%2C_Soho%2C_W1_%282711029239%29.jpg",
       "imageAlt": "Tradicionalni londonski pub v četrti Soho",
       "imageCredit": "Foto: Ewan Munro / CC BY-SA 2.0",
       "tags": [
@@ -1573,7 +1573,7 @@ window.AI_DNEVNIK_DATA = {
       "views": 9120,
       "breaking": true,
       "variant": "svet",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/CSIRO_ScienceImage_11313_The_CSIRO_GPU_cluster_at_the_data_centre.jpg/960px-CSIRO_ScienceImage_11313_The_CSIRO_GPU_cluster_at_the_data_centre.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/CSIRO_ScienceImage_11313_The_CSIRO_GPU_cluster_at_the_data_centre.jpg/960px-CSIRO_ScienceImage_11313_The_CSIRO_GPU_cluster_at_the_data_centre.jpg",
       "imageAlt": "Visokozmogljiva grafična gruča v podatkovnem centru",
       "imageCredit": "Foto: CSIRO / CC BY 3.0",
       "tags": [
@@ -1669,7 +1669,7 @@ window.AI_DNEVNIK_DATA = {
       "isHeroLead": true,
       "breaking": true,
       "variant": "anthropic",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Wall_Street_-_New_York_Stock_Exchange.jpg/960px-Wall_Street_-_New_York_Stock_Exchange.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wall_Street_-_New_York_Stock_Exchange.jpg/960px-Wall_Street_-_New_York_Stock_Exchange.jpg",
       "imageAlt": "Wall Street in borzno poslopje v New Yorku",
       "imageCredit": "Foto: Carlos Delgado / CC BY-SA 3.0",
       "tags": [
@@ -1685,7 +1685,7 @@ window.AI_DNEVNIK_DATA = {
       ],
       "body": [
         "Anthropic je v sredo zvečer uradno določil končno ceno ene najodmevnejših prvih javnih ponudb delnic v zgodovini tehnologije. Zaradi izjemnega povpraševanja vlagateljev je delnico ovrednotil na 83 dolarjev — občutno nad prvotno napovedanim razponom med 70 in 78 dolarji.",
-        "Družba daje v ponudbo 980 milijonov delnic razreda A, s čimer naj bi ob začetni ceni zbrala okoli 81,34 milijarde dolarjev kapitala, popolno vrednotenje ustvarjalca modelov Claude pa dosega približno 1,5 bilijona dolarjev. Trgovanje na borzi Nasdaq Global Select Market pod oznako ANT se začenja danes, v četrtek, 19. novembra.",
+        "Družba je ponudbo zaradi povpraševanja povečala s prvotnih 825 na 980 milijonov delnic razreda A (956,35 milijona jih prodaja Anthropic, 23,65 milijona soustanovitelji), s čimer naj bi ob začetni ceni zbrala okoli 81,34 milijarde dolarjev kapitala, popolno vrednotenje ustvarjalca modelov Claude pa dosega približno 1,5 bilijona dolarjev. Trgovanje na borzi Nasdaq Global Select Market pod oznako ANT se začenja danes, v četrtek, 19. novembra.",
         "Še posebej zgovoren je seznam strateških kupcev v vzporedni zasebni naložbi: Google, NVIDIA, Microsoft, AMD, Broadcom, Micron in TSMC so se zavezali k nakupu za skupno 26 milijard dolarjev delnic, kar tesno povezuje celotno svetovno verigo čipov in oblaka s prihodnostjo podjetja Anthropic."
       ],
       "sources": [
@@ -1700,45 +1700,66 @@ window.AI_DNEVNIK_DATA = {
         {
           "label": "ET CIO — Google, Nvidia, Microsoft among seven firms committing $26B",
           "url": "https://cio.economictimes.indiatimes.com/news/investments/google-nvidia-microsoft-among-seven-firms-committing-usd-26-billion-to-anthropic/135728598"
+        },
+        {
+          "label": "CNBC — Anthropic IPO raises over $81 billion in largest offering on record",
+          "url": "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html"
+        },
+        {
+          "label": "CBS News — Anthropic set for Nasdaq trading debut after largest IPO in history",
+          "url": "https://www.cbsnews.com/news/anthropic-ipo-nasdaq-debut-claude-ai/"
         }
       ],
       "isHeroSide": false
     },
     {
       "id": "citibank-agenti-odgovornost-vdori",
-      "title": "Citibank posvaril stranke z UI-agenti: če pomočnik zgreši ali vas oropajo, škodo nosite sami",
-      "excerpt": "Velika ameriška banka je posodobila pogoje poslovanja in jasno zapisala, da komitenti, ki svojim osebnim finančnim UI-agentom zaupajo dostop do računov, sami prevzemajo tveganje vdorov.",
+      "title": "Banke zapirajo vrata UI-agentom: Citi zunanjim agentom prepovedal prijavo v račune, tveganje ostaja pri strankah",
+      "excerpt": "Citi je po poročanju Financial Timesa zunanjim UI-agentom prepovedal prijavo v račune in izvajanje transakcij. Podobne omejitve uvajajo JPMorgan, Bank of America in Morgan Stanley, odgovornost ob zlorabi prijavnih podatkov pa po pogodbah nosijo stranke.",
       "category": "posel",
       "dateLabel": "19. november 2026",
       "timestamp": "2026-11-19T00:30:00",
-      "readMinutes": 3,
+      "readMinutes": 4,
       "views": 6290,
       "isHeroSide": false,
       "breaking": false,
       "variant": "varnost",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Citibank_K%C5%8Dbe_Branch.jpg/960px-Citibank_K%C5%8Dbe_Branch.jpg",
-      "imageAlt": "Poslovnica banke Citibank",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Citibank_K%C5%8Dbe_Branch.jpg/960px-Citibank_K%C5%8Dbe_Branch.jpg",
+      "imageAlt": "Poslovnica banke Citi",
       "imageCredit": "Foto: ラハール / CC BY-SA 4.0",
       "tags": [
-        "Citibank",
+        "Citi",
+        "Banke",
         "UI-agenti",
-        "Bančništvo",
-        "Odgovornost"
+        "Varnost"
       ],
       "takeaways": [
-        "Citibank je spremenil pogoje uporabe in opozoril stranke, naj pri uporabi zunanjih UI-agentov za bančne opravke ne računajo na povračilo škode.",
-        "Če komitent agentu posreduje poverilnice ali odobri samodejno delovanje, banka ne krije niti nepooblaščenih transakcij ob morebitnem vdorih v orodje.",
-        "Novica prihaja le nekaj dni po predstavitvi storitve ChatGPT Wallet in kaže na zaostritev bančne previdnosti do avtonomnih pomočnikov."
+        "Citi zunanjim UI-agentom ne dovoli več prijave v račune strank ali izvajanja transakcij; dovoljen ostaja le omejen dostop za branje prek izbranih ponudnikov odprtega bančništva.",
+        "Dostop omejujejo tudi JPMorgan, Bank of America in Morgan Stanley.",
+        "Bančne pogodbe tveganje zlorabe prijavnih podatkov nalagajo stranki — prav te podatke pa agenti običajno uporabljajo; vdora v jedrne sisteme bank doslej ni bilo."
       ],
       "body": [
-        "V tednu, ko tehnološka podjetja množično predstavljajo UI-agente za spletno nakupovanje in urejanje financ, so prve večje banke potegnile jasno pravno črto. Citibank je v posodobljenih pogojih poslovanja komitente opozoril, da ob uporabi zunanjih UI-agentov pri upravljanju osebnih financ v celoti ostajajo prepuščeni sami sebi.",
-        "Če stranka avtonomnemu pomočniku odobri dostop ali ta sproži nepooblaščene transakcije zaradi napake oziroma hekerskega vdora, banka takšne izgube ne namerava kriti. Gre za jasen signal tradicionalnih finančnih ustanov, da ne želijo prevzemati tveganj nepreverjenih zunanjih programskih vmesnikov.",
-        "Podobno previden pristop sprejemajo tudi druge velike banke, kar potrjuje, zakaj so sistemi s strogimi plačilnimi žetoni in obvezno biometrično potrditvijo vsakega posameznega nakupa za zdaj nujni."
+        "V tednu, ko tehnološka podjetja množično predstavljajo UI-agente za nakupovanje in urejanje financ, so velike ameriške banke potegnile jasno črto. Po poročanju Financial Timesa je Citi zunanjim UI-agentom prepovedal prijavo v račune strank in izvajanje transakcij na svojih digitalnih kanalih. Stranke lahko izbranim ponudnikom odprtega bančništva še vedno odobrijo omejen dostop samo za branje.",
+        "Citi ni edini. Po poročanju Axiosa so dostop zunanjih agentov omejili tudi JPMorgan, Bank of America in Morgan Stanley. Banke kot razlog navajajo varnost: največja skrb ni, da bi agenti sami vdirali v račune, temveč da stranke prostovoljno delijo svoje bančne prijavne podatke z orodji tretjih oseb.",
+        "To odpira vprašanje odgovornosti. Kot opozarja American Banker, pogodbe o digitalnem bančništvu tveganje nepooblaščene uporabe prijavnih podatkov praviloma nalagajo stranki — prav te podatke pa agenti običajno uporabljajo. Kdo nosi škodo, če agent zgreši ali ga kdo zlorabi, zato ostaja pravno nedorečeno, regulatorji pa menijo, da bo potrebno pojasnilo zakonodajalca.",
+        "Vdora v jedrne sisteme katere od teh bank doslej niso javno poročali. Omejitve kažejo, zakaj ponudniki agentov razvijajo plačilne žetone in obvezno biometrično potrditev vsakega nakupa, namesto da bi agenti uporabljali gesla strank."
       ],
       "sources": [
         {
-          "label": "TechCrunch — Banks warn customers using AI agents are on their own if hacked",
+          "label": "TechCrunch — Banks say customers using AI agents are on their own",
           "url": "https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/"
+        },
+        {
+          "label": "The Paypers — Citi and Bank of America restrict AI agents from accessing accounts",
+          "url": "https://thepaypers.com/fintech/news/citi-and-bank-of-america-restrict-ai-agents-from-accessing-accounts"
+        },
+        {
+          "label": "American Banker — Banks are blocking external AI agents. Is this sustainable?",
+          "url": "https://www.americanbanker.com/news/banks-are-blocking-external-ai-agents-is-this-sustainable"
+        },
+        {
+          "label": "Retail Banker International — US banks limit AI agents' access",
+          "url": "https://www.retailbankerinternational.com/newsletters/us-banks-limit-ai-agents-access/"
         }
       ],
       "isHeroLead": false
@@ -1754,7 +1775,7 @@ window.AI_DNEVNIK_DATA = {
       "views": 5480,
       "breaking": false,
       "variant": "nvidia",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Programming_code.jpg/960px-Programming_code.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Programming_code.jpg/960px-Programming_code.jpg",
       "imageAlt": "Programska koda na zaslonu razvijalca",
       "imageCredit": "Foto: Martin Vorel / CC BY-SA 4.0",
       "tags": [
@@ -1797,7 +1818,7 @@ window.AI_DNEVNIK_DATA = {
       "views": 4710,
       "breaking": false,
       "variant": "robotika",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Robotic_Arm_Polishing_Guitars_at_Martin_Guitar_Factory.jpg/960px-Robotic_Arm_Polishing_Guitars_at_Martin_Guitar_Factory.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Robotic_Arm_Polishing_Guitars_at_Martin_Guitar_Factory.jpg/960px-Robotic_Arm_Polishing_Guitars_at_Martin_Guitar_Factory.jpg",
       "imageAlt": "Robotska roka pri natančnem industrijskem delu",
       "imageCredit": "Foto: Henrysz / CC BY 4.0",
       "tags": [
@@ -1836,7 +1857,7 @@ window.AI_DNEVNIK_DATA = {
       "views": 6840,
       "breaking": false,
       "variant": "zanimivo",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Code_on_computer_monitor_%28Unsplash%29.jpg/960px-Code_on_computer_monitor_%28Unsplash%29.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Code_on_computer_monitor_%28Unsplash%29.jpg/960px-Code_on_computer_monitor_%28Unsplash%29.jpg",
       "imageAlt": "Zaslon računalnika s programsko kodo med testiranjem",
       "imageCredit": "Foto: Markus Spiske / CC0",
       "tags": [
@@ -1876,7 +1897,7 @@ window.AI_DNEVNIK_DATA = {
       "isHeroSide": true,
       "breaking": false,
       "variant": "gemini",
-      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/SC-APC_fiber_optic_cable.jpg/960px-SC-APC_fiber_optic_cable.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/SC-APC_fiber_optic_cable.jpg/960px-SC-APC_fiber_optic_cable.jpg",
       "imageAlt": "Optični kabel za hiter prenos podatkov",
       "imageCredit": "Foto: Alexceltare2 / CC BY-SA 4.0",
       "tags": [
@@ -1887,13 +1908,14 @@ window.AI_DNEVNIK_DATA = {
       ],
       "takeaways": [
         "Google DeepMind je 18. novembra predstavil Gemini 4 Neon kot hitrejši in ugodnejši most med paradnim Carbonom in vsakodnevnim Hydrogenom.",
-        "Pri najvišji ravni razmišljanja (xhigh) je Neon dosegel 61 točk na indeksu Artificial Analysis v5 — tik za Claude Fable 5.2 (64,6) in GPT-6.2 Astra (62,1).",
-        "Cena API znaša 3 USD na milijon vhodnih (0,15 USD za predpomnjen vhod) in 15 USD na milijon izhodnih tokenov ob enotnem milijonskem kontekstu."
+        "Pri najvišji ravni razmišljanja (xhigh) je Neon dosegel 61 točk na indeksu Artificial Analysis v5 — 3. mesto za Claude Fable 5.2 (65) in GPT-6.2 Astra (62,1) ter točko pred Gemini 4 Carbon.",
+        "Uvodna cena API znaša 3 USD na milijon vhodnih (0,15 USD za predpomnjen vhod) in 15 USD na milijon izhodnih tokenov; po izteku promocije bo 4 USD / 20 USD. Brezplačne ravni ni."
       ],
       "body": [
         "Le nekaj dni po predstavitvi modelov Gemini 4 Hydrogen in splošnem odprtju modela Carbon je Google DeepMind 18. novembra svojo četrto generacijo dopolnil še z modelom Gemini 4 Neon. Zasnovan je kot zlato ravnovesje med najglobljim analitičnim sklepanjem in hitrostjo za pogoste inženirske, analitične ter znanstvene delovne tokove.",
         "Model temelji na arhitekturi Gemini 4 Carbon, podpira besedilo, slike, zvok in video v enotnem kontekstnem oknu do milijona tokenov ter omogoča natančno nastavljanje napora sklepanja na štirih stopnjah (Low, Medium, High in Extra High). Pri stopnji xhigh je na neodvisnem indeksu inteligence Artificial Analysis v5 zbral 61 točk, kar ga postavlja tik za vodilna modela Claude Fable 5.2 in GPT-6.2 Astra.",
-        "Z izjemno konkurenčno ceno 3 dolarje na milijon vhodnih (0,15 dolarja za predpomnjen vhod) in 15 dolarjev na milijon izhodnih tokenov je Gemini 4 Neon že vključen v razvijalska orodja Google Antigravity — tudi v kombiniranem načinu Orchestrator (Neon + Hydrogen) — ter se postopoma uvaja v aplikacijo Gemini za naročnike paketov Google AI Pro in Ultra."
+        "Z uvodno ceno 3 dolarje na milijon vhodnih (0,15 dolarja za predpomnjen vhod) in 15 dolarjev na milijon izhodnih tokenov je Gemini 4 Neon že vključen v razvijalska orodja Google Antigravity — tudi v kombiniranem načinu Orchestrator (Neon + Hydrogen) — ter se postopoma uvaja v aplikacijo Gemini za naročnike paketov Google AI Pro in Ultra.",
+        "Po izteku uvodne cene bo Neon stal 4 dolarje za milijon vhodnih in 20 dolarjev za milijon izhodnih tokenov, brezplačne ravni v vmesniku API pa ni. V aplikaciji Gemini Neon nadomešča model Argon. Po poročanju 9to5Google teče skoraj dvakrat hitreje kot Carbon."
       ],
       "sources": [
         {
@@ -1907,6 +1929,10 @@ window.AI_DNEVNIK_DATA = {
         {
           "label": "9to5Google — Google announces Gemini 4 Neon",
           "url": "https://9to5google.com/2026/11/18/gemini-4-neon-announcement/"
+        },
+        {
+          "label": "Artificial Analysis — Google continues to accelerate its release cadence with Gemini 4 Neon",
+          "url": "https://artificialanalysis.ai/articles/gemini-4-neon-intelligence-gain"
         }
       ],
       "isHeroLead": false
