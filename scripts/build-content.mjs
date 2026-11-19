@@ -341,6 +341,40 @@ Sitemap: ${SITE_URL}/sitemap.xml
 `;
 fs.writeFileSync(path.join(ROOT, "robots.txt"), robots, "utf8");
 
+// 5. Ustvari RSS 2.0 vir (rss.xml) za 25 najnovejših člankov
+const rssItems = [...articles]
+  .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
+  .slice(0, 25)
+  .map((a) => {
+    const link = `${SITE_URL}/clanek/${a.id}.html`;
+    const pubDate = new Date(a.timestamp).toUTCString();
+    const cat = categoryLabels[a.category] || a.category;
+    return `    <item>
+      <title>${escapeHtml(a.title)}</title>
+      <link>${link}</link>
+      <guid isPermaLink="true">${link}</guid>
+      <pubDate>${pubDate}</pubDate>
+      <category>${escapeHtml(cat)}</category>
+      <description>${escapeHtml(a.excerpt)}</description>
+    </item>`;
+  })
+  .join("\n");
+
+const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI Dnevnik — Novice o umetni inteligenci</title>
+    <link>${SITE_URL}/</link>
+    <description>Slovenski portal za najnovejše novice, analize in primerjave modelov s področja umetne inteligence.</description>
+    <language>sl</language>
+    <lastBuildDate>${new Date(updatedAt).toUTCString()}</lastBuildDate>
+    <atom:link href="${SITE_URL}/rss.xml" rel="self" type="application/rss+xml" />
+${rssItems}
+  </channel>
+</rss>
+`;
+fs.writeFileSync(path.join(ROOT, "rss.xml"), rssXml, "utf8");
+
 console.log(
-  `Zgrajenih ${articles.length} samostojnih strani člankov, data/articles-bundle.js, sitemap.xml in robots.txt.`
+  `Zgrajenih ${articles.length} samostojnih strani člankov, data/articles-bundle.js, sitemap.xml, robots.txt in rss.xml.`
 );

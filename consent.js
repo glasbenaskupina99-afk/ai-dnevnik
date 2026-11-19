@@ -5,7 +5,7 @@
   const CONFIG = (window.AI_DNEVNIK_CONFIG || {}).consent || { provider: "builtin" };
   const KEY = "aidnevnik_consent";
   const MAX_AGE_MS = 1000 * 60 * 60 * 24 * 182;
-  const base = document.currentScript && document.currentScript.src.includes("/clanek/") ? "../" : "";
+  const base = window.location.pathname.includes("/clanek/") ? "../" : "";
   const policyUrl = base + (CONFIG.policyUrl || "zasebnost.html");
 
   // Google Consent Mode v2: privzeto zavrnjeno, dokler ni izbire
