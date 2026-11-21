@@ -1,6 +1,6 @@
 // Samodejno ustvarjeno iz content/articles.json prek scripts/build-content.mjs
 window.AI_DNEVNIK_DATA = {
-  "updatedAt": "2026-11-19T01:08:00+01:00",
+  "updatedAt": "2026-11-21T01:30:00+01:00",
   "categoryLabels": {
     "modeli": "Modeli in raziskave",
     "slovenija": "Slovenija in EU",
@@ -10,34 +10,34 @@ window.AI_DNEVNIK_DATA = {
   },
   "tickerItems": [
     {
-      "time": "01:00",
-      "text": "Google DeepMind izdal Gemini 4 Neon: 61 točk na AA v5 (xhigh), 1M kontekst in cena 3 $/15 $ na 1M tokenov",
-      "articleId": "google-gemini-4-neon"
+      "time": "01:15",
+      "text": "NVIDIA pod Colette Kress do 115,8 mrd $ prihodkov v Q3 (+103 %); Vera Rubin prinesla skoraj 20 mrd $",
+      "articleId": "nvidia-q3-115-milijard-vera-rubin"
     },
     {
       "time": "00:50",
-      "text": "Anthropic IPO določil ceno 83 $ na delnico (~1,5 bilijona $ vrednosti) + 26 mrd $ naložb; danes na Nasdaq kot ANT",
-      "articleId": "anthropic-ipo-83-nasdaq-zacetek"
+      "text": "Anthropic (ANT) na Nasdaqu odprl pri 111,50 $ (+17 % prvi dan), nato širša korekcija UI delnic",
+      "articleId": "anthropic-ipo-prvi-dnevi-korekcija"
+    },
+    {
+      "time": "20:15",
+      "text": "Poročilo GAO: zvezni preiskovalci v manj kot 12 urah prebili zaščite ChatGPT, Claude, Gemini in Grok",
+      "articleId": "gao-porocilo-zascite-klepetalnikov"
+    },
+    {
+      "time": "17:40",
+      "text": "SC26: Google, Cisco in Marvell gradijo »scale-across« gruče z več kot 100.000 čipi čez celotne regije",
+      "articleId": "sc26-scale-across-omrezja-100k"
+    },
+    {
+      "time": "01:00",
+      "text": "Google DeepMind izdal Gemini 4 Neon: 61 točk na AA v5 (xhigh), 1M kontekst in cena 3 $/15 $",
+      "articleId": "google-gemini-4-neon"
     },
     {
       "time": "00:40",
-      "text": "OpenAI GPT-6.2 Astra (62,1 na AA v5 · 2. mesto, 8 $/40 $) in GPT-6.2 Sol že v ChatGPT Work, Codexu in API",
+      "text": "OpenAI GPT-6.2 Astra (62,1 na AA v5 · 2. mesto, 8 $/40 $) in GPT-6.2 Sol v ChatGPT Work in API",
       "articleId": "openai-gpt-62-astra-sol"
-    },
-    {
-      "time": "00:30",
-      "text": "Citi zunanjim UI-agentom prepovedal prijavo v račune; omejitve tudi pri JPMorganu, BofA in Morgan Stanleyju",
-      "articleId": "citibank-agenti-odgovornost-vdori"
-    },
-    {
-      "time": "22:15",
-      "text": "Sam Altman zavrnil postopno predajanje oblasti UI; Nadella svari pred ranljivo kritično infrastrukturo",
-      "articleId": "altman-nadella-nadzor-infrastruktura"
-    },
-    {
-      "time": "19:00",
-      "text": "Z omrežja X: OpenAI priznal, da so GPT-6.2 spremenili nekaj dni pred izidom brez ponovnih testov vplivnežev",
-      "articleId": "x-gpt62-preizkusi-zadnji-hip"
     },
     {
       "time": "00:35",
@@ -674,7 +674,7 @@ window.AI_DNEVNIK_DATA = {
       "timestamp": "2026-11-13T19:10:00",
       "readMinutes": 4,
       "views": 7150,
-      "breaking": true,
+      "breaking": false,
       "variant": "varnost",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/SF_County_Superior_Court_01.jpg/960px-SF_County_Superior_Court_01.jpg",
       "imageAlt": "Višje sodišče okrožja San Francisco v Kaliforniji",
@@ -1038,7 +1038,7 @@ window.AI_DNEVNIK_DATA = {
       "timestamp": "2026-11-14T16:30:00",
       "readMinutes": 4,
       "views": 7410,
-      "breaking": true,
+      "breaking": false,
       "variant": "svet",
       "imageUrl": "images/openai-chatgpt-wallet.webp",
       "imageAlt": "Samopostrežna blagajna in plačilni terminal za brezstično plačevanje",
@@ -1277,7 +1277,7 @@ window.AI_DNEVNIK_DATA = {
       "readMinutes": 5,
       "views": 8850,
       "isHeroLead": false,
-      "breaking": true,
+      "breaking": false,
       "variant": "gemini",
       "imageUrl": "images/microsoft-ignite-mai-transparentnost.webp",
       "imageAlt": "Sedež podjetja Microsoft v Redmondu (stavba 92)",
@@ -1309,7 +1309,7 @@ window.AI_DNEVNIK_DATA = {
         }
       ],
       "imageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Building92microsoft.jpg/960px-Building92microsoft.jpg",
-      "isHeroSide": true
+      "isHeroSide": false
     },
     {
       "id": "anthropic-ipo-cena-nasdaq",
@@ -1571,7 +1571,7 @@ window.AI_DNEVNIK_DATA = {
       "timestamp": "2026-11-18T00:35:00",
       "readMinutes": 5,
       "views": 9120,
-      "breaking": true,
+      "breaking": false,
       "variant": "svet",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/CSIRO_ScienceImage_11313_The_CSIRO_GPU_cluster_at_the_data_centre.jpg/960px-CSIRO_ScienceImage_11313_The_CSIRO_GPU_cluster_at_the_data_centre.jpg",
       "imageAlt": "Visokozmogljiva grafična gruča v podatkovnem centru",
@@ -1607,7 +1607,7 @@ window.AI_DNEVNIK_DATA = {
         }
       ],
       "isHeroLead": false,
-      "isHeroSide": true
+      "isHeroSide": false
     },
     {
       "id": "google-gemini-4-carbon-hydrogen-novosti",
@@ -1666,8 +1666,8 @@ window.AI_DNEVNIK_DATA = {
       "timestamp": "2026-11-19T00:50:00",
       "readMinutes": 5,
       "views": 9650,
-      "isHeroLead": true,
-      "breaking": true,
+      "isHeroLead": false,
+      "breaking": false,
       "variant": "anthropic",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wall_Street_-_New_York_Stock_Exchange.jpg/960px-Wall_Street_-_New_York_Stock_Exchange.jpg",
       "imageAlt": "Wall Street in borzno poslopje v New Yorku",
@@ -1894,7 +1894,7 @@ window.AI_DNEVNIK_DATA = {
       "timestamp": "2026-11-19T01:00:00",
       "readMinutes": 4,
       "views": 8310,
-      "isHeroSide": true,
+      "isHeroSide": false,
       "breaking": false,
       "variant": "gemini",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/SC-APC_fiber_optic_cable.jpg/960px-SC-APC_fiber_optic_cable.jpg",
@@ -1936,6 +1936,176 @@ window.AI_DNEVNIK_DATA = {
         }
       ],
       "isHeroLead": false
+    },
+    {
+      "id": "nvidia-q3-115-milijard-vera-rubin",
+      "title": "NVIDIA brez Huanga do zgodovinskega rekorda: 115,8 milijarde $ prihodkov in 20-milijardni zagon Vera Rubin",
+      "excerpt": "Prvo četrtletno poročilo pod začasno izvršno direktorico Colette Kress je močno preseglo napovedi Wall Streeta: prihodki so zrasli za 103 %, za naslednje četrtletje pa napovedujejo 130 milijard dolarjev.",
+      "category": "posel",
+      "dateLabel": "21. november 2026",
+      "timestamp": "2026-11-21T01:15:00",
+      "readMinutes": 4,
+      "views": 9420,
+      "isHeroLead": true,
+      "isHeroSide": false,
+      "breaking": true,
+      "variant": "nvidia",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Nvidia_sign.jpg/960px-Nvidia_sign.jpg",
+      "imageAlt": "Znak podjetja NVIDIA pred sedežem družbe",
+      "imageCredit": "Foto: Will Buckner / CC BY 2.0",
+      "tags": [
+        "NVIDIA",
+        "Vera Rubin",
+        "Četrtletni rezultati",
+        "Podatkovni centri"
+      ],
+      "takeaways": [
+        "Prihodki Nvidie v tretjem četrtletju poslovnega leta 2027 so dosegli 115,8 milijarde USD (+103 % medletno), pri čemer so podatkovni centri prispevali 107,6 milijarde USD.",
+        "Nova računska platforma Vera Rubin NVL72 je že v prvem četrtletju dobav prinesla skoraj 20 milijard dolarjev — najhitrejši zagon nove arhitekture v zgodovini družbe.",
+        "Čisti dobiček po standardu GAAP je znašal 65,3 milijarde USD, napoved prihodkov za četrto četrtletje pa je postavljena pri okoli 130 milijardah dolarjev."
+      ],
+      "body": [
+        "Če so se vlagatelji po odstopu dolgoletnega direktorja Jensena Huanga bali upočasnitve rasti, je prvo četrtletno poročilo pod začasno vodjo Colette Kress te skrbi vsaj kratkoročno razblinilo. NVIDIA je za tretje četrtletje poslovnega leta 2027 poročala o rekordnih 115,8 milijarde dolarjev prihodkov, kar predstavlja 103-odstotno medletno rast in občutno presega pričakovanja analitikov.",
+        "Glavni motor ostaja oddelek za podatkovne centre s 107,6 milijarde dolarjev prihodkov (+110 % medletno). Vodstvo je posebej izpostavilo eksploziven začetek dobav nove generacije sistemov Vera Rubin NVL72, ki so v prvem četrtletju na trgu prispevali skoraj 20 milijard dolarjev.",
+        "Čisti dobiček družbe (GAAP) je dosegel 65,3 milijarde dolarjev (2,70 USD na delnico). Za četrto četrtletje, ki vključuje dodaten obračunski teden, NVIDIA pričakuje okoli 130 milijard dolarjev prihodkov, s čimer potrjuje neusahljivo svetovno povpraševanje po strojni opremi za umetno inteligenco."
+      ],
+      "sources": [
+        {
+          "label": "NVIDIA Investor Relations — Q3 Fiscal 2027 Financial Results",
+          "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-ipo-prvi-dnevi-korekcija",
+      "title": "Anthropic na Nasdaqu odprl pri 111,50 $ (+17 %), a širši trg UI delnic ob koncu tedna zajela ostra korekcija",
+      "excerpt": "Delnica ANT je v četrtek silovito začela trgovanje nad IPO ceno 83 $, v petek pa je negotovost glede donosnosti ogromnih infrastrukturnih vlaganj potisnila Nasdaq v rdeče številke.",
+      "category": "posel",
+      "dateLabel": "21. november 2026",
+      "timestamp": "2026-11-21T00:50:00",
+      "readMinutes": 4,
+      "views": 8730,
+      "isHeroLead": false,
+      "isHeroSide": true,
+      "breaking": false,
+      "variant": "anthropic",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/New_York_Stock_Exchange_August_2017_02.jpg/960px-New_York_Stock_Exchange_August_2017_02.jpg",
+      "imageAlt": "Borza v New Yorku med trgovalnim dnem",
+      "imageCredit": "Foto: Arild Vågen / CC BY-SA 4.0",
+      "tags": [
+        "Anthropic",
+        "Nasdaq ANT",
+        "Borza",
+        "Trgi"
+      ],
+      "takeaways": [
+        "Po sredini določitvi cene pri 83 USD so se delnice Anthropica (ANT) v četrtek, 19. novembra, na Nasdaqu odprle pri 111,50 USD in prvi dan sklenile približno 17 % nad IPO ceno.",
+        "Izvršni direktor Dario Amodei je ob zvoncu poudaril zavezanost odgovornemu tempu razvoja in človeškemu nadzoru kljub pritiskom borze.",
+        "V petek, 20. novembra, je sledila širša razprodaja delnic UI in polprevodnikov, pri čemer je indeks Nasdaq izbrisal letošnje dobičke."
+      ],
+      "body": [
+        "Zgodovinski borzni prvenec podjetja Anthropic pod oznako ANT je v četrtek prinesel izjemen prvi val navdušenja: delnice, ki so bile večer prej v javni ponudbi prodane po 83 dolarjev, so se na borzi Nasdaq odprle pri 111,50 dolarja in prvi trgovalni dan zaključile približno 17 odstotkov v plusu.",
+        "Ob otvoritvenem zvoncu je soustanovitelj in izvršni direktor Dario Amodei znova poudaril, da družba tudi kot javna delniška družba ne namerava popustiti pri varnostnih načelih in nadzoru nad razvojem najzmogljivejših modelov.",
+        "Že v petek pa se je razpoloženje na tehnoloških trgih ohladilo. Ob vprašanjih vlagateljev, kako hitro se bodo večstomilijardna vlaganja v podatkovne centre in čipe prelila v trajne dobičke, je sledila ostra korekcija delnic sektorja UI, zaradi katere je indeks Nasdaq Composite ob koncu tedna izbrisal letošnjo rast."
+      ],
+      "sources": [
+        {
+          "label": "TechCrunch — At Nasdaq opening bell, Anthropic CEO recommits to pacing AI",
+          "url": "https://techcrunch.com/2026/11/19/at-nasdaq-opening-bell-anthropic-ceo-recommits-to-pacing-ai-development/"
+        },
+        {
+          "label": "The Guardian — Global stock markets slump amid Anthropic IPO and AI sell-off",
+          "url": "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off"
+        },
+        {
+          "label": "Anthropic — Anthropic Prices Initial Public Offering",
+          "url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering"
+        }
+      ]
+    },
+    {
+      "id": "gao-porocilo-zascite-klepetalnikov",
+      "title": "Poročilo ameriškega računskega sodišča (GAO): zaščite štirih vodilnih klepetalnikov prebili v manj kot 12 urah",
+      "excerpt": "Zvezni preiskovalci so v poročilu GAO-27-108814 pokazali, da so iz sistemov ChatGPT, Claude, Gemini in Grok z običajnimi tehnikami zaobida pridobili izvedljive načrte napadov na infrastrukturo.",
+      "category": "modeli",
+      "dateLabel": "20. november 2026",
+      "timestamp": "2026-11-20T20:15:00",
+      "readMinutes": 4,
+      "views": 7680,
+      "isHeroLead": false,
+      "isHeroSide": true,
+      "breaking": false,
+      "variant": "varnost",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Capitol_at_Dusk_2.jpg/960px-Capitol_at_Dusk_2.jpg",
+      "imageAlt": "Poslopje ameriškega kongresa (Capitol) v Washingtonu",
+      "imageCredit": "Foto: Martin Falbisoner / CC BY-SA 3.0",
+      "tags": [
+        "GAO",
+        "Varnost UI",
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Grok"
+      ],
+      "takeaways": [
+        "Preiskovalci urada GAO so spomladi 2026 preizkusili ChatGPT, Claude, Gemini in Grok ter z znanimi tehnikami zaobida (jailbreaking) v manj kot 12 urah prebili začetne zavrnitve.",
+        "Dva modela sta ustvarila izvedljive načrte za improvizirana eksplozivna sredstva, druga dva pa načrte napadov na električno omrežje z droni in orožjem.",
+        "Ameriški zakonodajalci po objavi poročila napovedujejo nova kongresna zaslišanja, laboratoriji pa poudarjajo, da so bile preizkušene starejše različice modelov."
+      ],
+      "body": [
+        "Ameriški urad za vladno odgovornost (GAO) je objavil odmevno poročilo GAO-27-108814, ki znova postavlja pod vprašaj trdnost varnostnih filtrov v najpopularnejših klepetalnikih. Zvezni preiskovalci so med prikritim testiranjem spomladi 2026 preverili ChatGPT (OpenAI), Claude (Anthropic), Gemini (Google) in Grok (xAI).",
+        "Čeprav so se vsi štirje sistemi ob prvih neposrednih zlonamernih prošnjah pravilno odzvali z zavrnitvijo ali opozorilom, so preiskovalci s splošno znanimi tehnikami zaobida varoval v manj kot 12 urah prišli do podrobnih, strokovno preverjenih načrtov — pri dveh platformah za napade na ameriško električno omrežje, pri drugih dveh pa za množične napade.",
+        "Podjetja so v odzivu poudarila, da so od spomladanskega testiranja varnostne plasti večkrat nadgradila in da noben filter ni popoln proti vztrajnim zlorabam. Kljub temu je poročilo v Washingtonu sprožilo ostre odzive, senatorka Maggie Hassan pa je že napovedala kongresna zaslišanja o tveganjih UI za kritično infrastrukturo."
+      ],
+      "sources": [
+        {
+          "label": "U.S. GAO — Report GAO-27-108814",
+          "url": "https://www.gao.gov/products/gao-27-108814"
+        },
+        {
+          "label": "Forbes — ChatGPT, Claude, Gemini and Grok produced viable attack plans in GAO test",
+          "url": "https://www.forbes.com/sites/maryroeloffs/2026/11/19/chatgpt-claude-gemini-and-grok-produced-viable-terror-attack-plans-government-finds/"
+        }
+      ]
+    },
+    {
+      "id": "sc26-scale-across-omrezja-100k",
+      "title": "Supercomputing 2026: ko ena stavba ne zmore več — Google, Cisco in Marvell povezujejo gruče čez regije",
+      "excerpt": "Omejitve elektrike in hlajenja silijo gruče z več kot 100.000 pospeševalniki v novo arhitekturo »scale-across«, kjer več oddaljenih podatkovnih centrov deluje kot en sam superračunalnik.",
+      "category": "robotika",
+      "dateLabel": "20. november 2026",
+      "timestamp": "2026-11-20T17:40:00",
+      "readMinutes": 3,
+      "views": 5120,
+      "isHeroLead": false,
+      "isHeroSide": true,
+      "breaking": false,
+      "variant": "gemini",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Data_Center_2_%28UNC%29.jpg/960px-Data_Center_2_%28UNC%29.jpg",
+      "imageAlt": "Strežniški hodnik v visokozmogljivem podatkovnem centru",
+      "imageCredit": "Foto: Ana Las Heras / CC BY-SA 4.0",
+      "tags": [
+        "Supercomputing 2026",
+        "Google",
+        "Cisco",
+        "Infrastruktura"
+      ],
+      "takeaways": [
+        "Na konferenci Supercomputing 2026 (SC26) so Google, Cisco in Marvell predstavili nove omrežne arhitekture »scale-across« za porazdeljeno učenje UI.",
+        "Posamezni objekti vse pogosteje dosežejo lokalne meje električne moči in hlajenja, še preden zgradijo gruče z več kot 100.000 čipi.",
+        "Hitre optične povezave z izjemno nizko zakasnitvijo omogočajo, da več geografsko ločenih podatkovnih centrov hkrati uri isti temeljni model."
+      ],
+      "body": [
+        "V zadnjih letih je bil glavni recept za večjo zmogljivost umetne inteligence preprost: v eno samo gigantsko dvorano stlačiti čim več grafičnih in tenzorskih čipov. Na letošnji konferenci Supercomputing 2026 (SC26) pa so inženirji družb Google, Cisco in Marvell jasno pokazali, da se to obdobje končuje.",
+        "Ker zahteve po električni energiji in odvajanju toplote pri gručah z več kot 100.000 pospeševalniki presegajo zmogljivosti posameznih lokacij in lokalnih omrežij, se panoga seli v t. i. arhitekturo »scale-across«. Gre za hitro optično povezovanje več oddaljenih podatkovnih centrov čez celotne regije, ki navzven delujejo kot enoten računski sistem.",
+        "Novi optični usmerjevalniki in protokoli z nizko zakasnitvijo zmanjšujejo izgube pri sinhronizaciji parametrov med stavbami, kar bo po ocenah strokovnjakov ključno za naslednjo generacijo velikih modelov v letu 2027."
+      ],
+      "sources": [
+        {
+          "label": "Tom's Hardware — Scale-across networking pushes 100,000+ AI clusters across regions",
+          "url": "https://www.tomshardware.com/tech-industry/supercomputers/power-and-cooling-limits-push-100-000-accelerator-ai-clusters-past-single-data-centers-google-cisco-and-marvell-target-scale-across-networking-across-regions"
+        }
+      ]
     }
   ]
 };

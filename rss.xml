@@ -5,8 +5,40 @@
     <link>https://aidnevnik.si/</link>
     <description>Slovenski portal za najnovejše novice, analize in primerjave modelov s področja umetne inteligence.</description>
     <language>sl</language>
-    <lastBuildDate>Thu, 19 Nov 2026 00:08:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 00:30:00 GMT</lastBuildDate>
     <atom:link href="https://aidnevnik.si/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NVIDIA brez Huanga do zgodovinskega rekorda: 115,8 milijarde $ prihodkov in 20-milijardni zagon Vera Rubin</title>
+      <link>https://aidnevnik.si/clanek/nvidia-q3-115-milijard-vera-rubin.html</link>
+      <guid isPermaLink="true">https://aidnevnik.si/clanek/nvidia-q3-115-milijard-vera-rubin.html</guid>
+      <pubDate>Sat, 21 Nov 2026 00:15:00 GMT</pubDate>
+      <category>Posel in infrastruktura</category>
+      <description>Prvo četrtletno poročilo pod začasno izvršno direktorico Colette Kress je močno preseglo napovedi Wall Streeta: prihodki so zrasli za 103 %, za naslednje četrtletje pa napovedujejo 130 milijard dolarjev.</description>
+    </item>
+    <item>
+      <title>Anthropic na Nasdaqu odprl pri 111,50 $ (+17 %), a širši trg UI delnic ob koncu tedna zajela ostra korekcija</title>
+      <link>https://aidnevnik.si/clanek/anthropic-ipo-prvi-dnevi-korekcija.html</link>
+      <guid isPermaLink="true">https://aidnevnik.si/clanek/anthropic-ipo-prvi-dnevi-korekcija.html</guid>
+      <pubDate>Fri, 20 Nov 2026 23:50:00 GMT</pubDate>
+      <category>Posel in infrastruktura</category>
+      <description>Delnica ANT je v četrtek silovito začela trgovanje nad IPO ceno 83 $, v petek pa je negotovost glede donosnosti ogromnih infrastrukturnih vlaganj potisnila Nasdaq v rdeče številke.</description>
+    </item>
+    <item>
+      <title>Poročilo ameriškega računskega sodišča (GAO): zaščite štirih vodilnih klepetalnikov prebili v manj kot 12 urah</title>
+      <link>https://aidnevnik.si/clanek/gao-porocilo-zascite-klepetalnikov.html</link>
+      <guid isPermaLink="true">https://aidnevnik.si/clanek/gao-porocilo-zascite-klepetalnikov.html</guid>
+      <pubDate>Fri, 20 Nov 2026 19:15:00 GMT</pubDate>
+      <category>Modeli in raziskave</category>
+      <description>Zvezni preiskovalci so v poročilu GAO-27-108814 pokazali, da so iz sistemov ChatGPT, Claude, Gemini in Grok z običajnimi tehnikami zaobida pridobili izvedljive načrte napadov na infrastrukturo.</description>
+    </item>
+    <item>
+      <title>Supercomputing 2026: ko ena stavba ne zmore več — Google, Cisco in Marvell povezujejo gruče čez regije</title>
+      <link>https://aidnevnik.si/clanek/sc26-scale-across-omrezja-100k.html</link>
+      <guid isPermaLink="true">https://aidnevnik.si/clanek/sc26-scale-across-omrezja-100k.html</guid>
+      <pubDate>Fri, 20 Nov 2026 16:40:00 GMT</pubDate>
+      <category>Robotika in znanost</category>
+      <description>Omejitve elektrike in hlajenja silijo gruče z več kot 100.000 pospeševalniki v novo arhitekturo »scale-across«, kjer več oddaljenih podatkovnih centrov deluje kot en sam superračunalnik.</description>
+    </item>
     <item>
       <title>Google DeepMind predstavil Gemini 4 Neon: vrhunsko sklepanje pri 61 točkah AA v5 in ceni 3 $ / 15 $</title>
       <link>https://aidnevnik.si/clanek/google-gemini-4-neon.html</link>
@@ -174,38 +206,6 @@
       <pubDate>Sat, 14 Nov 2026 11:30:00 GMT</pubDate>
       <category>Zanimivo z X</category>
       <description>Uporabniki omrežja X vsak teden objavijo nove nenavadne aplikacije, izdelane z nekaj stavki navodil — od spletnega letalskega simulatorja do robotov za noč čarovnic.</description>
-    </item>
-    <item>
-      <title>Google z UI ščiti 1,2 milijarde ljudi pred zemeljskimi plazovi do 24 ur vnaprej</title>
-      <link>https://aidnevnik.si/clanek/google-ai-opozorila-plazovi.html</link>
-      <guid isPermaLink="true">https://aidnevnik.si/clanek/google-ai-opozorila-plazovi.html</guid>
-      <pubDate>Sat, 14 Nov 2026 10:50:00 GMT</pubDate>
-      <category>Robotika in znanost</category>
-      <description>Novi sistem združuje satelitske posnetke vegetacije, gibanja tal in podatke o padavinah ter pošilja zgodnja opozorila v sedmih najtežje prizadetih državah.</description>
-    </item>
-    <item>
-      <title>Anthropic opozarja na pasti varnostnih testov: surovi API in aplikacija Claude dala 34 točk razlike</title>
-      <link>https://aidnevnik.si/clanek/anthropic-varnostna-merila-evals.html</link>
-      <guid isPermaLink="true">https://aidnevnik.si/clanek/anthropic-varnostna-merila-evals.html</guid>
-      <pubDate>Sat, 14 Nov 2026 08:20:00 GMT</pubDate>
-      <category>Modeli in raziskave</category>
-      <description>Nova raziskava varnostne ekipe kaže, da površno štetje zavrnitev pogosto zavede: pri modelu Claude Fable 5.1 je ustreznost v kriznih pogovorih nihala med 60 % in 94 %.</description>
-    </item>
-    <item>
-      <title>Tektonski premik pri Nvidii: Jensen Huang po 33 letih zapušča čelo družbe</title>
-      <link>https://aidnevnik.si/clanek/nvidia-huang-odstop.html</link>
-      <guid isPermaLink="true">https://aidnevnik.si/clanek/nvidia-huang-odstop.html</guid>
-      <pubDate>Fri, 13 Nov 2026 18:40:00 GMT</pubDate>
-      <category>Posel in infrastruktura</category>
-      <description>Soustanovitelj najvrednejšega proizvajalca čipov za UI je odstopil z mesta glavnega izvršnega direktorja in člana uprave. Vodenje začasno prevzema dolgoletna finančna direktorica Colette Kress.</description>
-    </item>
-    <item>
-      <title>Tožba v San Franciscu: varnostne organizacije zahtevajo zamrznitev razvoja najnaprednejših modelov UI</title>
-      <link>https://aidnevnik.si/clanek/tozba-varnost-ui-san-francisco.html</link>
-      <guid isPermaLink="true">https://aidnevnik.si/clanek/tozba-varnost-ui-san-francisco.html</guid>
-      <pubDate>Fri, 13 Nov 2026 18:10:00 GMT</pubDate>
-      <category>Posel in infrastruktura</category>
-      <description>Koalicija neprofitnih skupin na čelu z Alliance for Secure AI in Public Citizen toži podjetja OpenAI, Anthropic, Google, Meta in SpaceXSI ter od sodišča zahteva nujno prepoved razvoja novih najnaprednejših (frontier) modelov.</description>
     </item>
   </channel>
 </rss>
